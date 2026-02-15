@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.KO GALLERY - Luxury Wedding & Event Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Dancing+Script:wght@400;500&family=Montserrat:wght@200;300;400&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Nunito+Sans:wght@500;700&family=Cormorant:wght@400;500&family=Corinthia:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <img src="src/img/for dev/icons and logo/mobile/ic_menu.svg" alt="Menu" class="mobile-menu-icon">
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <img src="src/img/for dev/icons and logo/mobile/ic_cross.svg" alt="Close" class="mobile-menu-close-icon">
+        </button>
+        <div class="mobile-menu-content">
+            <div class="mobile-brand">
+                <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="mobile-brand-logo">
+            </div>
+            <nav class="mobile-nav">
+                <a href="#" class="mobile-nav-link" data-translate="navHome">ГОЛОВНА</a>
+                <a href="#about" class="mobile-nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
+                <a href="#services" class="mobile-nav-link" data-translate="navServices">ПОСЛУГИ</a>
+                <a href="#portfolio" class="mobile-nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
+                <a href="#contacts" class="mobile-nav-link" data-translate="navContacts">КОНТАКТИ</a>
+            </nav>
+            <button class="mobile-contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
+            <a href="https://www.instagram.com/jko_gallery/" class="mobile-instagram" target="_blank" rel="noopener noreferrer">
+                <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="instagram-icon">
+                <span>Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="profile-section">
+                <a href="#" class="profile-image">
+                    <img src="src/img/for dev/icons and logo/logo-white.svg" alt="Profile">
+                </a>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+            <a href="#about" class="nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
+            <a href="#services" class="nav-link" data-translate="navServices">ПОСЛУГИ</a>
+            <a href="#portfolio" class="nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
+            <a href="#contacts" class="nav-link" data-translate="navContacts">КОНТАКТИ</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="languages">
+                <span class="lang" data-lang="ua">UA</span>
+                <span class="lang" data-lang="ru">RU</span>
+                <span class="lang" data-lang="en">EN</span>
+            </div>
+            <button class="contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="src/img/video/home-1.mp4" type="video/mp4">
+            <source src="background.webm" type="video/webm">
+            Ваш браузер не підтримує відео.
+        </video>
+        <div class="hero-content">
+            <div class="brand-text">
+                <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="brand-logo">
+                <div class="brand-tagline">LUXURY WEDDING & EVENT PLANNER</div>
+                <div class="brand-subtitle">CURATED PLANNING AND DESIGN EXPERIENCE</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <h2 class="intro-title" data-translate="introTitle">BESPOKE WEDDING AND EVENT PLANNING, WHERE EVERY DETAIL IS DESIGNED WITH PURPOSE</h2>
+            <p class="intro-text" data-translate="introText">Створюємо індивідуальні авторські події, де кожен елемент має сенс. Ідея, простір, естетика та сценарій формують цілісну <br> історію, що відображає характер, атмосферу локації та унікальність моменту.</p>
+        </div>
+    </section>
+
+    <!-- Combined Section -->
+    <section class="combined-section">
+        <!-- Feature Block -->
+        <div class="feature-content">
+            <div class="feature-text">
+                <h3 class="feature-title" data-translate="featureTitle">МІЖНАРОДНИЙ ФОРМАТ МИСЛЕННЯ</h3>
+                <p class="feature-description" data-translate="featureDescription">Робота в різних країнах і культурних контекстах із дотриманням міжнародних стандартів сервісу та протоколу. Формат, масштаб і локація узгоджуються в межах єдиної концепції, зберігаючи цілісність проєкту та стабільний рівень реалізації незалежно від географії.</p>
+                <button class="feature-btn" data-translate="viewMore">ПЕРЕГЛЯНУТИ</button>
+            </div>
+            <div class="feature-image">
+                <div class="feature-image-slides">
+                    <img class="feature-image-slide active" src="src/img/for dev/1.jpg" alt="Event Planning">
+                    <img class="feature-image-slide" src="src/img/for dev/Rectangle 5.jpg" alt="Event Planning">
+                    <img class="feature-image-slide" src="src/img/for dev/Rectangle 6.jpg" alt="Event Planning">
+                    <img class="feature-image-slide" src="src/img/for dev/Rectangle 7.jpg" alt="Event Planning">
+                    <img class="feature-image-slide" src="src/img/for dev/Rectangle 8.jpg" alt="Event Planning">
+                    <img class="feature-image-slide" src="src/img/for dev/Rectangle 9.jpg" alt="Event Planning">
+                    <img class="feature-image-slide" src="src/img/for dev/Rectangle 10.jpg" alt="Event Planning">
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Block -->
+        <div class="grid-container">
+            <div class="grid-item grid-image">
+                <img src="src/img/for dev/2.jpg" alt="Bride">
+            </div>
+            <div class="grid-item grid-text">
+                <h3 class="grid-title" data-translate="gridTitle1">ВИСОКИЙ РІВЕНЬ ЕСТЕТИЧНОЇ КУЛЬТУРИ</h3>
+                <p class="grid-description" data-translate="gridDescription1">Створюємо індивідуальні авторські події, де кожен елемент має сенс. Ідея, простір, естетика та сценарій формують цілісну історію, що відображає характер, атмосферу локації та унікальність моменту.</p>
+                <button class="grid-btn" data-translate="viewMore">ПЕРЕГЛЯНУТИ</button>
+            </div>
+            <div class="grid-item grid-text1">
+                <h3 class="grid-title" data-translate="gridTitle2">АВТОРСЬКА РОЗРОБКА</h3>
+                <p class="grid-description" data-translate="gridDescription2">Проєкти без повторюваних рішень і шаблонних сценаріїв. Робота вибудовується з урахуванням контексту клієнта, специфіки події, стратегічних цілей та масштабу відповідальності. Зміст, структура й архітектура реалізації формують індивідуальну ідентичність проєкту та професійний рівень виконання.</p>
+                <button class="grid-btn" data-translate="viewMore">ПЕРЕГЛЯНУТИ</button>
+            </div>
+            <div class="grid-item grid-image">
+                <img src="src/img/for dev/3.jpg" alt="Bride and Groom">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-image-wrapper">
+                <div class="about-logo-overlay">
+                    <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="about-logo">
+                </div>
+                <div class="about-main-image">
+                    <img src="src/img/for dev/yk1.jpg "alt=Yulia Kovinko">
+                </div>
+            </div>
+            <div class="about-text-wrapper">
+                <div class="about-text-content">
+                    <h2 class="about-title">
+                        <span class="about-name" data-translate="aboutName">ЮЛІЯ КОВІНЬКО.</span><br>
+                        <span class="about-role" data-translate="aboutRole1">EVENT PLANNER TA</span><br>
+                        <span class="about-role" data-translate="aboutRole2">PRODUCER ПОДІЙ</span><br>
+                        <span class="about-role" data-translate="aboutRole3">ВИСОКОГО РІВНЯ</span>
+                    </h2>
+                    <p class="about-description" data-translate="aboutDescription">
+                        Юлія працює з подіями як із продюсерськими проєктами, у яких стратегія, простір і сценарій формують єдину систему. Її підхід базується на чіткому управлінні процесами, високих естетичних стандартах і здатності реалізовувати складні формати подій у різних культурних контекстах. Кожен проєкт вибудовується як індивідуальне рішення — від концепції та просторової логіки до сценарію, команди й фінальної реалізації. Такий підхід дозволяє створювати події, що зберігають цілісність, масштаб і якість незалежно від локації, формату чи рівня складності.
+                    </p>
+                    <button class="about-btn" data-translate="learnMore">ДІЗНАТИСЯ БІЛЬШЕ ПРО ЮЛІЮ</button>
+                    <div class="book-section">
+                        <div class="book-image">
+                            <img src="src/img/for dev/book.png" alt="Смакувати життя">
+                        </div>
+                        <div class="book-text">
+                            <p data-translate="bookText1">Познайомитися з</p>
+                            <p data-translate="bookText2">філософією життя Юлії</p>
+                            <p data-translate="bookText3">можна у книзі</p>
+                            <p class="book-title" data-translate="bookTitle">"Смакувати життя"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonial-content">
+            <div class="testimonial-photo">
+                <img src="src/img/for dev/testim.png" alt="Mark & Sofia">
+            </div>
+            <h3 class="testimonial-names" data-translate="testimonial1Names">MARK & SOFIA, DESTINATION WEDDING</h3>
+            <p class="testimonial-text" data-translate="testimonial1Text">
+                Для нас було принципово важливо працювати з людиною, якій можна повністю довірити нашу подію. Юлія вразила нас рівнем професійності, естетичним баченням і здатністю тонко відчути те, що було справді важливим для нас. У день події ми не думали про організацію — ми проживали емоції. Усі деталі були продумані до дрібниць, а атмосфера й візуальні рішення створили відчуття цілісності та абсолютного задоволення.
+            </p>
+            <button class="testimonial-btn"><span data-translate="viewMore">ПЕРЕГЛЯНУТИ</span> WEDDING</button>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-header">
+            <video class="cta-header-video" autoplay muted loop playsinline>
+                <source src="src/img/video/home-2.mp4" type="video/mp4">
+            </video>
+            <h2 class="cta-slogan">
+                <span class="cta-line1" data-translate="ctaSlogan1">EXPERT-LED EVENTS WHERE <span class="cta-script" data-translate="ctaSloganScript">every</span></span><br>
+                <span class="cta-line2" data-translate="ctaSlogan2">DECISION CARRIES MEANING</span>
+            </h2>
+        </div>
+        <div class="cta-content">
+            <div class="cta-image-wrapper">
+                
+                <div class="cta-image">
+                    <img src="src/img/for dev/yk2.jpg" alt="Yulia">
+                </div>
+            </div>
+            <div class="cta-text-wrapper">
+                <h3 class="cta-title" data-translate="ctaTitle">З РАДІСТЮ РОЗГЛЯНЕМО ІДЕЮ ВАШОЇ МАЙБУТНЬОЇ ПОДІЇ</h3>
+                <p class="cta-description" data-translate="ctaDescription">
+                    Кожен проєкт перебуває під особистим супроводом Юлії від першого контакту до фінальної реалізації. Особистий супровід, стратегічне планування та увага до деталей формують події, що мають сенс, структуру й унікальний характер.
+                </p>
+                <button class="cta-btn" data-translate="bookMeeting">ЗАБРОНЮВАТИ ЗУСТРІЧ З ЮЛІЄЮ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="portfolio" class="locations-section">
+        <h2 class="locations-title" data-translate="locationsTitle">ЕКСКЛЮЗИВНІ ЛОКАЦІЇ</h2>
+        
+        <div class="locations-gallery">
+            <div class="locations-gallery-container">
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l1.png" alt="Dubai">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l2.jpg" alt="Monaco">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l3.png" alt="Milan">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l4.png" alt="Budapest">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l5.png" alt="Paris">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l6.png" alt="Lisbon">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l7.png" alt="Barcelona">
+                </div>
+                <div class="location-item">
+                    <img src="src/img/for dev/locatioons/l8.jpg" alt="Warsaw">
+                </div>
+            </div>
+        </div>
+
+        <div class="locations-cities">
+            <div class="locations-cities-container">
+                <span class="city-name">ДУБАЙ</span>
+                <span class="city-name">МОНАКО</span>
+                <span class="city-name">МІЛАН</span>
+                <span class="city-name">БУДАПЕШТ</span>
+                <span class="city-name">ПАРИЖ</span>
+                <span class="city-name">ЛІСАБОН</span>
+                <span class="city-name">БАРСЕЛОНА</span>
+                <span class="city-name">ВАРШАВА</span>
+                <span class="city-name">ВІДЕНЬ</span>
+                <span class="city-name">ВЕРОНА</span>
+                <span class="city-name">БЕРЛІН</span>
+                <span class="city-name">АМСТЕРДАМ</span>
+                <span class="city-name">ПРАГА</span>
+                <span class="city-name">РИМ</span>
+                <span class="city-name">КИЇВ</span>
+                <span class="city-name">ДУБАЙ</span>
+                <span class="city-name">МОНАКО</span>
+                <span class="city-name">МІЛАН</span>
+                <span class="city-name">БУДАПЕШТ</span>
+                <span class="city-name">ПАРИЖ</span>
+                <span class="city-name">ЛІСАБОН</span>
+                <span class="city-name">БАРСЕЛОНА</span>
+                <span class="city-name">ВАРШАВА</span>
+                <span class="city-name">ВІДЕНЬ</span>
+                <span class="city-name">ВЕРОНА</span>
+                <span class="city-name">БЕРЛІН</span>
+                <span class="city-name">АМСТЕРДАМ</span>
+                <span class="city-name">ПРАГА</span>
+                <span class="city-name">РИМ</span>
+                <span class="city-name">КИЇВ</span>
+            </div>
+        </div>
+
+        <div class="locations-text-blocks">
+            <div class="location-text-block">
+                <div class="decorative-image">
+                    <img src="src/img/for dev/icon.png" alt="Decorative">
+                </div>
+                <p data-translate="locationText1">Простір, декор, гастрономія, музика та атмосфера працюють як єдина система, що підсилює вашу історію.</p>
+            </div>
+            <div class="location-text-block">
+                <div class="decorative-image">
+                    <img src="src/img/for dev/icon.png" alt="Decorative">
+                </div>
+                <p data-translate="locationText2">Європа, ОАЕ чи Україна, кожна локація обирається стратегічно з урахуванням стилю, логістики та сценарію події.</p>
+            </div>
+            <div class="location-text-block">
+                <div class="decorative-image">
+                    <img src="src/img/for dev/icon.png" alt="Decorative">
+                </div>
+                <p data-translate="locationText3">Юлія особисто супроводжує кожен етап підготовки, забезпечує контроль процесу та найвищий рівень комфорту.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-content">
+            <div class="services-left">
+                <div class="services-main-image">
+                    <div class="services-main-slides">
+                        <img class="services-main-slide active" src="src/img/for dev/Rectangle 21.jpg" alt="Private Events">
+                        <img class="services-main-slide" src="src/img/for dev/Rectangle 18.jpg" alt="Private Events">
+                        <img class="services-main-slide" src="src/img/for dev/Rectangle 20.jpg" alt="Private Events">
+                        <img class="services-main-slide" src="src/img/for dev/Rectangle 22.jpg" alt="Private Events">
+                        <img class="services-main-slide" src="src/img/for dev/Rectangle 19.jpg" alt="Private Events">
+                        <img class="services-main-slide" src="src/img/for dev/Rectangle 4.jpg" alt="Private Events">
+                    </div>
+                </div>
+                <div class="services-text-block">
+                    <p class="services-description" data-translate="servicesDescription">
+                        Від камерних свят до масштабних, виїзних і локальних — кожен формат реалізується індивідуально, а рішення приймаються системно, з фокусом на якість, естетику та контроль кожного етапу реалізації. Кожен проєкт формується на основі вашого бачення та чітко структурованого сценарію.
+                    </p>
+                    <button class="services-btn" data-translate="moreServices">БІЛЬШЕ ПРО НАШІ ПОСЛУГИ</button>
+                </div>
+            </div>
+            <div class="services-right">
+                <h2 class="services-title" data-translate="servicesTitle">ПРИВАТНІ ПОДІЇ ТА БРЕНД- <br>ІВЕНТИ, СТВОРЕНІ З УРАХУВАННЯМ ФОРМАТУ, ХАРАКТЕРУ ТА АТМОСФЕРИ ПОДІЇ</h2>
+                <div class="services-small-image">
+                    <img src="src/img/for dev/4.jpg" alt="Wedding">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section 2 -->
+    <section class="testimonials-section">
+        <div class="testimonial-content">
+            <div class="testimonial-photo">
+                <img src="src/img/for dev/couple2.png" alt="Oleg & Anastasia">
+            </div>
+            <h3 class="testimonial-names" data-translate="testimonial2Names">OLEG & ANASTASIA, DESTINATION WEDDING</h3>
+            <p class="testimonial-text" data-translate="testimonial2Text">
+                Співпраця з Юлією та J.KO Gallery перевершила всі наші очікування. Подія стала справжнім святом, яке ми запам'ятаємо на все життя. Атмосфера, створена Юлією, була наповнена красотою, теплом і глибоким відчуттям нашої історії. Ми безмежно вдячні за ці моменти щастя, які назавжди залишаться з нами.
+            </p>
+            <button class="testimonial-btn"><span data-translate="viewMore">ПЕРЕГЛЯНУТИ</span> WEDDING</button>
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section id="contacts" class="consultation-section">
+        <div class="consultation-content">
+            <div class="consultation-image">
+                <img src="src/img/for dev/yk3.jpg" alt="Consultation">
+            </div>
+            <div class="consultation-text-block">
+                <h2 class="consultation-title" data-translate-html="consultationTitle">РОЗПОЧНІМО<br>ВАШУ РОЗКІШНУ<br>ІСТОРІЮ</h2>
+                <p class="consultation-description" data-translate="consultationDescription">Поділіться з нами своєю мрією і ми допоможемо перетворити її на подію, створену саме для вас. Від ідеї до реалізації — кожне рішення формується навколо ваших цінностей, стилю та настрою, щоб подія стала справжнім відображенням вас.</p>
+                <button class="consultation-btn" data-translate="planConsultation">ЗАПЛАНУВАТИ КОНСУЛЬТАЦІЮ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero CTA Section -->
+    <section class="hero-cta-section">
+        <div class="hero-cta-video">
+            <video autoplay muted loop playsinline>
+                <source src="src/img/video/home-3.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-cta-text">
+            <h2 class="hero-cta-title">
+                <span class="hero-cta-line1" data-translate="heroCtaLine1">GIVE US AN IDEA AND <span class="hero-cta-script" data-translate="heroCtaScript">we will</span></span>
+                <span class="hero-cta-line2" data-translate="heroCtaLine2">CREATE YOUR UNIQUE STORY</span>
+            </h2>
+        </div>
+    </section>
+
+    <script>
+        // Feature image slideshow: зміна фото кожні 4 сек з плавною появою (тільки коли блок видимий)
+        (function() {
+            const slides = document.querySelectorAll('.feature-image-slide');
+            if (slides.length === 0) return;
+            
+            const slidesContainer = document.querySelector('.feature-image-slides');
+            if (!slidesContainer) return;
+            
+            let current = 0;
+            let slideInterval = null;
+            
+            const startSlideshow = function() {
+                if (slideInterval) return; // Вже запущено
+                slideInterval = setInterval(function() {
+                    slides[current].classList.remove('active');
+                    current = (current + 1) % slides.length;
+                    slides[current].classList.add('active');
+                }, 4000);
+            };
+            
+            const stopSlideshow = function() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                    slideInterval = null;
+                }
+            };
+            
+            // Використовуємо Intersection Observer для визначення видимості
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        startSlideshow();
+                    } else {
+                        stopSlideshow();
+                    }
+                });
+            }, {
+                threshold: 0.1 // Запускається коли 10% елемента видимо
+            });
+            
+            observer.observe(slidesContainer);
+        })();
+
+        // Services main image: те саме — почергова зміна з швидким ефектом появи
+        (function() {
+            const slides = document.querySelectorAll('.services-main-slide');
+            if (slides.length === 0) return;
+            let current = 0;
+            setInterval(function() {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 4000);
+        })();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Hide header on scroll, show only at the top
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll === 0) {
+                // At the top, show header
+                header.classList.remove('hidden');
+            } else {
+                // Anywhere else, hide header
+                header.classList.add('hidden');
+            }
+        });
+
+        // Галерея локацій: тільки свайп/тягнення, плавно слідує за пальцем, без автоскролу і без підтягування
+        const locationsGallery = document.querySelector('.locations-gallery');
+        
+        function enableDragScroll(element) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            function getX(e) {
+                return e.touches ? e.touches[0].clientX : e.pageX;
+            }
+
+            function move(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = getX(e);
+                const walk = x - startX;
+                element.scrollLeft = scrollLeft - walk;
+            }
+
+            element.addEventListener('mousedown', (e) => {
+                isDown = true;
+                element.style.cursor = 'grabbing';
+                element.style.userSelect = 'none';
+                startX = e.pageX;
+                scrollLeft = element.scrollLeft;
+            });
+
+            element.addEventListener('touchstart', (e) => {
+                isDown = true;
+                startX = getX(e);
+                scrollLeft = element.scrollLeft;
+            }, { passive: true });
+
+            element.addEventListener('mouseleave', () => {
+                isDown = false;
+                element.style.cursor = 'grab';
+                element.style.userSelect = '';
+            });
+
+            element.addEventListener('mouseup', () => {
+                isDown = false;
+                element.style.cursor = 'grab';
+                element.style.userSelect = '';
+            });
+
+            element.addEventListener('touchend', () => {
+                isDown = false;
+            }, { passive: true });
+
+            element.addEventListener('mousemove', move);
+            element.addEventListener('touchmove', move, { passive: false });
+
+            element.addEventListener('selectstart', (e) => {
+                if (isDown) e.preventDefault();
+            });
+        }
+
+        if (locationsGallery) {
+            enableDragScroll(locationsGallery);
+
+            // Безкінечне гортання: клонуємо картинки і при досягненні краю переміщуємо скрол
+            const galleryContainer = locationsGallery.querySelector('.locations-gallery-container');
+            const items = galleryContainer.querySelectorAll('.location-item');
+            if (items.length > 0) {
+                const count = items.length;
+                for (let i = 0; i < count; i++) {
+                    galleryContainer.appendChild(items[i].cloneNode(true));
+                }
+                const gap = 20;
+                const itemWidth = items[0].offsetWidth;
+                const originalWidth = count * (itemWidth + gap);
+
+                let isJumping = false;
+                function setInitialScroll() {
+                    locationsGallery.scrollLeft = originalWidth;
+                }
+                setInitialScroll();
+                window.addEventListener('load', setInitialScroll);
+
+                locationsGallery.addEventListener('scroll', () => {
+                    if (isJumping) return;
+                    const sl = locationsGallery.scrollLeft;
+                    if (sl >= originalWidth * 2) {
+                        isJumping = true;
+                        locationsGallery.scrollLeft = sl - originalWidth;
+                        requestAnimationFrame(() => { isJumping = false; });
+                    } else if (sl <= 0) {
+                        isJumping = true;
+                        locationsGallery.scrollLeft = sl + originalWidth;
+                        requestAnimationFrame(() => { isJumping = false; });
+                    }
+                }, { passive: true });
+            }
+        }
+
+        // locations-cities тепер їде автоматично за рахунок CSS-анімації
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#">
+                    <img src="src/img/for dev/icons and logo/logo-black.svg" alt="J.KO GALLERY" class="footer-logo-img">
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <a href="#about" class="footer-nav-link" data-translate="footerAbout">ПРО НАС</a>
+                <a href="#services" class="footer-nav-link" data-translate="footerServices">ПОСЛУГИ</a>
+                <a href="#portfolio" class="footer-nav-link" data-translate="footerPortfolio">ПОРТФОЛІО</a>
+                <a href="#contacts" class="footer-nav-link" data-translate="footerContacts">КОНТАКТИ</a>
+            </nav>
+            <div class="footer-contacts">
+                <h3 class="footer-section-title" data-translate="footerContactsTitle">КОНТАКТИ:</h3>
+                <div class="footer-contact">
+                    <div class="footer-phone">
+                        <img src="src/img/for dev/icons and logo/whatsapp.svg" alt="WhatsApp" class="footer-icon">
+                        <a href="tel:+380674306471" class="footer-contact-link">+38 (067) 4306471</a>
+                    </div>
+                    <div class="footer-email">
+                        <a href="mailto:jkogallery@gmail.com" class="footer-contact-link">jkogallery@gmail.com</a>
+                    </div>
+                </div>
+                <button class="footer-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
+            </div>
+            <div class="footer-right">
+                <h3 class="footer-section-title" data-translate="footerSocialTitle">СОЦІАЛЬНІ МЕРЕЖІ:</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/jko_gallery/" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="footer-social-icon">
+                    </a>
+                    <a href="https://www.threads.com/@juliakovinko?xmt=AQF0-ck61pvXUQDFmIZNkJqVhKGXguqFOk3-LTiBStXwZ5I" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/threads.svg" alt="Threads" class="footer-social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/pinterest.png" alt="Pinteres" class="footer-social-icon footer-social-icon-pinterest">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="instagram-section-content">
+            <h2 class="instagram-title" data-translate="instagramTitle">Відвідайте наш інстаграм</h2>
+            <div class="instagram-gallery">
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst1.jpg" alt="Instagram Photo 1">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst2.jpg" alt="Instagram Photo 2">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst3.jpg" alt="Instagram Photo 3">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst4.jpg" alt="Instagram Photo 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Bottom -->
+    <footer class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p class="footer-copyright" data-translate="footerCopyright">© J. KO GALLERY 2026, ALL RIGHTS RESERVED</p>
+            <div class="footer-bottom-links">
+                <a href="#" class="footer-bottom-link" data-translate="footerPrivacy">PRIVACY POLICY</a>
+                <a href="#" class="footer-bottom-link" data-translate="footerCredits">SITE CREDITS</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
