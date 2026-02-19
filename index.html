@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Dancing+Script:wght@400;500&family=Montserrat:wght@200;300;400&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Nunito+Sans:wght@500;700&family=Cormorant:wght@400;500&family=Corinthia:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="translations.js"></script>
 </head>
 <body>
@@ -174,7 +175,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <section class="testimonials-section1">
         <div class="testimonial-content">
             <div class="testimonial-photo">
                 <img src="src/img/for dev/testim.png" alt="Mark & Sofia">
@@ -309,9 +310,10 @@
     <section id="services" class="services-section">
         <div class="services-content">
             <div class="services-left">
-                <div class="services-main-image">
+                <div class="image-mask">
                     <div class="services-main-slides">
-                        <img class="services-main-slide active" src="src/img/for dev/Rectangle 21.jpg" alt="Private Events">
+                        <img class="services-main-slide active" src="src/img/for dev/Rectangle 44.png" alt="Private Events">
+                        <img class="services-main-slide" src="src/img/for dev/Rectangle 21.jpg" alt="Private Events">
                         <img class="services-main-slide" src="src/img/for dev/Rectangle 18.jpg" alt="Private Events">
                         <img class="services-main-slide" src="src/img/for dev/Rectangle 20.jpg" alt="Private Events">
                         <img class="services-main-slide" src="src/img/for dev/Rectangle 22.jpg" alt="Private Events">
@@ -493,8 +495,8 @@
             }
             
             function updateMenuIcon() {
-                // Перевіряємо тільки на мобільній та планшетній версії
-                if (window.innerWidth > 1024) return;
+                // Перевіряємо тільки на мобільній та планшетній версії (від 1130px)
+                if (window.innerWidth > 1130) return;
                 
                 const scrollY = window.pageYOffset || window.scrollY;
                 const menuBtnTop = mobileMenuBtn.getBoundingClientRect().top + scrollY;
