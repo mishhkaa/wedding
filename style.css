@@ -1059,7 +1059,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .brand-logo {
-        height: 150px;
+        height: 200px;
         margin-bottom: 15px;
     }
 
@@ -1118,11 +1118,14 @@ h3[data-translate="gridTitle2"] {
         height: auto;
         width: 100%;
         max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         padding-bottom: 0;
         margin-bottom: 46px;
         aspect-ratio: 3/4;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .feature-text {
@@ -1130,8 +1133,13 @@ h3[data-translate="gridTitle2"] {
         display: flex;
         flex-direction: column;
         padding: 0;
-        margin-top: 0;
+        margin-top: -185px;
+
         gap: 16px;
+        width: 80%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .feature-text .feature-title {
@@ -1186,13 +1194,22 @@ h3[data-translate="gridTitle2"] {
         inset: 0;
         margin-top: 0;
         margin-bottom: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .feature-image-slide {
         object-fit: contain;
-        width: 100%;
+        width: 80% !important;
+        max-width: 80% !important;
         height: 100%;
         object-position: center;
+        display: block;
+        margin: -100px auto !important;
+        left: auto !important;
+        right: auto !important;
+        margin-top: -150px;
     }
 
     .combined-section {
@@ -1214,14 +1231,14 @@ h3[data-translate="gridTitle2"] {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
-        gap: 36px;
+        gap: 46px;
         min-height: auto;
         height: auto;
     }
 
     .grid-container .grid-image:first-child {
         margin-top: 0;
-        right: 0;
+        right: auto !important;
     }
 
     .grid-container .grid-image:last-child {
@@ -1235,15 +1252,23 @@ h3[data-translate="gridTitle2"] {
     .grid-image {
         height: auto;
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .grid-image img {
         object-fit: contain;
-        width: 100%;
+        width: 80% !important;
+        max-width: 80% !important;
         height: auto;
         display: block;
+        margin: 0 auto !important;
+        left: auto !important;
+        right: auto !important;
     }
 
     .grid-text {
@@ -1251,12 +1276,20 @@ h3[data-translate="gridTitle2"] {
         align-items: flex-start;
         margin-left: 0;
         margin-top: -10px;
+        width: 80%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .grid-text1 {
         padding: 0px 0 0px 0;
         align-items: flex-start;
         margin-top: -12px;
+        width: 80%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .grid-btn {
@@ -1641,7 +1674,7 @@ h3[data-translate="gridTitle2"] {
     background-color: white;
     display: flex;
     align-items: center;
-    padding: 64px 50px;
+    padding: 64px 50px 44px 50px;
     position: relative;
     z-index: 1;
     margin-left: -100px;
@@ -1831,6 +1864,7 @@ h3[data-translate="gridTitle2"] {
         font-size: 30px;
         letter-spacing: 0.04em;
         line-height: 1.6;
+        
     }
 
     .about-name {
@@ -1927,7 +1961,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .about-text-wrapper {
-        padding: 40px 24px;
+        padding: 40px 24px 5px 24px;
         margin-left: 0;
         margin-right: 0;
         margin-top: -60px;
@@ -2505,18 +2539,36 @@ h3[data-translate="gridTitle2"] {
         width: 65%;
         max-width: 100%;
         margin-top: -100px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .cta-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto !important;
     }
 
     .cta-text-wrapper {
-        padding: 70px 48px;
+        padding: 85px 48px;
         gap: 30px;
+        width: 80%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cta-title {
         font-size: 24px;
         letter-spacing: 0.04em;
         line-height: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .cta-description {
@@ -2542,7 +2594,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .cta-line1 {
-        line-height: 0.9;
+        line-height: 0.1;
         margin-bottom: -4px;
     }
 
@@ -3183,7 +3235,7 @@ letter-spacing: 0.3px;
         letter-spacing: 0.04em;
         line-height: 100%;
         margin-bottom: 20px;
-        text-align: center;
+        text-align: left;
         width: 100%;
         flex-basis: 100%;
     }
@@ -3223,6 +3275,9 @@ letter-spacing: 0.3px;
 
     .services-btn {
         margin-bottom: 40px;
+        align-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 
