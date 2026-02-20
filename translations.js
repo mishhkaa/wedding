@@ -59,7 +59,7 @@ const translations = {
         ctaTitle: "З РАДІСТЮ РОЗГЛЯНЕМО ІДЕЮ ВАШОЇ МАЙБУТНЬОЇ ПОДІЇ",
         ctaDescription: "Кожен проєкт перебуває під особистим супроводом Юлії від першого контакту до фінальної реалізації. Особистий супровід, стратегічне планування та увага до деталей формують події, що мають сенс, структуру й унікальний характер.",
         
-        consultationTitle: "РОЗПОЧНІМО\nВАШУ РОЗКІШНУ\nІСТОРІЮ",
+        consultationTitle: "РОЗПОЧНІМО ВАШУ РОЗКІШНУ ІСТОРІЮ",
         consultationDescription: "Поділіться з нами своєю мрією і ми допоможемо перетворити її на подію, створену саме для вас. Від ідеї до реалізації — кожне рішення формується навколо ваших цінностей, стилю та настрою, щоб подія стала справжнім відображенням вас.",
         
         heroCtaLine1: "GIVE US AN IDEA AND",
@@ -138,7 +138,7 @@ const translations = {
         ctaTitle: "С РАДОСТЬЮ РАССМОТРИМ ИДЕЮ ВАШЕГО БУДУЩЕГО СОБЫТИЯ",
         ctaDescription: "Каждый проект находится под личным сопровождением Юлии от первого контакта до финальной реализации. Личное сопровождение, стратегическое планирование и внимание к деталям формируют события, имеющие смысл, структуру и уникальный характер.",
         
-        consultationTitle: "НАЧНЕМ\nВАШУ РОСКОШНУЮ\nИСТОРИЮ",
+        consultationTitle: "НАЧНЕМ ВАШУ РОСКОШНУЮ ИСТОРИЮ",
         consultationDescription: "Поделитесь с нами своей мечтой, и мы поможем превратить ее в событие, созданное именно для вас. От идеи до реализации — каждое решение формируется вокруг ваших ценностей, стиля и настроения, чтобы событие стало настоящим отражением вас.",
         
         heroCtaLine1: "GIVE US AN IDEA AND",
@@ -217,7 +217,7 @@ const translations = {
         ctaTitle: "WE WILL GLADLY CONSIDER THE IDEA OF YOUR FUTURE EVENT",
         ctaDescription: "Each project is under Yulia's personal supervision from first contact to final implementation. Personal supervision, strategic planning and attention to detail create events that have meaning, structure and unique character.",
         
-        consultationTitle: "LET'S START\nYOUR LUXURIOUS\nSTORY",
+        consultationTitle: "LET'S START YOUR LUXURIOUS STORY",
         consultationDescription: "Share your dream with us and we will help turn it into an event created just for you. From idea to implementation — every decision is formed around your values, style and mood, so that the event becomes a true reflection of you.",
         
         heroCtaLine1: "GIVE US AN IDEA AND",
