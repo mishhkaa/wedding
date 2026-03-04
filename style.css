@@ -4666,17 +4666,16 @@ letter-spacing: 0.3px;
 
     .consultation-text-block {
         background-color: #fff;
-        padding: 100px 30px;
+        padding: 95px 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
         z-index: 1;
         margin-left: 0px;
-        width: 56%;
+        width: 50%;
         flex-shrink: 0;
-        min-height: 650px;
-        left: 66px;
+        min-height: 410px;
     }
 
     .consultation-text-block::before {
