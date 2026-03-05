@@ -4400,19 +4400,19 @@ letter-spacing: 0.3px;
 
     .services-main-image {
         order: 1;
-        width: 46%;
+        width: 47%;
         height: auto;
         aspect-ratio: 3/4;
-        margin: 0 1px 30px 0;
+        margin: 0 -1px 30px 0;
     }
 
     .image-mask {
         order: 1;
         position: relative;
-        width: 46%;
+        width: 47%;
         height: auto;
         aspect-ratio: 3/4;
-        margin: 0 1px 30px 0;
+        margin: 0 -1px 30px 0;
         left: 0;
         right: auto;
         top: auto;
@@ -4488,10 +4488,10 @@ letter-spacing: 0.3px;
     .services-small-image {
         order: 2 !important;
         position: relative !important;
-        width: calc(54% - 2px) !important;
+        width: 53% !important;
         height: auto !important;
         aspect-ratio: 3/4 !important;
-        margin: 0 0 30px 1px !important;
+        margin: 0 0 30px -1px !important;
         overflow: hidden !important;
         right: auto !important;
         top: auto !important;
@@ -4515,7 +4515,7 @@ letter-spacing: 0.3px;
 
     .services-small-image img[src*="4.jpg"] {
         margin-left: 0px !important;
-        right: 0 !important;
+        right: -9px !important;
     }
 
     .services-description {
