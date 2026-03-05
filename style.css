@@ -2869,11 +2869,11 @@ h3[data-translate="gridTitle2"] {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 18px;
         margin-top: 26px;
         padding-bottom: 10px;
-        margin-left: auto;
+        margin-left: 30px;
         margin-right: auto;
     }
 
@@ -2896,7 +2896,7 @@ h3[data-translate="gridTitle2"] {
     .book-text {
         margin-left: 0;
         max-width: 100%;
-        text-align: center;
+        text-align: left;
         flex: 1;
         font-size: 16px;
         line-height: 22px;
