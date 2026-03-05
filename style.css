@@ -4400,7 +4400,7 @@ letter-spacing: 0.3px;
 
     .services-main-image {
         order: 1;
-        width: 47%;
+        width: calc(47%);
         height: auto;
         aspect-ratio: 3/4;
         margin: 0 -1px 30px 0;
@@ -4409,7 +4409,7 @@ letter-spacing: 0.3px;
     .image-mask {
         order: 1;
         position: relative;
-        width: 47%;
+        width: calc(47% + 3px);
         height: auto;
         aspect-ratio: 3/4;
         margin: 0 -1px 30px 0;
@@ -4488,10 +4488,10 @@ letter-spacing: 0.3px;
     .services-small-image {
         order: 2 !important;
         position: relative !important;
-        width: 53% !important;
+        width: calc(53% + -8px) !important;
         height: auto !important;
-        aspect-ratio: 3/4 !important;
-        margin: 0 0 30px -1px !important;
+        /* aspect-ratio: 3 / 4 !important; */
+        margin: 0 0 30px 2px !important;
         overflow: hidden !important;
         right: auto !important;
         top: auto !important;
