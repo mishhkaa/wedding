@@ -35,8 +35,8 @@ const translations = {
         aboutRole3: "ВИСОКОГО РІВНЯ",
         aboutDescription: "Юлія працює з подіями як із продюсерськими проєктами, у яких стратегія, простір і сценарій формують єдину систему. Її підхід базується на чіткому управлінні процесами, високих естетичних стандартах і здатності реалізовувати складні формати подій у різних культурних контекстах. Кожен проєкт вибудовується як індивідуальне рішення — від концепції та просторової логіки до сценарію, команди й фінальної реалізації. Такий підхід дозволяє створювати події, що зберігають цілісність, масштаб і якість незалежно від локації, формату чи рівня складності.",
         bookText1: "Познайомитися з",
-        bookText2: "філософією життя Юлії",
-        bookText3: "можна у книзі",
+        bookText2: "філософією життя ",
+        bookText3: "Юлії можна у книзі",
         bookTitle: "\"Смакувати життя\"",
         
         testimonial1Names: "MARK & SOFIA, DESTINATION WEDDING",
@@ -114,8 +114,8 @@ const translations = {
         aboutRole3: "ВЫСОКОГО УРОВНЯ",
         aboutDescription: "Юлия работает с событиями как с продюсерскими проектами, в которых стратегия, пространство и сценарий формируют единую систему. Ее подход основан на четком управлении процессами, высоких эстетических стандартах и способности реализовывать сложные форматы событий в разных культурных контекстах. Каждый проект выстраивается как индивидуальное решение — от концепции и пространственной логики до сценария, команды и финальной реализации. Такой подход позволяет создавать события, сохраняющие целостность, масштаб и качество независимо от локации, формата или уровня сложности.",
         bookText1: "Познакомиться с",
-        bookText2: "философией жизни Юлии",
-        bookText3: "можно в книге",
+        bookText2: "философией жизни ",
+        bookText3: "Юлии можно в книге",
         bookTitle: "\"Вкушать жизнь\"",
         
         testimonial1Names: "MARK & SOFIA, DESTINATION WEDDING",
@@ -193,8 +193,8 @@ const translations = {
         aboutRole3: "HIGH-LEVEL EVENTS",
         aboutDescription: "Yulia works with events as production projects in which strategy, space and scenario form a unified system. Her approach is based on clear process management, high aesthetic standards and the ability to implement complex event formats in different cultural contexts. Each project is built as an individual solution — from concept and spatial logic to scenario, team and final implementation. This approach allows creating events that maintain integrity, scale and quality regardless of location, format or level of complexity.",
         bookText1: "Get acquainted with",
-        bookText2: "Yulia's life philosophy",
-        bookText3: "in the book",
+        bookText2: "the life philosophy",
+        bookText3: "of Yulia in the book",
         bookTitle: "\"Savor Life\"",
         
         testimonial1Names: "MARK & SOFIA, DESTINATION WEDDING",

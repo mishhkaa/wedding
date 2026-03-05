@@ -1595,7 +1595,7 @@ h3[data-translate="gridTitle2"] {
         bottom: auto !important;
         left: auto !important;
         width: 100% !important;
-        max-width: 420px !important;
+        max-width: 440px !important;
         aspect-ratio: 420 / 545 !important;
         height: auto !important;
         margin: 0 !important;
@@ -1886,7 +1886,6 @@ h3[data-translate="gridTitle2"] {
     /* Мобільні — усі заголовки font-weight 400 */
     .intro-title,
     .feature-title,
-    .grid-title,
     .about-title,
     .services-title,
     .consultation-title,
@@ -2003,7 +2002,7 @@ h3[data-translate="gridTitle2"] {
         align-self: center;
         width: auto;
         height: 40px;
-        padding: 0 32px;
+        padding: 0 38px;
         margin-top: 0;
     }
 
@@ -2056,7 +2055,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .combined-section {
-        padding: 35px 32px;
+        padding: 35px 32px 34px 32px;
     }
 
     .combined-section .feature-content {
@@ -2121,7 +2120,7 @@ h3[data-translate="gridTitle2"] {
         align-self: center;
         width: auto;
         height: 48px;
-        padding: 0 40px;
+        padding: 0 38px;
         font-size: 13px;
         margin-top: 0;
     }
@@ -2151,7 +2150,6 @@ h3[data-translate="gridTitle2"] {
     .grid-title
 {
     font-weight: 400 !important;
-    -webkit-font-smoothing: antialiased !important;
 }
 
     .grid-text {
@@ -2537,7 +2535,7 @@ h3[data-translate="gridTitle2"] {
 /* Mobile */
 @media (max-width: 600px) {
     .about-section {
-        padding: 40px 32px;
+        padding: 40px 24px;
     }
 
     .about-content {
@@ -2582,18 +2580,25 @@ h3[data-translate="gridTitle2"] {
     }
 
     .about-text-wrapper {
-        padding: 40px 24px 5px 24px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: -60px;
+        padding: 34px 24px 20px 24px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -48px;
         position: relative;
         z-index: 1;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .about-text-content {
         text-align: center;
         align-items: center;
-        gap: 26px;
+        justify-content: center;
+        gap: 24px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
     }
 
     .about-title {
@@ -2615,6 +2620,9 @@ h3[data-translate="gridTitle2"] {
         line-height: 20px;
         letter-spacing: 0.02em;
         text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
     }
 
     .about-btn {
@@ -2625,10 +2633,10 @@ h3[data-translate="gridTitle2"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        line-height: 20px;
+        line-height: 18px;
     }
     .testimonials-section1 {
-        padding: 130px 40px 80px 40px;
+        padding: 130px 32px 74px 32px;
         max-width: 900px;
         margin: -170px auto 0 auto;
         text-align: center;
@@ -2810,7 +2818,7 @@ h3[data-translate="gridTitle2"] {
 /* Mobile */
 @media (max-width: 600px) {
     .testimonials-section {
-        padding: 50px 32px 110px 32px;
+        padding: 50px 32px 140px 32px;
     }
 
     .testimonial-content {
@@ -2826,8 +2834,8 @@ h3[data-translate="gridTitle2"] {
     }
 
     .testimonial-content {
-        gap: 15px;
-        margin-top: 80px;
+        gap: 12px;
+        margin-top: 74px;
     }
 
     .testimonial-photo {
@@ -2836,31 +2844,37 @@ h3[data-translate="gridTitle2"] {
     }
 
     .testimonial-names {
-        font-size: 11px;
+        font-size: 12px;
         letter-spacing: 0.24em;
         line-height: 130%;
-        max-width: 300px;
+        max-width: 290px;
+        margin-top: 4px;
     }
 
     .testimonial-text {
         font-size: 20px;
-        line-height: 22px;
+        line-height: 23px;
         letter-spacing: -0.02em;
     }
 
     .testimonial-btn {
         width: 100%;
         height: 64px;
+        margin-top: 22px;
     }
 
     .book-section {
         padding-left: 0;
+        padding-right: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 15px;
+        justify-content: center;
+        gap: 18px;
         margin-top: 26px;
         padding-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .book-image {
@@ -2882,7 +2896,7 @@ h3[data-translate="gridTitle2"] {
     .book-text {
         margin-left: 0;
         max-width: 100%;
-        text-align: left;
+        text-align: center;
         flex: 1;
         font-size: 16px;
         line-height: 22px;
@@ -2891,8 +2905,8 @@ h3[data-translate="gridTitle2"] {
 
     .book-text p {
         margin: 0;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 18px;
+        line-height: 20px;
     }
 
     .book-title {
@@ -3308,14 +3322,19 @@ h3[data-translate="gridTitle2"] {
         width: 100%;
         max-width: 100%;
         margin-top: -80px;
+        position: relative;
     }
 
     .cta-image img {
-        width: 100%;
-        max-width: 100%;
+        width: 105%;
+        max-width: 105%;
         height: auto;
         object-fit: contain;
         margin-top: 20px;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .cta-image-overlay {
@@ -3327,8 +3346,8 @@ h3[data-translate="gridTitle2"] {
     }
 
     .cta-text-wrapper {
-        padding: 80px 32px 80px 24px;
-        gap: 20px;
+        padding: 50px 35px 50px 35px;
+        gap: 16px;
     }
 
     .cta-title {
@@ -3341,7 +3360,7 @@ h3[data-translate="gridTitle2"] {
 
     .cta-description {
         font-size: 15px;
-        line-height: 20px;
+        line-height: 23px;
         letter-spacing: 0.02em;
         text-align: justify;
     }
@@ -3350,6 +3369,7 @@ h3[data-translate="gridTitle2"] {
         align-self: stretch;
         width: 100%;
         height: 58px;
+        margin-top: 8px;
     }
 }
 
@@ -3610,12 +3630,12 @@ letter-spacing: 0.3px;
 /* Mobile */
 @media (max-width: 600px) {
     .locations-section {
-        padding: 30px 0;
+        padding: 24px 0 30px 0;
     }
 
     .locations-title {
         font-size: 32px;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
         max-width: 380px;
         margin-left: auto;
         margin-right: auto;
@@ -3643,6 +3663,7 @@ letter-spacing: 0.3px;
 
     .locations-gallery-container {
         padding: 0;
+        gap: 11px;
     }
 
     .locations-cities-container {
@@ -3657,8 +3678,9 @@ letter-spacing: 0.3px;
 
     .locations-text-blocks {
         grid-template-columns: 1fr;
-        gap: 1px;
-        padding: 0 40px 0 5px;
+        gap: 0px;
+        padding: 0 38px 0 5px;
+        margin-top: -24px;
     }
 
     .location-text-block p {
@@ -3699,7 +3721,7 @@ letter-spacing: 0.3px;
 }
 
 .services-main-image {
-    width: 420px;
+    width: 440px;
     height: 545px;
     overflow: hidden;
     margin-left: auto;
@@ -3730,7 +3752,7 @@ letter-spacing: 0.3px;
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
     aspect-ratio: 420 / 545;
     height: auto;
     margin: 0;
@@ -3840,7 +3862,7 @@ letter-spacing: 0.3px;
 }
 
 .services-small-image {
-    width: 360px;
+    width: 380px;
     max-width: 100%;
     aspect-ratio: 360 / 544;
     height: auto;
@@ -3875,7 +3897,7 @@ letter-spacing: 0.3px;
         position: relative !important;
         right: auto !important;
         top: auto !important;
-        width: 360px !important;
+        width: 380px !important;
         max-width: 100% !important;
         aspect-ratio: 360 / 544 !important;
         height: auto !important;
@@ -3918,7 +3940,7 @@ letter-spacing: 0.3px;
     }
 
     .services-main-image {
-        width: 420px;
+        width: 440px;
         height: 545px;
         overflow: hidden;
         margin-left: auto;
@@ -3929,7 +3951,7 @@ letter-spacing: 0.3px;
     .image-mask {
         position: relative;
         width: 100%;
-        max-width: 420px;
+        max-width: 440px;
         aspect-ratio: 420 / 545;
         height: auto;
         margin: 0;
@@ -4009,7 +4031,7 @@ letter-spacing: 0.3px;
     }
 
     .services-small-image {
-        width: 360px;
+        width: 380px;
         max-width: 100%;
         aspect-ratio: 360 / 544;
         height: auto;
@@ -4173,7 +4195,7 @@ letter-spacing: 0.3px;
 
     .services-small-image {
         width: 100% !important;
-        max-width: 280px !important;
+        max-width: 300px !important;
         height: auto !important;
         aspect-ratio: 360 / 544 !important;
         overflow: visible !important;
@@ -4254,7 +4276,7 @@ letter-spacing: 0.3px;
         bottom: auto !important;
         left: auto !important;
         width: 100% !important;
-        max-width: min(420px, 100%) !important;
+        max-width: min(440px, 100%) !important;
         aspect-ratio: 420 / 545 !important;
         height: auto !important;
         margin: 0 !important;
@@ -4290,7 +4312,7 @@ letter-spacing: 0.3px;
     }
 
     .services-main-image {
-        width: 420px !important;
+        width: 440px !important;
         height: auto !important;
         overflow: hidden !important;
         margin-left: auto !important;
@@ -4327,7 +4349,7 @@ letter-spacing: 0.3px;
     }
 
     .services-small-image {
-        width: 360px !important;
+        width: 380px !important;
         max-width: 100% !important;
         aspect-ratio: 360 / 544 !important;
         height: auto !important;
@@ -4369,6 +4391,7 @@ letter-spacing: 0.3px;
         padding-top: 0;
         padding-left: 32px;
         padding-right: 32px;
+        padding-bottom: 10px;
     }
 
     .services-left {
@@ -4377,19 +4400,19 @@ letter-spacing: 0.3px;
 
     .services-main-image {
         order: 1;
-        width: 45%;
+        width: 46%;
         height: auto;
         aspect-ratio: 3/4;
-        margin: 0 5px 30px 0;
+        margin: 0 1px 30px 0;
     }
 
     .image-mask {
         order: 1;
         position: relative;
-        width: 45%;
+        width: 46%;
         height: auto;
         aspect-ratio: 3/4;
-        margin: 0 5px 30px 0;
+        margin: 0 1px 30px 0;
         left: 0;
         right: auto;
         top: auto;
@@ -4416,6 +4439,12 @@ letter-spacing: 0.3px;
         display: block;
         margin: 0;
         transform: none;
+        left: 4px;
+        position: relative;
+    }
+
+    .services-main-slide[src*="Rectangle 44.png"] {
+        left: 0px !important;
     }
 
     .services-text-block {
@@ -4430,6 +4459,7 @@ letter-spacing: 0.3px;
         align-items: center;
         flex-basis: 100%;
         gap: 5px;
+        padding-left: 0;
     }
 
     .services-right {
@@ -4446,21 +4476,22 @@ letter-spacing: 0.3px;
         font-size: 23px;
         letter-spacing: 0.04em;
         line-height: 1.35;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         text-align: center;
         width: 100%;
         flex-basis: 100%;
         text-align: left;
         transform: none;
+        margin-top: -15px;
     }
 
     .services-small-image {
         order: 2 !important;
         position: relative !important;
-        width: calc(55% - 10px) !important;
+        width: calc(54% - 2px) !important;
         height: auto !important;
         aspect-ratio: 3/4 !important;
-        margin: 0 0 30px 5px !important;
+        margin: 0 0 30px 1px !important;
         overflow: hidden !important;
         right: auto !important;
         top: auto !important;
@@ -4477,30 +4508,39 @@ letter-spacing: 0.3px;
         display: block !important;
         margin: 0 !important;
         position: relative !important;
-        right: auto !important;
+        right: 10px !important;
         top: auto !important;
         left: auto !important;
     }
 
+    .services-small-image img[src*="4.jpg"] {
+        margin-left: 0px !important;
+        right: 0 !important;
+    }
+
     .services-description {
         font-size: 14px;
-        line-height: 22px;
-        letter-spacing: 0.02em;
+        line-height: 23px;
+        letter-spacing: 0.3px;
         text-align: justify;
         margin-bottom: 20px;
         width: 100%;
+        padding-left: 0;
+        align-self: stretch;
     }
 
     .services-btn {
         align-self: stretch;
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
     .services-section {
-        padding: 60px 0;
+        padding: 44px 0;
     }
 
     .services-content {
@@ -4736,7 +4776,7 @@ letter-spacing: 0.3px;
 /* Мобільна версія блоку консультації — до 740px (стек: фото зверху, текст знизу, без фото зліва/текст справа) */
 @media (max-width: 740px) {
     .consultation-section {
-        padding: 60px 32px;
+        padding: 60px 32px 74px 32px;
         background-color: #fff;
         overflow: visible;
     }
@@ -4770,6 +4810,7 @@ letter-spacing: 0.3px;
         object-fit: contain;
         display: block;
         right: auto !important;
+        margin-top: -120px;
     }
 
     .consultation-text-block {
@@ -4795,22 +4836,23 @@ letter-spacing: 0.3px;
         font-size: 28px;
         letter-spacing: 0.02em;
         line-height: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         text-align: left;
+        margin-top: -14px;
     }
 
     .consultation-description {
         font-size: 15px;
-        line-height: 20px;
+        line-height: 23px;
         letter-spacing: 0.02em;
         text-align: justify;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .consultation-btn {
         align-self: stretch;
         width: 100%;
-        padding: 15px 30px;
+        padding: 15px 4px;
     }
 }
 
