@@ -822,7 +822,7 @@ body.menu-open {
 
 /* Intro Section */
 .intro-section {
-    padding: 100px 40px;
+    padding: 112px 40px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -867,7 +867,7 @@ body.menu-open {
 
 /* Combined Section */
 .combined-section {
-    padding: 0 40px 100px 40px;
+    padding: 0 40px 112px 40px;
     max-width: 1175px;
     margin: 0 auto;
     width: 100%;
@@ -902,7 +902,7 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 0 60px;
+    padding: 0 30px 0 90px;
 }
 
 .feature-title {
@@ -983,6 +983,7 @@ body.menu-open {
     transition: opacity 0.4s ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
 }
 
 .feature-image-slide.active {
@@ -1032,6 +1033,8 @@ body.menu-open {
     height: 100%;
     object-fit: contain;
     display: block;
+    left: 20px;
+    position: relative;
 }
 
 .grid-container .grid-image:first-child {
@@ -1058,6 +1061,8 @@ body.menu-open {
     flex-direction: column;
     justify-content: center;
     gap: 16px;
+    left: 25px;
+    position: relative;
 }
 
 .grid-title {
@@ -2246,7 +2251,7 @@ h3[data-translate="gridTitle2"] {
     object-fit: cover;
     object-position: center top;
     display: block;
-    margin-bottom: -110px;
+    margin-bottom: -200px;
     margin-top: 40px;
 }
 
@@ -2395,8 +2400,9 @@ h3[data-translate="gridTitle2"] {
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1200px) {
     .about-section {
-        padding: 0px 40px;
+        padding: 0px 0px;
     }
+    
 
     .about-content {
         grid-template-columns: 1fr 1fr;
@@ -2439,7 +2445,7 @@ h3[data-translate="gridTitle2"] {
         object-fit: cover;
         object-position: center top;
         display: block;
-        margin-bottom: -110px;
+        margin-bottom: -350px;
         margin-top: 40px;
     }
 
@@ -2663,7 +2669,7 @@ h3[data-translate="gridTitle2"] {
 /* Десктопні стилі для testimonials-section1 */
 @media (min-width: 601px) {
     .testimonials-section1 {
-        padding: 220px 40px 100px 40px;
+        padding: 220px 40px 112px 40px;
         max-width: 900px;
         margin: -100px auto 0 auto;
         text-align: center;
@@ -2720,6 +2726,7 @@ h3[data-translate="gridTitle2"] {
     letter-spacing: -0.52px;
     max-width: 846px;
     margin: 0;
+    margin-top: -5px;
 }
 
 .testimonial-btn {
@@ -3059,6 +3066,8 @@ h3[data-translate="gridTitle2"] {
     object-position: center bottom;
     display: block;
     vertical-align: bottom;
+    left: 40px;
+    position: relative;
 }
 
 .cta-text-wrapper {
@@ -3174,8 +3183,10 @@ h3[data-translate="gridTitle2"] {
 /* Великі екрани — більший правий відступ у тексту */
 @media (min-width: 1201px) {
     .cta-text-wrapper {
-        padding: 64px 160px 88px 48px;
-        max-width: 700px;
+        padding: 64px 208px 88px 0px;
+        max-width: 660px;
+        left: 70px;
+        position: relative;
     }
 }
 
@@ -3375,7 +3386,7 @@ h3[data-translate="gridTitle2"] {
 
 /* Locations Section */
 .locations-section {
-    padding: 62px 0;
+    padding: 82px 0 62px 0;
     margin: 0;
     width: 100%;
     max-width: none;
@@ -3582,6 +3593,17 @@ letter-spacing: 0.3px;
     .locations-section {
         padding: 62px 0;
     }
+    .cta-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 420 / 550;
+        object-fit: cover;
+        object-position: center bottom;
+        display: block;
+        vertical-align: bottom;
+        left: 0;
+
+    }
 
     .locations-title {
         color: var(--black, #31302E);
@@ -3696,7 +3718,7 @@ letter-spacing: 0.3px;
     background-color: rgb(255, 255, 255);
     position: relative;
     margin-bottom: -100px;
-    padding: 10px 0 60px;
+    padding: 10px 0 90px;
 }
 
 .services-content {
@@ -3759,10 +3781,86 @@ letter-spacing: 0.3px;
     flex-shrink: 0;
 }
 
-/* 1200–1300px: обмежуємо ширину контенту Services (карусель не розтягується) */
+
+
+/* 1200–1300px: такі самі стилі як для 1300px+ */
 @media (min-width: 1200px) and (max-width: 1300px) {
+    .services-section {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        margin-bottom: -100px;
+        padding: 10px 0 90px;
+    }
+
     .services-content {
-        max-width: 1200px;
+        display: grid;
+        grid-template-columns: minmax(280px, 480px) minmax(280px, 460px);
+        gap: 56px 72px;
+        align-items: start;
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 40px;
+        box-sizing: border-box;
+        justify-content: center;
+        overflow: visible;
+    }
+
+    .services-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 56px;
+        margin-top: 48px;
+    }
+
+    .services-right {
+        display: grid;
+        grid-template-rows: 545px auto;
+        gap: 56px;
+        align-items: start;
+        padding-top: 0;
+        padding-right: 56px;
+        overflow: visible;
+    }
+
+    .services-title {
+        font-family: 'Cormorant', serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        line-height: 115%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(49, 48, 46, 1);
+        margin: 0;
+        transform: translateX(-50px);
+        text-align: left;
+        max-width: 100%;
+        min-width: 0;
+        align-self: center;
+        justify-self: end;
+        overflow: visible;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .services-small-image {
+        width: 380px;
+        max-width: 100%;
+        aspect-ratio: 360 / 544;
+        height: auto;
+        overflow: visible;
+        position: relative;
+        margin-bottom: -150px;
+        margin-top: -48px;
+        z-index: 1;
+        margin-left: auto;
+        margin-right: 48px;
+        flex-shrink: 0;
+        justify-self: end;
     }
 }
 
@@ -3770,6 +3868,28 @@ letter-spacing: 0.3px;
 @media (min-width: 1201px) {
     .services-right {
         padding-right: 56px;
+    }
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .about-main-image img {
+        width: 100%;
+        height: calc(100% + 40px);
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        margin-bottom: -200px;
+        margin-top: 40px;
+    }
+}
+@media (min-width: 1401px) {
+    .about-main-image img {
+        width: 100%;
+        height: calc(100% + 40px);
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        margin-bottom: -95px;
+        margin-top: 40px;
     }
 }
 
@@ -3785,8 +3905,10 @@ letter-spacing: 0.3px;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
-    margin-top: 0;
+    margin-top: 60px;
     padding-left: 12px;
+    left: 50px;
+    position: relative;
 }
 
 .services-description {
@@ -3852,14 +3974,6 @@ letter-spacing: 0.3px;
     word-wrap: break-word;
 }
 
-/* Костиль для діапазону 1200–1290px: трохи відсуваємо заголовок вправо */
-@media (min-width: 1200px) and (max-width: 1290px) {
-    .services-title {
-        margin-left: 0;
-        width: 443px;
-        transform: none;
-    }
-}
 
 .services-small-image {
     width: 380px;
@@ -3879,12 +3993,13 @@ letter-spacing: 0.3px;
 
 .services-small-image img {
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: contain;
     display: block;
     position: relative;
     right: 0;
-    margin-top: -50px;
+    margin-top: 45px;
+    left: 50px;
 }
 
 /* Десктопні стилі - переконаємося, що вони не перекриваються мобільними */
@@ -4551,7 +4666,7 @@ letter-spacing: 0.3px;
 
 /* Consultation Section */
 .consultation-section {
-    padding: 100px 40px;
+    padding: 112px 40px;
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
@@ -4593,7 +4708,7 @@ letter-spacing: 0.3px;
 
 .consultation-text-block {
     background-color: #fff;
-    padding: 175px 60px;
+    padding: 160px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4638,6 +4753,8 @@ letter-spacing: 0.3px;
     text-align: justify;
     color: rgba(49, 48, 46, 1);
     margin: 0 0 25px 0;
+    max-width: 450px;
+    
 }
 
 .consultation-btn {
@@ -4659,6 +4776,46 @@ letter-spacing: 0.3px;
     align-self: flex-start;
 }
 
+/* Фіксація розміру зображення від 1200px до максимальної ширини */
+@media (min-width: 1200px) {
+    .consultation-section {
+        max-width: 1400px;
+    }
+
+    .consultation-image {
+        width: 420px !important;
+        min-width: 420px !important;
+        max-width: 420px !important;
+        min-height: 600px;
+        flex-shrink: 0 !important;
+    }
+
+    .consultation-image img {
+        width: 420px !important;
+        max-width: 420px !important;
+        min-width: 420px !important;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        position: relative;
+        right: 0;
+    }
+}
+@media (min-width: 1301px)  {
+    .consultation-text-block {
+        background-color: #fff;
+        padding: 190px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        margin-left: 0px;
+        width: 50%;
+        flex-shrink: 0;
+        min-height: 620px;
+    }
+}
 
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1200px) {
