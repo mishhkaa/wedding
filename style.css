@@ -1123,7 +1123,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .intro-section {
-        padding: 100px 40px;
+        padding: 112px 10px;
         text-align: center;
     }
 
@@ -1194,7 +1194,7 @@ h3[data-translate="gridTitle2"] {
         order: 0;
         display: flex;
         flex-direction: column;
-        padding: 0 60px;
+        padding: 0 48px 0 0px;
         margin-top: 0;
         gap: 16px;
         width: auto;
@@ -1283,7 +1283,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .combined-section {
-        padding: 0 40px 100px 40px;
+        padding: 0 40px 112px 40px;
     }
 
     .combined-section .feature-content {
@@ -1330,6 +1330,18 @@ h3[data-translate="gridTitle2"] {
         height: 100%;
         object-fit: contain;
         display: block;
+        left: -20px;
+        position: relative;
+    }
+
+    /* Окремий стиль для зображення 3.jpg, щоб воно не перепліталося */
+    .grid-container .grid-image:last-child img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        left: 50px;
+        position: relative;
     }
 
     .grid-text {
@@ -1344,7 +1356,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .grid-text1 {
-        padding: 140px 0px 80px 110px;
+        padding: 140px 10px 80px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1383,7 +1395,7 @@ h3[data-translate="gridTitle2"] {
 
 @media (min-width: 601px) and (max-width: 1200px) {
     .grid-text {
-        padding: 140px 20px 80px 55px;
+        padding: 140px 30px 80px 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2759,7 +2771,7 @@ h3[data-translate="gridTitle2"] {
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1200px) {
     .testimonials-section1 {
-        padding: 220px 40px 100px 40px;
+        padding: 220px 40px 112px 40px;
         max-width: 900px;
         margin: -100px auto 0 auto;
         text-align: center;
@@ -2770,7 +2782,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .testimonials-section {
-        padding: 270px 40px 0px 40px;
+        padding: 292px 40px 0px 40px;
         max-width: 900px;
         margin: -100px auto 0 auto;
         text-align: center;
@@ -3176,7 +3188,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .cta-text-wrapper {
-        padding: 64px 48px 88px 48px;
+        padding: 64px 48px 88px 15px;
     }
 }
 
@@ -3591,17 +3603,18 @@ letter-spacing: 0.3px;
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1200px) {
     .locations-section {
-        padding: 62px 0;
+        padding: 112px 0 22px 0;
     }
     .cta-image img {
-        width: 100%;
+        width: 115%;
         height: auto;
         aspect-ratio: 420 / 550;
         object-fit: cover;
         object-position: center bottom;
         display: block;
         vertical-align: bottom;
-        left: 0;
+        left: -90px;
+        margin-top: -30px;
 
     }
 
@@ -3631,10 +3644,10 @@ letter-spacing: 0.3px;
     .locations-text-blocks {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        gap: 20px;
         max-width: 1200px;
         margin: -30px auto 0 auto;
-        padding: 0 40px;
+        padding: 0 0px;
         box-sizing: border-box;
     }
 
@@ -3724,11 +3737,11 @@ letter-spacing: 0.3px;
 .services-content {
     display: grid;
     grid-template-columns: minmax(280px, 480px) minmax(280px, 460px);
-    gap: 56px 72px;
+    gap: 56px 90px;
     align-items: start;
     max-width: 1040px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
     box-sizing: border-box;
     justify-content: center;
     overflow: visible;
@@ -3941,6 +3954,7 @@ letter-spacing: 0.3px;
     transition: all 0.3s ease;
     align-self: flex-start;
     border-radius: 0;
+    margin-left: 18px;
 }
 
 
@@ -4345,7 +4359,7 @@ letter-spacing: 0.3px;
     .services-section {
         position: relative !important;
         overflow: visible !important;
-        padding: 60px 0 60px 50px !important;
+        padding: 60px 0 60px 0px !important;
         background-color: #fff !important;
     }
 
@@ -4438,11 +4452,12 @@ letter-spacing: 0.3px;
     .services-text-block {
         display: flex !important;
         flex-direction: column !important;
-        gap: 40px !important;
+        gap: 24px !important;
         margin-left: 0 !important;
         max-width: 100% !important;
-        margin-top: 0 !important;
-        padding-left: 12px !important;
+        margin-top: 70px !important;
+        padding-left: 0px !important;
+        left: 20px;
     }
 
     .services-title {
@@ -4484,7 +4499,7 @@ letter-spacing: 0.3px;
         display: block !important;
         position: relative !important;
         right: 0 !important;
-        margin-top: -50px !important;
+        margin-top: 30px !important;
     }
 }
 
@@ -4820,7 +4835,7 @@ letter-spacing: 0.3px;
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1200px) {
     .consultation-section {
-        padding: 100px 40px;
+        padding: 112px 40px;
         max-width: 1400px;
         margin: 0 auto;
         width: 100%;
@@ -4857,28 +4872,29 @@ letter-spacing: 0.3px;
         height: auto;
         object-fit: contain;
         display: block;
-        right: 70px;
+        right: 30px;
         position: relative;
     }
 
     .consultation-text-block {
         background-color: #fff;
-        padding: 95px 60px;
+        padding: 130px 0px 130px 140px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
         z-index: 1;
         margin-left: 0px;
-        width: 50%;
+        width: 75%;
         flex-shrink: 0;
         min-height: 410px;
+        left: 30px;
     }
 
     .consultation-text-block::before {
         content: '';
         position: absolute;
-        left: -30%;
+        left: -15%;
         top: 0;
         bottom: 0;
         width: 30%;
@@ -4896,6 +4912,7 @@ letter-spacing: 0.3px;
         text-transform: uppercase;
         color: rgba(49, 48, 46, 1);
         margin: 0 0 25px 0;
+        max-width: 450px;
     }
 
     .consultation-description {
