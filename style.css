@@ -1004,7 +1004,7 @@ body.menu-open {
 }
 
 .combined-section .grid-container {
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .grid-container {
@@ -1291,7 +1291,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .combined-section .grid-container {
-        margin-top: 100px;
+        margin-top: 130px;
     }
 
     .grid-section {
@@ -2117,6 +2117,7 @@ h3[data-translate="gridTitle2"] {
         height: auto;
         max-width: 100%;
         display: block;
+        left: 0;
     }
 
     .grid-text {
@@ -2174,6 +2175,7 @@ h3[data-translate="gridTitle2"] {
     }
     .grid-text1 {
         text-align: left;
+        left: 0;
     }
 
 
@@ -4590,6 +4592,7 @@ letter-spacing: 0.3px;
         flex-basis: 100%;
         gap: 5px;
         padding-left: 0;
+        left: 0;
     }
 
     .services-right {
@@ -5205,7 +5208,7 @@ letter-spacing: 0.3px;
 }
 
 .footer-content {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
