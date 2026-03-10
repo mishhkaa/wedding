@@ -36,6 +36,7 @@ html {
     font-weight: 300 !important;
 }
 
+
 body.menu-open {
     overflow: hidden;
 }
@@ -1912,9 +1913,12 @@ h3[data-translate="gridTitle2"] {
     .locations-title,
     .hero-cta-title,
     .book-title,
-    .instagram-title,
     .testimonial-names {
         font-weight: 400 !important;
+    }
+
+    .instagram-title {
+        font-weight: 500 !important;
     }
 
     .mobile-brand-logo {
@@ -5215,7 +5219,7 @@ letter-spacing: 0.3px;
 .footer-content {
     display: grid;
     grid-template-columns: auto 1fr 1fr 1fr;
-    gap: 80px;
+    gap: 56px;
     align-items: start;
 }
 
@@ -5413,7 +5417,7 @@ letter-spacing: 0.3px;
     }
 
     .footer-content {
-        gap: 70px;
+        gap: 56px;
     }
 
     .footer-nav {
@@ -5427,7 +5431,7 @@ letter-spacing: 0.3px;
     }
 
     .footer-content {
-        gap: 60px;
+        gap: 56px;
     }
 
     .footer-nav {
@@ -5462,7 +5466,7 @@ letter-spacing: 0.3px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: auto 1fr 1fr 1fr;
-        gap: 60px;
+        gap: 36px;
         align-items: start;
     }
 
@@ -5695,12 +5699,12 @@ letter-spacing: 0.3px;
 }
 
 .instagram-title {
-    font-family: 'Cormorant', serif;
-    font-weight: 300;
-    font-style: normal;
+    font-family: Cormorant, serif;
     font-size: 26px;
-    line-height: 28px;
-    letter-spacing: -0.02em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 107.692% */
+    letter-spacing: -0.52px;
     text-align: center;
     color: rgba(49, 48, 46, 1);
     margin-bottom: 18px;
@@ -5792,12 +5796,12 @@ letter-spacing: 0.3px;
     }
 
     .instagram-title {
-        font-family: 'Cormorant', serif;
-        font-weight: 300;
-        font-style: normal;
+        font-family: Cormorant, serif;
         font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
         line-height: 28px;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.52px;
         text-align: center;
         color: rgba(49, 48, 46, 1);
         margin-bottom: 18px;
