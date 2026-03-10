@@ -1898,7 +1898,9 @@ h3[data-translate="gridTitle2"] {
         /* -webkit-font-smoothing: antialiased !important; */
     }
 }
-
+.instagram-title {
+    font-weight: 400 !important;
+}
 /* Mobile */
 @media (max-width: 600px) {
     /* Мобільні — усі заголовки font-weight 400 */
@@ -1918,7 +1920,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .instagram-title {
-        font-weight: 500 !important;
+        font-weight: 400 !important;
     }
 
     .mobile-brand-logo {
