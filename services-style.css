@@ -1,0 +1,1670 @@
+/* Services Page Styles */
+
+/* Hero Section */
+.services-hero {
+    position: relative;
+    width: 100%;
+    height: 716px;
+    overflow: hidden;
+}
+
+.services-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.services-hero-video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 822px;
+}
+
+.services-hero-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: normal;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+/* Intro Section */
+.services-intro-section {
+    padding: 112px 0;
+    background-color: #F8F3ED;
+}
+
+.services-intro-container {
+    max-width: 846px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.services-intro-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: normal;
+    color: #31302e;
+    text-align: center;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.services-intro-text {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: normal;
+    color: #31302e;
+    text-align: justify;
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+.services-intro-text p {
+    margin: 0;
+}
+
+.services-intro-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 24px 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Services Content Section */
+.services-content-section {
+    background-color: #F8F3ED;
+    padding: 0;
+}
+
+/* Wedding Block */
+.services-wedding-block {
+    padding: 0;
+    margin-bottom: 94px;
+}
+
+.services-wedding-content {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    padding: 0 244px 0 244px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.services-wedding-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 446px;
+    flex-shrink: 0;
+}
+
+.services-wedding-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.services-wedding-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+}
+
+.services-wedding-subtitle {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.15px;
+    margin: 0;
+}
+
+.services-wedding-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.services-wedding-description p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.services-wedding-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.services-wedding-image {
+    width: 512px;
+    height: 692px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-wedding-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gallery Section */
+.services-gallery {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 94px;
+    padding: 0;
+}
+
+.services-gallery-item {
+    width: 448px;
+    height: 616px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-gallery-item:first-child {
+    margin-left: -188.5px;
+}
+
+.services-gallery-item:last-child {
+    margin-right: -188.5px;
+}
+
+.services-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Proposal Block */
+.services-proposal-block {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 230px;
+}
+
+.services-proposal-image {
+    width: 490px;
+    height: 676px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-proposal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.services-proposal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 446px;
+    flex-shrink: 0;
+}
+
+.services-proposal-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.services-proposal-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+}
+
+.services-proposal-subtitle {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.15px;
+    margin: 0;
+}
+
+.services-proposal-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.services-proposal-description p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.services-proposal-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+/* Feedback Section */
+.services-feedback-section {
+    background-color: white;
+    padding: 112px 0;
+    margin-bottom: -30px;
+}
+
+.services-feedback-container {
+    max-width: 846px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.services-feedback-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.services-feedback-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.services-feedback-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.services-feedback-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    color: #31302e;
+}
+
+.services-feedback-name {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.services-feedback-quote {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 28px;
+    letter-spacing: -0.52px;
+    margin: 0;
+}
+
+/* Parties Section */
+.services-parties-section {
+    background-color: #F8F3ED;
+    padding: 0;
+}
+
+.services-parties-block {
+    display: flex;
+    gap: 44px;
+    align-items: end;
+    max-width: 984px;
+    margin: 0 auto;
+    padding: 0 228px 94px 228px;
+}
+
+.services-parties-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 400px;
+    flex-shrink: 0;
+    padding-top: 100px;
+}
+
+.services-parties-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+}
+
+.services-parties-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.services-parties-description p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.services-parties-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.services-parties-image {
+    width: 540px;
+    height: 692px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-parties-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Chamber Parties Block */
+.services-chamber-parties-block {
+    display: flex;
+    gap: 54px;
+    align-items: end;
+    max-width: 915px;
+    margin: 0 auto;
+    padding: 0 34.5px 94px 34.5px;
+}
+
+.services-chamber-parties-image {
+    width: 461px;
+    height: 630px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-chamber-parties-image img {
+    width: 109.62%;
+    height: 119.06%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: -16.07%;
+    left: -4.79%;
+}
+
+.services-chamber-parties-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.services-chamber-parties-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+}
+
+.services-chamber-parties-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.services-chamber-parties-description p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.services-chamber-parties-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+/* Children Video Section */
+.services-children-video-section {
+    position: relative;
+    width: 100%;
+    height: 942px;
+    overflow: hidden;
+    margin-bottom: 112px;
+}
+
+.services-children-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 716px;
+    z-index: 1;
+}
+
+.services-children-video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-children-content {
+    position: absolute;
+    top: 598px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1022px;
+    background: white;
+    padding: 44px 54px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.services-children-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-align: center;
+    letter-spacing: 1.52px;
+    text-transform: uppercase;
+    margin: 0;
+    width: 100%;
+}
+
+.services-children-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+    width: 100%;
+}
+
+.services-children-btn {
+    background: #F1EBE3;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Girls Party Section */
+.services-girls-party-section {
+    background-color: #F8F3ED;
+    padding: 0 0 112px 0;
+}
+
+.services-girls-party-block {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    max-width: 928px;
+    margin: 0 auto;
+    padding: 0 209px;
+}
+
+.services-girls-party-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.services-girls-party-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+}
+
+.services-girls-party-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.services-girls-party-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.services-girls-party-image {
+    width: 461px;
+    height: 646px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-girls-party-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Lectures Section */
+.services-lectures-section {
+    background-color: #F8F3ED;
+    padding: 0 0 112px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    max-width: 1022px;
+    margin: 0 auto;
+    padding-left: 209px;
+    padding-right: 209px;
+}
+
+.services-lectures-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.services-lectures-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+    width: 100%;
+}
+
+.services-lectures-subtitle {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.15px;
+    margin: 0;
+    width: 100%;
+}
+
+.services-lectures-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+    width: 100%;
+}
+
+.services-lectures-gallery {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 1022px;
+}
+
+.services-lectures-gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-lectures-gallery-item:first-child {
+    width: 284px;
+    height: 414px;
+    margin-top: 46px;
+}
+
+.services-lectures-gallery-item-center {
+    width: 438px;
+    height: 506px;
+    margin-top: 0;
+}
+
+.services-lectures-gallery-item:last-child {
+    width: 284px;
+    height: 414px;
+    margin-top: 46px;
+}
+
+.services-lectures-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.services-lectures-gallery-item-center img {
+    width: 100%;
+    height: 129.84%;
+    object-fit: cover;
+    position: absolute;
+    top: -9.41%;
+    left: 0;
+}
+
+.services-lectures-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Thematic Section */
+.services-thematic-section {
+    background-color: #F8F3ED;
+    padding: 0 0 112px 0;
+}
+
+.services-thematic-block {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    max-width: 928px;
+    margin: 0 auto;
+    padding: 0 47px;
+}
+
+.services-thematic-image {
+    width: 484px;
+    height: 668px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-thematic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.services-thematic-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.services-thematic-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-transform: uppercase;
+    letter-spacing: 1.52px;
+    margin: 0;
+}
+
+.services-thematic-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.services-thematic-btn {
+    background: white;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+/* How We Work Section */
+.services-how-work-section {
+    background-color: #F8F3ED;
+    padding: 0 0 24px 0;
+}
+
+.services-how-work-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.services-how-work-image {
+    width: 462px;
+    height: 610px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-how-work-image img {
+    width: 136%;
+    height: 154.5%;
+    object-fit: cover;
+    position: absolute;
+    top: -27.18%;
+    left: -14.72%;
+}
+
+.services-how-work-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+    color: #31302e;
+    text-align: center;
+    letter-spacing: 1.52px;
+    text-transform: uppercase;
+    margin: 0;
+    width: 100%;
+}
+
+.services-how-work-steps {
+    display: flex;
+    gap: 54px;
+    align-items: start;
+    width: 100%;
+}
+
+.services-how-work-left {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: 96px;
+    justify-content: center;
+    padding-top: 22px;
+}
+
+.services-how-work-right {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: 96px;
+    justify-content: center;
+    padding-top: 142px;
+}
+
+.services-step-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.services-step-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: normal;
+    color: #31302e;
+    text-align: right;
+    letter-spacing: 4.48px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.services-how-work-right .services-step-title {
+    text-align: left;
+}
+
+.services-step-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.services-step-text a {
+    text-decoration: underline;
+    color: #31302e;
+}
+
+.services-how-work-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    width: 66px;
+    flex-shrink: 0;
+}
+
+.services-timeline-circle {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #bea59b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Corinthia', serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 28px;
+    color: #bea59b;
+    position: relative;
+    z-index: 2;
+}
+
+.services-timeline-line {
+    width: 0;
+    height: 96px;
+    border-left: 1px solid #bea59b;
+    margin: 0;
+}
+
+.services-how-work-btn {
+    background: #F1EBE3;
+    color: #31302e;
+    border: none;
+    padding: 24px 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Visualization Section */
+.services-visualization-section {
+    background-color: #F8F3ED;
+    padding: 64px 0 0 0;
+    margin-top: -320px;
+}
+
+.services-visualization-container {
+    max-width: 788px;
+    margin: 0 auto;
+    padding: 0 326px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.services-visualization-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: normal;
+    color: #31302e;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 0;
+    width: 100%;
+}
+
+.services-visualization-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    color: #31302e;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    margin: 0;
+    width: 100%;
+}
+
+.services-visualization-image {
+    width: 588px;
+    height: 382px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-visualization-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.services-visualization-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 121.924px;
+    height: 121.924px;
+    z-index: 2;
+}
+
+.services-visualization-play img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Final Video Section */
+.services-final-video-section {
+    position: relative;
+    width: 100%;
+    height: 716px;
+    overflow: hidden;
+}
+
+.services-final-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.services-final-video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-final-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.services-final-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.services-final-title-line1,
+.services-final-title-line3 {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: normal;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.services-final-title-line2 {
+    font-family: 'Corinthia', serif;
+    font-weight: 400;
+    font-size: 78px;
+    line-height: normal;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: -0.96px;
+    text-transform: lowercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.services-final-btn {
+    background: #F1EBE3;
+    color: #31302e;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .services-hero {
+        height: 564px;
+    }
+
+    .services-hero-text {
+        width: 310px;
+        padding: 0 33px;
+    }
+
+    .services-hero-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-intro-section {
+        padding: 54px 0;
+    }
+
+    .services-intro-container {
+        padding: 0 32px;
+        gap: 16px;
+    }
+
+    .services-intro-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-intro-text {
+        font-size: 20px;
+    }
+
+    .services-intro-btn {
+        width: 100%;
+        padding: 24px 50px;
+    }
+
+    .services-wedding-content {
+        flex-direction: column;
+        padding: 0 32px;
+        gap: 16px;
+    }
+
+    .services-wedding-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .services-wedding-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 512 / 692;
+        order: 1;
+    }
+
+    .services-wedding-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-wedding-subtitle {
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
+
+    .services-gallery {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 8px;
+        padding: 0 32px;
+        margin-bottom: 54px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .services-gallery-item {
+        width: 197px;
+        height: 271px;
+        flex-shrink: 0;
+    }
+
+    .services-gallery-item:first-child {
+        margin-left: -116px;
+    }
+
+    .services-gallery-item:last-child {
+        margin-right: 0;
+    }
+
+    .services-proposal-block {
+        flex-direction: column;
+        padding: 0 32px;
+        gap: 16px;
+    }
+
+    .services-proposal-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 490 / 676;
+        order: 1;
+    }
+
+    .services-proposal-content {
+        width: 100%;
+        order: 2;
+    }
+
+    .services-proposal-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-proposal-subtitle {
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
+
+    .services-feedback-section {
+        padding: 44px 0;
+    }
+
+    .services-feedback-container {
+        padding: 0 32px;
+    }
+
+    .services-parties-block {
+        flex-direction: column;
+        padding: 0 32px 54px 32px;
+        gap: 16px;
+    }
+
+    .services-parties-text {
+        width: 100%;
+        padding-top: 0;
+        order: 2;
+    }
+
+    .services-parties-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 540 / 692;
+        order: 1;
+    }
+
+    .services-parties-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-chamber-parties-block {
+        flex-direction: column;
+        padding: 0 32px 54px 32px;
+        gap: 16px;
+    }
+
+    .services-chamber-parties-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 461 / 630;
+        order: 1;
+    }
+
+    .services-chamber-parties-image img {
+        width: 100%;
+        height: 100%;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+
+    .services-chamber-parties-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .services-chamber-parties-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-children-video-section {
+        height: auto;
+        min-height: 1218px;
+    }
+
+    .services-children-video {
+        height: 564px;
+    }
+
+    .services-children-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        padding: 44px 32px;
+        margin-top: 468px;
+    }
+
+    .services-children-title {
+        font-size: 23px;
+        letter-spacing: 1.15px;
+    }
+
+    .services-girls-party-block {
+        flex-direction: column;
+        padding: 0 32px 54px 32px;
+        gap: 16px;
+    }
+
+    .services-girls-party-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .services-girls-party-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 461 / 646;
+        order: 1;
+    }
+
+    .services-girls-party-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-lectures-section {
+        padding: 0 32px 54px 32px;
+        gap: 16px;
+    }
+
+    .services-lectures-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-lectures-subtitle {
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
+
+    .services-lectures-gallery {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .services-lectures-gallery-item {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .services-lectures-gallery-item:first-child {
+        aspect-ratio: 284 / 414;
+        margin-top: 0;
+    }
+
+    .services-lectures-gallery-item-center {
+        aspect-ratio: 438 / 506;
+        margin-top: 23.22px;
+    }
+
+    .services-lectures-gallery-item:last-child {
+        aspect-ratio: 284 / 414;
+        margin-top: 0;
+    }
+
+    .services-lectures-gallery-item-center img {
+        width: 100%;
+        height: 100%;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+
+    .services-thematic-block {
+        flex-direction: column;
+        padding: 0 32px 54px 32px;
+        gap: 16px;
+    }
+
+    .services-thematic-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 484 / 668;
+        order: 1;
+    }
+
+    .services-thematic-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .services-thematic-title {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-how-work-container {
+        padding: 0 32px;
+        gap: 32px;
+    }
+
+    .services-how-work-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 462 / 610;
+    }
+
+    .services-how-work-image img {
+        width: 100%;
+        height: 100%;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+
+    .services-how-work-title {
+        font-size: 23px;
+        letter-spacing: 1.15px;
+    }
+
+    .services-how-work-steps {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .services-how-work-left,
+    .services-how-work-right {
+        flex: none;
+        padding-top: 0;
+        gap: 34px;
+    }
+
+    .services-how-work-timeline {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        padding: 44px 0;
+    }
+
+    .services-timeline-circle {
+        width: 66px;
+        height: 66px;
+    }
+
+    .services-timeline-line {
+        width: 54px;
+        height: 0;
+        border-left: none;
+        border-top: 1px solid #bea59b;
+        margin: 0;
+    }
+
+    .services-step-title {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .services-how-work-btn {
+        width: 100%;
+        padding: 24px 50px;
+    }
+
+    .services-visualization-container {
+        padding: 0 32px;
+        gap: 16px;
+    }
+
+    .services-visualization-title {
+        font-size: 23px;
+        letter-spacing: 1.15px;
+    }
+
+    .services-visualization-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 588 / 382;
+    }
+
+    .services-visualization-play {
+        width: 64.487px;
+        height: 64.487px;
+    }
+
+    .services-final-video-section {
+        height: 564px;
+    }
+
+    .services-final-content {
+        width: 311px;
+        padding: 0 32px;
+        gap: 24px;
+    }
+
+    .services-final-title-line1,
+    .services-final-title-line3 {
+        font-size: 28px;
+        letter-spacing: 1.12px;
+    }
+
+    .services-final-title-line2 {
+        font-size: 48px;
+    }
+
+    .services-final-btn {
+        width: 100%;
+    }
+}
