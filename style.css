@@ -1051,7 +1051,7 @@ body.menu-open {
     flex-direction: column;
     justify-content: center;
     gap: 16px;
-    margin-left: -70px;
+    margin-left: -50px;
     align-items: flex-start;
     text-align: left;
 }
@@ -1401,7 +1401,7 @@ h3[data-translate="gridTitle2"] {
         flex-direction: column;
         justify-content: center;
         gap: 16px;
-        margin-left: -70px;
+        margin-left: 0px;
         align-items: flex-start;
         text-align: left;
     }
@@ -1464,22 +1464,7 @@ h3[data-translate="gridTitle2"] {
         margin-bottom: 0;
     }
 
-    .combined-section .grid-container {
-        /* margin-top: 60px; */
-        gap: 40px;
-        column-gap: 40px;
-        row-gap: 0px;
-    }
-
-    .combined-section .grid-container .grid-text,
-    .combined-section .grid-container .grid-text1 {
-        margin-left: 0;
-        padding: 40px 0px 60px 0px;
-    }
-
-    .combined-section .grid-container .grid-image:first-child {
-        right: 0;
-    }
+    /* Сітка залишається 2-колонковою до 740px — стилі з (601–1200) застосовуються */
 
     .cta-line1,
     .cta-line2 {
@@ -1562,14 +1547,14 @@ h3[data-translate="gridTitle2"] {
     /* Services на міні iPad — використовуємо той самий адаптивний макет, що й на планшеті,
        без жорстких absolute-позицій, щоб секція рухалася разом з іншими блоками. */
     .services-section {
-        padding: 180px 0 60px 0 !important;
+        padding: 64px 0 60px 0 !important;
         background-color: #fff !important;
     }
 
     .services-content {
         display: grid !important;
         grid-template-columns: minmax(280px, 480px) minmax(280px, 460px) !important;
-        gap: 56px 72px !important;
+        gap: 56px 24px !important;
         align-items: start !important;
         max-width: 1040px !important;
         margin: 0 auto !important;
@@ -1599,11 +1584,17 @@ h3[data-translate="gridTitle2"] {
     }
 
     .services-title {
-        align-self: center !important;
-        justify-self: end !important;
-        overflow: visible !important;
-        min-width: 0 !important;
-        overflow-wrap: break-word !important;
+        font-family: 'Cormorant', serif !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        font-size: 26px !important;
+        line-height: 115% !important;
+        letter-spacing: 0.04em !important;
+        text-transform: uppercase !important;
+        color: rgba(49, 48, 46, 1) !important;
+        margin: 0 !important;
+        transform: translateX(0px) !important;
+        text-align: left !important;
     }
 
     .image-mask {
@@ -1666,7 +1657,7 @@ h3[data-translate="gridTitle2"] {
         text-transform: uppercase !important;
         color: rgba(49, 48, 46, 1) !important;
         margin: 0 !important;
-        transform: translateX(-50px) !important;
+        transform: translateX(0px) !important;
         text-align: left !important;
     }
 }
@@ -1699,8 +1690,8 @@ h3[data-translate="gridTitle2"] {
     }
 }
 
-/* Combined section (feature + grid) — мобільний макет від 740px */
-@media (max-width: 740px) {
+/* Combined section (feature + grid) — мобільний макет до 739px (2-кол. до 740px включно) */
+@media (max-width: 739px) {
     .feature-section {
         padding: 40px 32px;
     }
@@ -1787,7 +1778,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .combined-section {
-        padding: 35px 32px;
+        padding: 0px 32px;
     }
 
     .combined-section .feature-content {
@@ -1795,7 +1786,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .grid-section {
-        padding: 40px 32px;
+        padding: 48px 32px;
     }
 
     .grid-container {
@@ -2427,13 +2418,13 @@ h3[data-translate="gridTitle2"] {
     .about-content {
         grid-template-columns: 1fr 1fr;
         gap: 0;
-        min-height: 500px;
+        min-height: auto;
         align-items: start;
     }
 
     .about-image-wrapper {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         margin-top: -40px;
     }
 
@@ -2454,19 +2445,19 @@ h3[data-translate="gridTitle2"] {
 
     .about-main-image {
         width: 100%;
-        height: 100%;
-        min-height: 500px;
-        overflow: hidden;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
     }
 
     .about-main-image img {
-        width: 125%;
-        height: calc(100% + 40px);
-        object-fit: cover;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
         object-position: center top;
         display: block;
-        margin-bottom: -350px;
-        margin-top: 40px;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     .about-text-wrapper {
@@ -2478,7 +2469,7 @@ h3[data-translate="gridTitle2"] {
         z-index: 1;
         margin-left: -100px;
         margin-top: 40px;
-        min-height: calc(500px + 40px);
+        min-height: auto;
     }
 
     .about-title {
@@ -2790,7 +2781,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .testimonials-section {
-        padding: 292px 40px 0px 40px;
+        padding: 164px 40px 94px 40px;
         max-width: 900px;
         margin: -100px auto 0 auto;
         text-align: center;
@@ -3200,6 +3191,12 @@ h3[data-translate="gridTitle2"] {
     }
 }
 
+@media (min-width: 781px) and (max-width: 1200px) {
+    .cta-text-wrapper {
+        padding: 64px 24px 50px 29px;
+    }
+}
+
 /* Великі екрани — більший правий відступ у тексту */
 @media (min-width: 1201px) {
     .cta-text-wrapper {
@@ -3256,20 +3253,26 @@ h3[data-translate="gridTitle2"] {
     .cta-image-wrapper {
         padding: 0 32px;
         justify-content: center;
+        max-width: 770px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cta-image {
         width: 100%;
-        max-width: 100%;
+        max-width: 770px;
         margin-top: -80px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cta-image img {
-        width: 100%;
-        max-width: 100%;
+        width: 129%;
+        max-width: 129%;
         height: auto;
         object-fit: contain;
         margin-top: 20px;
+        display: block;
     }
 
     .cta-image-overlay {
@@ -3283,6 +3286,8 @@ h3[data-translate="gridTitle2"] {
     .cta-text-wrapper {
         padding: 80px 32px 80px 24px;
         gap: 20px;
+        max-width: 560px;
+        margin: 0 auto;
     }
 
     .cta-title {
@@ -3357,8 +3362,8 @@ h3[data-translate="gridTitle2"] {
     }
 
     .cta-image img {
-        width: 105%;
-        max-width: 105%;
+        width: 129%;
+        max-width: 129%;
         height: auto;
         object-fit: contain;
         margin-top: 20px;
@@ -3377,7 +3382,7 @@ h3[data-translate="gridTitle2"] {
     }
 
     .cta-text-wrapper {
-        padding: 50px 35px 50px 35px;
+        padding: 74px 35px 50px 35px;
         gap: 16px;
     }
 
@@ -3611,7 +3616,7 @@ letter-spacing: 0.3px;
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1200px) {
     .locations-section {
-        padding: 112px 0 22px 0;
+        padding: 74px 0 22px 0;
     }
     .cta-image img {
         width: 115%;
@@ -3621,7 +3626,7 @@ letter-spacing: 0.3px;
         object-position: center bottom;
         display: block;
         vertical-align: bottom;
-        left: -90px;
+        left: 0px;
         margin-top: -30px;
 
     }
@@ -3788,6 +3793,8 @@ letter-spacing: 0.3px;
     object-position: center;
     display: block;
     margin-top: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 
@@ -3916,7 +3923,7 @@ letter-spacing: 0.3px;
 
 .services-main-slide.active {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
 }
 
 .services-text-block {
@@ -4034,14 +4041,14 @@ letter-spacing: 0.3px;
         position: relative !important;
         right: auto !important;
         top: auto !important;
-        width: 380px !important;
+        width: 288px !important;
         max-width: 100% !important;
         aspect-ratio: 360 / 544 !important;
         height: auto !important;
         margin-bottom: -150px !important;
         margin-top: -48px !important;
         margin-left: auto !important;
-        margin-right: 48px !important;
+        margin-right: 106px !important;
         justify-self: end !important;
     }
 }
@@ -4564,10 +4571,12 @@ letter-spacing: 0.3px;
         left: 0;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
 
     .services-main-slide {
-        position: absolute;
+        position: absolute !important;
+        inset: 0;
         top: 0;
         left: 0;
         width: 100%;
@@ -4576,13 +4585,19 @@ letter-spacing: 0.3px;
         object-position: center;
         display: block;
         margin: 0;
-        transform: none;
-        left: 4px;
-        position: relative;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
+    .services-main-slide.active {
+        opacity: 1;
+        z-index: 2;
+        pointer-events: auto;
     }
 
     .services-main-slide[src*="Rectangle 44.png"] {
-        left: 0px !important;
+        left: 0 !important;
     }
 
     .services-text-block {
@@ -4621,7 +4636,7 @@ letter-spacing: 0.3px;
         flex-basis: 100%;
         text-align: left;
         transform: none;
-        margin-top: -15px;
+        margin-top: 10px;
     }
 
     .services-small-image {
@@ -4777,8 +4792,7 @@ letter-spacing: 0.3px;
     text-align: justify;
     color: rgba(49, 48, 46, 1);
     margin: 0 0 25px 0;
-    max-width: 450px;
-    
+    max-width: 100%;
 }
 
 .consultation-btn {
@@ -4887,7 +4901,7 @@ letter-spacing: 0.3px;
 
     .consultation-text-block {
         background-color: #fff;
-        padding: 130px 0px 130px 140px;
+        padding: 130px 40px 130px 140px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -4921,7 +4935,6 @@ letter-spacing: 0.3px;
         text-transform: uppercase;
         color: rgba(49, 48, 46, 1);
         margin: 0 0 25px 0;
-        max-width: 450px;
     }
 
     .consultation-description {
