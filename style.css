@@ -2344,6 +2344,8 @@ h3[data-translate="gridTitle2"] {
     cursor: pointer;
     transition: all 0.3s ease;
     align-self: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 
@@ -2651,6 +2653,7 @@ h3[data-translate="gridTitle2"] {
         align-items: center;
         justify-content: center;
         line-height: 18px;
+        text-decoration: none;
     }
     .testimonials-section1 {
         padding: 130px 32px 74px 32px;
