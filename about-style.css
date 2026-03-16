@@ -787,6 +787,8 @@ text-align: justify;
     letter-spacing: -2%;
     text-align: center;
     display: block;
+    -webkit-text-stroke: 0.3px;
+
 }
 
 .wedding-work-subtitle {
@@ -958,13 +960,13 @@ text-align: justify;
 .consultation-planning-option-text {
     font-family: 'Corinthia', cursive;
     font-weight: 400;
-    font-style: normal;
     font-size: 52px;
     line-height: 28px;
     letter-spacing: -2%;
     text-align: center;
     display: block;
     margin-top: 20px;
+    -webkit-text-stroke: 0.3px;
 }
 
 .consultation-planning-title {
