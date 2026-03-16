@@ -42,13 +42,13 @@
     font-family: 'Cormorant', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 38px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: 2%;
     text-align: center;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
-    max-width: 850px;
+    max-width: 1022px;
     margin: 0;
 }
 
@@ -285,7 +285,7 @@
 
 /* Yulia About Section */
 .yulia-about-section {
-    padding: 100px 40px 100px 40px;
+    padding: 100px 40px 84px 40px;
     background-color: #F8F3ED;
     position: relative;
     margin: 0;
@@ -356,26 +356,17 @@
     font-weight: 300;
     font-style: normal;
     font-size: 48px;
-    line-height: 1.1;
-    letter-spacing: 0.04em;
+    line-height: 110%;
+    letter-spacing: 2%;
     text-align: center;
     text-transform: uppercase;
     color: var(--black, #31302E);
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+    display: block;
+    width: 105%;
     margin-top: -125px;
 }
 
-.yulia-about-title-line1,
-.yulia-about-title-line2,
-.yulia-about-title-line3 {
-    display: block;
-    font-weight: 300;
-    font-size: 38px;
-}
 
 .yulia-about-text-columns {
     display: grid;
@@ -460,7 +451,7 @@
     flex: 0 0 50%;
     position: relative;
     width: 50%;
-    height: 734px;
+    height: 700px;
     box-sizing: border-box;
 }
 
@@ -635,7 +626,8 @@
 
 /* Personalized Services Section */
 .personalized-services-section {
-    padding: 100px 40px;
+    padding: 94px 40px 64px 40px;
+
     background-color: #F8F3ED;
     max-width: 1400px;
     margin: 0 auto;
@@ -656,9 +648,9 @@
     font-family: 'Cormorant', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 38px;
+    font-size: 48px;
     line-height: 1.2;
-    letter-spacing: 0.04em;
+    letter-spacing: 2%;
     text-align: center;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
@@ -823,11 +815,11 @@ text-align: justify;
 
 .wedding-work-description {
     font-family: Cormorant;
-    font-weight: 300;
+    font-weight: 400;
     font-style: Medium;
     font-size: 20px;
     leading-trim: NONE;
-    line-height: 23px;
+    line-height: 120%;
     letter-spacing: 0%;
     text-align: justify;    
     max-width: 800px;
@@ -979,8 +971,8 @@ text-align: justify;
     font-family: 'Cormorant', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 32px;
-    line-height: 1.2;
+    font-size: 38px;
+    line-height: 120%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
@@ -1050,7 +1042,7 @@ text-align: justify;
     font-weight: 300;
     font-size: 30px;
     line-height: 1.2;
-    letter-spacing: 0.04em;
+    letter-spacing: 4%;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
     text-align: center;
@@ -1242,7 +1234,7 @@ text-align: justify;
     font-style: normal;
     font-size: 30px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 2%;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
     margin: 0;
@@ -1383,7 +1375,7 @@ text-align: justify;
 .start-story-text-block::before {
     content: '';
     position: absolute;
-    right: -40%;
+    right: -50%;
     top: 0;
     bottom: 0;
     width: 50%;
@@ -1405,11 +1397,13 @@ text-align: justify;
 }
 
 .start-story-image img {
-    width: 462px;
+    width: 462px !important;
+    min-width: 462px;
     height: 610px;
     object-fit: cover;
     display: block;
     position: relative;
+    right: 20px;
 }
 
 .start-story-option-image {
@@ -1440,13 +1434,13 @@ text-align: justify;
     font-family: 'Cormorant', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 34px;
+    font-size: 38px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 4%;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     text-align: center;
 }
 
@@ -1520,7 +1514,8 @@ text-align: justify;
     }
 
     .start-story-image img {
-        width: 462px;
+        width: 462px !important;
+        min-width: 462px;
         height: 610px;
         object-fit: cover;
         display: block;
@@ -1859,7 +1854,7 @@ text-align: justify;
 /* Mentorship Final Section */
 .mentorship-final-section {
     background-color: #F8F3ED;
-    padding: 120px 40px;
+    padding: 120px 40px 74px 40px;
     overflow: visible;
 }
 
@@ -2050,15 +2045,14 @@ text-align: justify;
     font-family: 'Cormorant', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 32px;
+    font-size: 38px;
     line-height: 1.2;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: rgba(49, 48, 46, 1);
     margin: 0;
     text-align: center;
-    max-width: 425px;
-    left: 25px;
+    max-width: 488px;
     position: relative;
 }
 
@@ -2545,10 +2539,9 @@ text-align: justify;
         font-weight: 300;
         font-style: normal;
         font-size: 23px;
-        line-height: 1;
+        line-height: 1.4;
         letter-spacing: 0.04em;
         margin-bottom: 14px;
-        gap: 5px;
     }
     .consultation-planning-title {
         font-family: 'Cormorant', serif;
@@ -2561,13 +2554,6 @@ text-align: justify;
         color: rgba(49, 48, 46, 1);
         margin: 0;
         text-align: center;
-    }
-
-    .yulia-about-title-line1,
-    .yulia-about-title-line2,
-    .yulia-about-title-line3 {
-        font-weight: 300;
-        font-size: 28px;
     }
 
     .yulia-about-text-columns {
@@ -3420,10 +3406,9 @@ text-align: justify;
 
 /* Book Section */
 .book-section {
-    position: relative;
-    margin-top: 30px;
+    position: relative;  
     padding-left: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 0px;
     min-height: 140px;
 }
 
