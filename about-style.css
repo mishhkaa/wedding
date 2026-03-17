@@ -190,7 +190,7 @@
 
     .signature-space-description {
         font-family: 'Cormorant', serif;
-        font-weight: 300;
+        font-weight: 400;
         font-style: normal;
         font-size: 20px;
         line-height: 120%;
@@ -209,7 +209,7 @@
 /* Mobile */
 @media (max-width: 600px) {
     .signature-space-section {
-        padding: 54px 32px 104px 32px;
+        padding: 54px 32px 89px 32px;
     }
 
     .signature-space-title {
@@ -255,7 +255,7 @@
 
     .signature-space-description {
         font-family: 'Cormorant', serif;
-        font-weight: 300;
+        font-weight: 400;
         font-style: normal;
         font-size: 20px;
         line-height: 120%;
@@ -271,7 +271,7 @@
         padding: 38px 45px;
         font-size: 12px;
         align-self: stretch;
-        line-height: 120%;
+        line-height: 140%;
     }
     .signature-space-text {
         display: flex;
@@ -787,7 +787,7 @@ text-align: justify;
     letter-spacing: -2%;
     text-align: center;
     display: block;
-    -webkit-text-stroke: 0.3px;
+    color: #75736D;
 
 }
 
@@ -967,6 +967,7 @@ text-align: justify;
     display: block;
     margin-top: 20px;
     -webkit-text-stroke: 0.3px;
+    color: #75736D;
 }
 
 .consultation-planning-title {
@@ -1025,6 +1026,7 @@ text-align: justify;
         text-align: center;
         display: block;
         margin-top: 8px;
+        color: #75736D;
     }
 }
 
@@ -1299,13 +1301,14 @@ text-align: justify;
     }
     
     .consultation-text-title {
-        font-size: 26px;
+        font-size: 23px;
         margin-bottom: 10px;
+        font-weight: 400;
     }
     
     .consultation-text-description {
         font-size: 20px;
-        line-height: 23px;
+        line-height: 120%;
     }
     
     .consultation-text-btn {
@@ -1324,14 +1327,14 @@ text-align: justify;
         margin: 0 0 8px 0;
     }
     .cooperation-stage-description {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 23px;
-    letter-spacing: 0.02em;
-    text-align: justify;
-    color: rgba(49, 48, 46, 1);
+        color: var(--black, #31302E);
+        text-align: justify;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.3px;
     margin: 0;
     max-width: 300px;
 }
@@ -1430,6 +1433,7 @@ text-align: justify;
     letter-spacing: -2%;
     text-align: center;
     display: block;
+    color: #75736D;
 }
 
 .start-story-title {
@@ -1630,8 +1634,8 @@ text-align: justify;
     }
 
     .start-story-title {
-        font-size: 28px;
-        font-weight: 400px;
+        font-size: 23px;
+        font-weight: 400;
     }
     
 }
@@ -1779,34 +1783,45 @@ text-align: justify;
 }
 
 @media (max-width: 600px) {
+    .gallery-text {
+        color: var(--black, #31302E);
+        text-align: justify;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.3px;
+    }
     .gallery-section {
         padding: 10px 32px 44px 32px;
         background-color: white;
 
     }
     .gallery-title {
-        font-family: Cormorant;
-    font-weight: 300;
+        font-family: 'Cormorant', serif;
+    font-weight: 400;
     font-style: Medium;
-    font-size: 25px;
+    font-size: 23px;
     leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 4%;
     text-transform: uppercase;
+    color: rgba(49, 48, 46, 1);
     }
     
     .gallery-main-title {
         font-family: 'Cormorant', serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 25px;
+        font-size: 23px;
         line-height: 1.2;
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: rgba(49, 48, 46, 1);
         text-align: center;
         margin: 0 auto 16px auto;
-        max-width: 1050px;
+        max-width: 300px;
     }
     
     .gallery-container {
@@ -1949,7 +1964,7 @@ text-align: justify;
         font-size: 12px;
         font-weight: 700;
         font-style: normal;
-        line-height: 16px;
+        line-height: 140%;
         letter-spacing: 0.24em;
         text-align: center;
         text-transform: uppercase;
@@ -2147,6 +2162,7 @@ text-align: justify;
         text-align: center;
         margin-top: -10px;
         left: 0;
+        font-weight: 400;
     }
     
     .video-about-description {
@@ -2158,7 +2174,7 @@ text-align: justify;
         width: 100%;
         max-width: 400px;
         padding: 32px 32px;
-        line-height: 16px;
+        line-height: 140%;
         left: 0;
     }
 }
@@ -2180,9 +2196,10 @@ text-align: justify;
     }
 
     .wedding-work-title {
-        font-size: 25px;
+        font-size: 23px;
         font-weight: 400;
         margin: 0 auto 16px auto;
+        line-height: 120%;
     }
 
     .wedding-work-subtitle {
@@ -2191,7 +2208,7 @@ text-align: justify;
 
     .wedding-work-description {
         font-size: 20px;
-        line-height: 22px;
+        line-height: 120%;
     }
 
     .wedding-work-columns {
@@ -2487,7 +2504,7 @@ text-align: justify;
 /* Mobile */
 @media (max-width: 600px) {
     .yulia-about-section {
-        padding: 100px 0px 60px 0px;
+        padding: 100px 0px 54px 0px;
     }
     .consultation-text-btn {
         background: white;
@@ -2502,7 +2519,7 @@ text-align: justify;
         font-size: 12px;
         font-weight: 700;
         font-style: normal;
-        line-height: 16px;
+        line-height: 140%;
         letter-spacing: 0.24em;
         text-align: center;
         text-transform: uppercase;
@@ -2538,10 +2555,10 @@ text-align: justify;
 
     .yulia-about-title {
         font-family: 'Cormorant', serif;
-        font-weight: 300;
+        font-weight: 400;
         font-style: normal;
         font-size: 23px;
-        line-height: 1.4;
+        line-height: 130%;
         letter-spacing: 0.04em;
         margin-bottom: 14px;
     }
@@ -2565,14 +2582,14 @@ text-align: justify;
     }
 
     .yulia-about-text-column {
-        font-family: 'Nunito Sans', sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 16.5px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
+        color: var(--black, #31302E);
         text-align: justify;
-        color: rgba(49, 48, 46, 1);
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.3px;
         -webkit-font-smoothing: antialiased;
     }
 
@@ -2593,7 +2610,7 @@ text-align: justify;
         width: 100%;
         padding: 38px 30px;
         margin-top: -30px;
-        line-height: 120%;
+        line-height: 140%;
     }
 
     .book-section {
@@ -2627,8 +2644,8 @@ text-align: justify;
         padding: 0 32px;
         box-sizing: border-box;
         overflow: visible;
-        display: flex;
-        justify-content: center;
+        display: flex !important;
+        justify-content: center !important;
         align-items: flex-start;
     }
 
@@ -2640,15 +2657,14 @@ text-align: justify;
         min-height: 379.9771728515625px !important;
         max-width: 310.99957275390625px !important;
         max-height: 379.9771728515625px !important;
-        margin: -100px auto 24px auto !important;
-        margin-left: calc(50% + 50px) !important;
+        margin: -100px 0 24px 0 !important;
+        left: 50% !important;
         transform: translateX(-50%) !important;
         padding: 0 !important;
         z-index: 1 !important;
         opacity: 1 !important;
         overflow: visible !important;
         top: 0 !important;
-        left: 0 !important;
     }
 
     .book-image-single img {
@@ -2686,8 +2702,13 @@ text-align: justify;
 
     .book-intro,
     .book-description {
-        font-size: 16.5px;
-        line-height: 25px;
+        color: var(--black, #31302E);
+        text-align: justify;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        line-height: 23px;
+        letter-spacing: 0.3px;
         margin-top: 16px;
         
     }
@@ -2709,22 +2730,23 @@ text-align: justify;
 
     .personalized-services-title {
         font-size: 28px;
+        font-weight: 400;
     }
 
     .personalized-services-description {
         font-size: 20px;
-        line-height: 25px;
+        line-height: 120%;
         text-align: justify;
         margin-top: -15px;
-
     }
 
     .personalized-services-slider-wrapper {
-        width: 100%;
-        overflow: hidden;
+        width: 100vw;
+        overflow-x: auto;
+        overflow-y: hidden;
         position: relative;
-        margin: 0 -32px;
-        padding: 0 32px;
+        margin-left: calc(-50vw + 50% + 32px);
+        padding: 0;
     }
 
     .personalized-services-grid.personalized-services-slider {
@@ -2738,10 +2760,10 @@ text-align: justify;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        width: calc(100% + 64px);
-        margin-left: -32px;
-        padding: 0 32px;
-        padding-right: 12px;
+        width: auto;
+        margin-left: 0;
+        padding-left: 32px;
+        padding-right: 0;
     }
 
     .personalized-services-grid.personalized-services-slider::-webkit-scrollbar {
@@ -2840,10 +2862,10 @@ text-align: justify;
     }
     .consultation-planning-description {
         font-family: 'Cormorant', serif;
-        font-weight: 500;
+        font-weight: 400;
         font-style: normal;
         font-size: 20px;
-        line-height: 24px;
+        line-height: 120%;
         letter-spacing: 0%;
         text-align: justify;
         color: rgba(49, 48, 46, 1);
@@ -2923,12 +2945,21 @@ text-align: justify;
         margin: 0 auto !important;
         text-align: left !important;
         font-size: 23px;
+        font-weight: 400;
     }
 
     .wedding-work-column-text {
         max-width: 375px !important;
         width: 100% !important;
         margin: -14px auto !important;
+        color: var(--black, #31302E);
+        text-align: justify;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.3px;
     }
 
     .mobile-gallery-strip {
@@ -3001,12 +3032,14 @@ text-align: justify;
         margin-top: 15px !important;
         text-align: center !important;
         margin-bottom: 0px;
+        font-size: 20px;
     }
 
     .mobile-gallery-strip .wedding-gallery-strip-btn {
         margin-top: 20px !important;
         width: 100% !important;
         padding: 38px 50px;
+        line-height: 140%;
     }
 
     .consultation-planning-section {
@@ -3043,7 +3076,7 @@ text-align: justify;
     .cooperation-stages-title {
         font-family: 'Cormorant', serif;
         font-weight: 400;
-        font-size: 28px;
+        font-size: 23px;
         line-height: 1.2;
         letter-spacing: 0.04em;
         text-transform: uppercase;
@@ -3890,6 +3923,49 @@ text-align: justify;
         height: 64px;
     }
 
+    /* Force main book section layout centered on mobile */
+    .book-main-section {
+        display: block !important;
+        padding: 0 32px 54px 32px !important;
+    }
+
+    .book-main-section .book-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0px !important;
+    }
+
+    .book-main-section .book-images {
+        justify-content: center !important;
+        padding: 0 32px !important;
+    }
+
+    .book-main-section .book-image-single {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: 0 !important;
+        transform: none !important;
+        margin-top: 0 !important;
+        margin-bottom: 24px !important;
+    }
+
+    /* Перевизначаємо .book-image лише для головної секції книги (конфлікт з іншим блоком) */
+    .book-main-section .book-image.book-image-single {
+        width: 310.99957275390625px !important;
+        min-width: 310.99957275390625px !important;
+        max-width: 310.99957275390625px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .book-main-section .book-image-single img {
+        margin: 0 auto !important;
+        margin-top: 0 !important;
+        width: 310.99957275390625px !important;
+        max-width: 310.99957275390625px !important;
+        right: auto !important;
+    }
+
     .book-section {
         padding-left: 0;
         display: flex;
@@ -3935,8 +4011,9 @@ text-align: justify;
     }
 
     .book-title {
-        font-size: 26px;
-        margin-top: 50px;
+        font-size: 23px;
+        margin-top: 0;
         font-weight: 400;
+        line-height: 120%;
     }
 }
