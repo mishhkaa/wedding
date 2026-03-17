@@ -903,26 +903,34 @@
             setTimeout(reorganizeGallery, 100);
         })();
 
-        // Video play button functionality
+        // Video play button functionality — hide button after first click
         (function() {
             const playButton = document.querySelector('.video-play-button');
             const video = document.querySelector('.video-about-image');
             
             if (playButton && video) {
-                playButton.addEventListener('click', function() {
-                    video.play();
+                const startVideo = () => {
+                    try {
+                        const playPromise = video.play();
+                        if (playPromise && typeof playPromise.then === 'function') {
+                            playPromise.catch(() => {});
+                        }
+                    } catch (e) {}
                     playButton.style.display = 'none';
+                };
+
+                playButton.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    startVideo();
                 });
-                
-                // Show play button when video is paused
-                video.addEventListener('pause', function() {
-                    playButton.style.display = 'block';
-                });
-                
-                // Hide play button when video is playing
-                video.addEventListener('play', function() {
-                    playButton.style.display = 'none';
-                });
+
+                // Optional: also start video when clicking on the video area
+                const wrapper = document.querySelector('.video-about-video-wrapper');
+                if (wrapper) {
+                    wrapper.addEventListener('click', function() {
+                        startVideo();
+                    });
+                }
             }
         })();
 
