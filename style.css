@@ -710,7 +710,7 @@ body.menu-open {
     padding: 5px 0;
 }
 .mobile-nav-link{
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     -webkit-font-smoothing: antialiased !important;
 
 }
@@ -778,7 +778,7 @@ body.menu-open {
 }
 
 /* Tablet - мобільне меню */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     .mobile-menu-content {
         justify-content: center !important;
         padding: 80px 48px 80px 48px !important;
@@ -1117,7 +1117,7 @@ h3[data-translate="gridTitle2"] {
 }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     /* Планшетна версія - використовуємо десктопні стилі */
     .hero-content {
         padding: 0;
@@ -1401,7 +1401,7 @@ h3[data-translate="gridTitle2"] {
     }
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     .grid-text {
         padding: 140px 30px 80px 10px;
         display: flex;
@@ -2399,7 +2399,7 @@ h3[data-translate="gridTitle2"] {
 }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     .about-section {
         padding: 0px 0px;
     }
@@ -2810,7 +2810,7 @@ h3[data-translate="gridTitle2"] {
 
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     .testimonials-section1 {
         padding: 220px 40px 112px 40px;
         max-width: 900px;
@@ -3701,7 +3701,7 @@ letter-spacing: 0.3px;
 }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     .locations-section {
         padding: 74px 0 22px 0;
     }
@@ -4145,7 +4145,7 @@ letter-spacing: 0.3px;
 }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 781px) and (max-width: 1200px) {
     .services-section {
         padding: 60px 0 60px 0;
     }
