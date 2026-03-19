@@ -1,3 +1,78 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure anchors don't hide under the fixed header */
+#option1,
+#option2,
+#option3 {
+    scroll-margin-top: 105px;
+}
+
+/* Sticky options bar (About page) */
+.about-sticky-options {
+    position: fixed;
+    top: 5px; /* fixed header height + 5px */
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1101; /* must be above the fixed main header */
+    background: #ffffff;
+    border-bottom: 1px solid rgba(49, 48, 46, 0.08);
+}
+
+.about-sticky-options-inner {
+    max-width: 1022px;
+    margin: 0 auto;
+    padding: 6px 40px; /* list spacing */
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+}
+
+.about-sticky-option {
+    font-family: 'Nunito Sans', sans-serif; /* body-caps-12 */
+    font-weight: 700;
+    font-style: normal; /* Bold */
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.24em; /* 24% */
+    text-transform: uppercase;
+    color: rgba(142, 117, 108, 1);
+    text-decoration: none;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+    opacity: 0.75;
+}
+
+.about-sticky-option:hover {
+    opacity: 1;
+    color: rgba(142, 117, 108, 1);
+    text-decoration: none;
+}
+
+.about-sticky-option.is-active {
+    opacity: 1;
+    color: rgba(49, 48, 46, 1);
+    border-bottom-color: rgba(49, 48, 46, 1);
+}
+
+@media (max-width: 780px) {
+    .about-sticky-options-inner {
+        padding: 6px 16px;
+        gap: 18px;
+        justify-content: space-between;
+    }
+
+    .about-sticky-option {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-align: center;
+        flex: 1;
+    }
+}
+
 /* Hero Section - Full Width with Cropped Width */
 .hero {
     width: 100vw !important;

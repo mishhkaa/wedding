@@ -173,12 +173,26 @@
     color: rgba(176, 161, 155, 1);
 }
 
+.contact-form-field input::placeholder,
+.contact-form-field textarea::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(176, 161, 155, 1);
+    opacity: 1;
+}
+
 .contact-form-field input,
 .contact-form-field textarea {
     border: none;
     border-bottom: 1px solid rgba(190, 177, 172, 1);
     background: transparent;
-    padding: 4px 0;
+    /* space between underline and placeholder/text */
+    padding: 4px 0 14px 0;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 500;
     font-style: normal; /* SemiBold => використаємо weight 600 */

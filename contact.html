@@ -101,48 +101,43 @@
 
                     <form class="contact-form" id="contactForm" novalidate>
                         <div class="contact-form-field">
-                            <label for="name">ІМ'Я</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="ІМ'Я" required aria-label="ІМ'Я">
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="EMAIL" required aria-label="EMAIL">
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="phone">НОМЕР ТЕЛЕФОНУ</label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <input type="tel" id="phone" name="phone" placeholder="НОМЕР ТЕЛЕФОНУ" required aria-label="НОМЕР ТЕЛЕФОНУ">
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="event-type">ТИП ПОДІЇ</label>
-                            <input type="text" id="event-type" name="event-type" required>
+                            <input type="text" id="event-type" name="event-type" placeholder="ТИП ПОДІЇ" required aria-label="ТИП ПОДІЇ">
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="event-date">ДАТА ПОДІЇ</label>
                             <input
                                 type="text"
                                 id="event-date"
                                 name="event-date"
-                                placeholder="12.03.2026"
+                                placeholder="ДАТА ПОДІЇ"
                                 inputmode="numeric"
                                 autocomplete="off"
                                 pattern="^\d{2}\.\d{2}\.\d{4}$"
                                 maxlength="10"
                                 required
+                                aria-label="ДАТА ПОДІЇ"
                             >
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="description">КОРОТКИЙ ОПИС, ПО БАЖАННЮ</label>
-                            <textarea id="description" name="description" rows="4"></textarea>
+                            <textarea id="description" name="description" rows="4" placeholder="КОРОТКИЙ ОПИС, ПО БАЖАННЮ" aria-label="КОРОТКИЙ ОПИС, ПО БАЖАННЮ"></textarea>
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
