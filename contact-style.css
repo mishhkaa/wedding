@@ -201,60 +201,6 @@
     border-bottom-color: #8E756C;
 }
 
-.contact-form-field input[type="date"] {
-    cursor: pointer;
-    position: relative;
-}
-
-.contact-form-field input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 1;
-}
-
-/* Приховати текст форматування коли поле порожнє */
-.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-text {
-    color: transparent;
-    pointer-events: none;
-}
-
-.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-month-field {
-    color: transparent;
-    pointer-events: none;
-}
-
-.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-day-field {
-    color: transparent;
-    pointer-events: none;
-}
-
-.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-year-field {
-    color: transparent;
-    pointer-events: none;
-}
-
-/* Показати текст коли дата вибрана */
-.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-text,
-.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-month-field,
-.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-day-field,
-.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-year-field {
-    color: rgba(49, 48, 46, 1);
-    pointer-events: none;
-}
-
-.contact-form-field input[type="date"]::-webkit-input-placeholder {
-    color: transparent;
-}
-
-.contact-form-field input[type="date"]::placeholder {
-    color: transparent;
-}
-
 .contact-form-field textarea {
     resize: vertical;
     min-height: 50px;

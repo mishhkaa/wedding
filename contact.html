@@ -126,7 +126,17 @@
 
                         <div class="contact-form-field">
                             <label for="event-date">ДАТА ПОДІЇ</label>
-                            <input type="date" id="event-date" name="event-date" placeholder="" required>
+                            <input
+                                type="text"
+                                id="event-date"
+                                name="event-date"
+                                placeholder="12.03.2026"
+                                inputmode="numeric"
+                                autocomplete="off"
+                                pattern="^\d{2}\.\d{2}\.\d{4}$"
+                                maxlength="10"
+                                required
+                            >
                             <div class="contact-inline-error" hidden></div>
                         </div>
 
