@@ -234,6 +234,12 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+    text-decoration: none;
 }
 
 
@@ -753,6 +759,12 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+.mobile-contact-btn:hover,
+.mobile-contact-btn:focus {
+    text-decoration: none;
 }
 
 
@@ -5463,10 +5475,12 @@ letter-spacing: 0.3px;
     border-radius: 0;
     align-self: flex-start;
     margin-top: 10px;
+    text-decoration: none;
 }
 
 .footer-btn:hover {
     color: #8E756C;
+    text-decoration: none;
 }
 
 
