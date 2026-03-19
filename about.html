@@ -1145,16 +1145,18 @@
                 });
             });
 
-            // Show sticky nav after passing the options grid block
-            const showObserver = new IntersectionObserver(
-                (entries) => {
-                    const entry = entries[0];
-                    const shouldShow = entry ? entry.intersectionRatio < 0.2 && entry.boundingClientRect.top < 0 : false;
-                    sticky.hidden = !shouldShow;
-                },
-                { threshold: [0, 0.2, 1] }
-            );
-            showObserver.observe(trigger);
+            // Show sticky nav after passing the options grid block.
+            // (Scroll-based logic is more reliable than IntersectionObserver here.)
+            const updateStickyVisibility = () => {
+                const triggerRect = trigger.getBoundingClientRect();
+                // Fixed main header occupies ~80px; sticky bar should appear right under it.
+                const mainHeaderHeight = 80;
+                sticky.hidden = !(triggerRect.bottom <= mainHeaderHeight + 5);
+            };
+
+            updateStickyVisibility();
+            window.addEventListener('scroll', updateStickyVisibility, { passive: true });
+            window.addEventListener('resize', updateStickyVisibility);
 
             // Highlight active option based on section in view
             const activeObserver = new IntersectionObserver(

@@ -60,13 +60,11 @@ html {
 .about-sticky-option.is-active {
     opacity: 1 !important;
     color: #31302E !important; /* pure dark text */
-    border-bottom-color: #31302E;
     text-decoration: none !important;
 }
 
 .about-sticky-option.is-active:visited {
     color: #31302E !important;
-    text-decoration: none !important;
 }
 
 .about-sticky-option.is-active:hover,
