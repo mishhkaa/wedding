@@ -32,30 +32,48 @@ html {
 
 .about-sticky-option {
     font-family: 'Nunito Sans', sans-serif; /* body-caps-12 */
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal; /* Bold */
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0.24em; /* 24% */
     text-transform: uppercase;
     color: rgba(142, 117, 108, 1);
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 6px 0;
     border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
     opacity: 0.75;
 }
 
-.about-sticky-option:hover {
+.about-sticky-option:visited {
+    color: rgba(142, 117, 108, 1);
+    text-decoration: none !important;
+}
+
+.about-sticky-option:hover:not(.is-active) {
     opacity: 1;
     color: rgba(142, 117, 108, 1);
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .about-sticky-option.is-active {
-    opacity: 1;
-    color: rgba(49, 48, 46, 1);
-    border-bottom-color: rgba(49, 48, 46, 1);
+    opacity: 1 !important;
+    color: #31302E !important; /* pure dark text */
+    border-bottom-color: #31302E;
+    text-decoration: none !important;
+}
+
+.about-sticky-option.is-active:visited {
+    color: #31302E !important;
+    text-decoration: none !important;
+}
+
+.about-sticky-option.is-active:hover,
+.about-sticky-option.is-active:focus {
+    color: #31302E !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
 }
 
 @media (max-width: 780px) {
