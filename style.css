@@ -551,8 +551,8 @@ body.menu-open {
 .mobile-menu-btn {
     display: none;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     z-index: 1001;
     background: transparent;
     border: none;
@@ -595,7 +595,8 @@ body.menu-open {
     
     /* Відступ для мобільної кнопки меню, коли меню відкрито */
     .mobile-menu.active ~ .mobile-menu-btn {
-        top: 56px;
+        top: 20px;
+        left: 20px;
     }
 }
 
@@ -648,9 +649,9 @@ body.menu-open {
 }
 
 .mobile-menu-close {
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    position: relative;
+    top: 10px;
+    left: 10px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -710,7 +711,7 @@ body.menu-open {
     padding: 5px 0;
 }
 .mobile-nav-link{
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     -webkit-font-smoothing: antialiased !important;
 
 }

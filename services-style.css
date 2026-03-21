@@ -30,7 +30,6 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
-    width: 822px;
 }
 
 .services-hero-title {
@@ -44,27 +43,28 @@
     text-transform: uppercase;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     margin: 0;
+    max-width: 632px;
 }
 
 /* Intro Section */
 .services-intro-section {
-    padding: 112px 0;
+    padding: 64px 0 64px 0;
     background-color: #F8F3ED;
 }
 
 .services-intro-container {
     max-width: 846px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 0px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
 }
 
 .services-intro-title {
     font-family: 'Cormorant', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 48px;
     line-height: normal;
     color: #31302e;
@@ -76,13 +76,12 @@
 
 .services-intro-text {
     font-family: 'Cormorant', serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     line-height: normal;
     color: #31302e;
     text-align: justify;
-    width: 100%;
-    white-space: pre-wrap;
+    max-width: 846px;
 }
 
 .services-intro-text p {
@@ -104,25 +103,26 @@
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    margin-top: 8px;
 }
 
 /* Services Content Section */
 .services-content-section {
     background-color: #F8F3ED;
-    padding: 0;
+    padding: 0 0 79px 0;
 }
 
 /* Wedding Block */
 .services-wedding-block {
     padding: 0;
-    margin-bottom: 94px;
+    margin-bottom: 44px;
 }
 
 .services-wedding-content {
     display: flex;
     gap: 44px;
     align-items: center;
-    padding: 0 244px 0 244px;
+    padding: 64px 194px 0 244px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -143,7 +143,7 @@
 
 .services-wedding-title {
     font-family: 'Cormorant', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 38px;
     line-height: normal;
     color: #31302e;
@@ -154,7 +154,7 @@
 
 .services-wedding-subtitle {
     font-family: 'Cormorant', serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 23px;
     line-height: normal;
     color: #31302e;
@@ -216,27 +216,52 @@
 /* Gallery Section */
 .services-gallery {
     display: flex;
+    flex-wrap: nowrap;
     gap: 8px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 94px;
     padding: 0;
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+
+.services-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.services-gallery.is-dragging {
+    cursor: grabbing;
 }
 
 .services-gallery-item {
-    width: 448px;
-    height: 616px;
+    width: clamp(197px, 31.2vw, 448px);
+    height: auto;
+    aspect-ratio: 448 / 616;
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    transform: rotate(0deg);
+    opacity: 1;
+    scroll-snap-align: center;
 }
 
 .services-gallery-item:first-child {
-    margin-left: -188.5px;
+    margin-left: 0;
 }
 
 .services-gallery-item:last-child {
-    margin-right: -188.5px;
+    margin-right: 0;
 }
 
 .services-gallery-item img {
@@ -251,9 +276,12 @@
     display: flex;
     gap: 44px;
     align-items: center;
-    max-width: 980px;
+    width: 980px;
+    height: 676px;
     margin: 0 auto;
-    padding: 0 230px;
+    padding: 0;
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 .services-proposal-image {
@@ -287,7 +315,7 @@
 
 .services-proposal-title {
     font-family: 'Cormorant', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 38px;
     line-height: normal;
     color: #31302e;
@@ -298,7 +326,7 @@
 
 .services-proposal-subtitle {
     font-family: 'Cormorant', serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 23px;
     line-height: normal;
     color: #31302e;
@@ -346,7 +374,7 @@
 /* Feedback Section */
 .services-feedback-section {
     background-color: white;
-    padding: 112px 0;
+    padding: 112px 0 132px 0;
     margin-bottom: -30px;
 }
 
@@ -359,7 +387,7 @@
 .services-feedback-content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     align-items: center;
 }
 
@@ -399,10 +427,10 @@
 
 .services-feedback-quote {
     font-family: 'Cormorant', serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 26px;
     line-height: 28px;
-    letter-spacing: -0.52px;
+    letter-spacing: -2%;
     margin: 0;
 }
 
@@ -410,15 +438,22 @@
 .services-parties-section {
     background-color: #F8F3ED;
     padding: 0;
+    margin-top: -44px;
+    position: relative;
+    z-index: 2;
 }
 
 .services-parties-block {
     display: flex;
     gap: 44px;
     align-items: end;
-    max-width: 984px;
+    width: 984px;
+    height: 692px;
     margin: 0 auto;
-    padding: 0 228px 94px 228px;
+    padding: 0;
+    box-sizing: border-box;
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 .services-parties-text {
@@ -427,12 +462,15 @@
     gap: 16px;
     width: 400px;
     flex-shrink: 0;
-    padding-top: 100px;
+    padding-top: 0;
+    margin-top: 0;
+    position: relative;
+    top: -70px;
 }
 
 .services-parties-title {
     font-family: 'Cormorant', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 38px;
     line-height: normal;
     color: #31302e;
@@ -483,9 +521,11 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    transform: translateY(-25px);
 }
 
-.services-parties-image img {
+.services-parties-image img,
+.services-parties-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -499,7 +539,7 @@
     align-items: end;
     max-width: 915px;
     margin: 0 auto;
-    padding: 0 34.5px 94px 34.5px;
+    padding: 74px 34.5px 94px 34.5px;
 }
 
 .services-chamber-parties-image {
@@ -1255,6 +1295,233 @@
     white-space: nowrap;
 }
 
+/* Tablet/Desktop adaptive for Services content block */
+@media (min-width: 781px) and (max-width: 1200px) {
+    .services-wedding-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 44px;
+        align-items: center;
+        padding: 48px 40px 0 40px;
+        max-width: 1200px;
+    }
+
+    .services-wedding-text {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .services-wedding-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 512 / 692;
+    }
+
+    .services-gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-bottom: 72px;
+        padding: 0;
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .services-gallery-item {
+        width: clamp(260px, 34vw, 448px);
+        height: auto;
+        aspect-ratio: 448 / 616;
+        scroll-snap-align: center;
+    }
+
+    .services-gallery-item:first-child {
+        margin-left: 0;
+    }
+
+    .services-gallery-item:last-child {
+        margin-right: 0;
+    }
+
+    .services-proposal-block {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 44px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .services-proposal-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 490 / 676;
+    }
+
+    .services-proposal-content {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Large desktop adaptive (1200+) for Services content block */
+@media (min-width: 1201px) {
+    .services-wedding-content {
+        display: grid;
+        grid-template-columns: minmax(420px, 1fr) minmax(460px, 1fr);
+        gap: 44px;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 64px 194px 0 244px;
+    }
+
+    .services-wedding-text {
+        width: 100%;
+        min-width: 0;
+        max-width: 446px;
+    }
+
+    .services-wedding-image {
+        width: 100%;
+        max-width: 512px;
+        justify-self: end;
+        height: auto;
+        aspect-ratio: 512 / 692;
+    }
+
+    .services-gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-bottom: 94px;
+        padding: 0;
+        max-width: none;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .services-gallery-item {
+        width: clamp(300px, 31.2vw, 448px);
+        height: auto;
+        aspect-ratio: 448 / 616;
+        scroll-snap-align: center;
+    }
+
+    .services-gallery-item:first-child {
+        margin-left: 0;
+    }
+
+    .services-gallery-item:last-child {
+        margin-right: 0;
+    }
+
+    .services-proposal-block {
+        display: grid;
+        grid-template-columns: minmax(460px, 1fr) minmax(420px, 1fr);
+        gap: 44px;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 clamp(40px, 8vw, 120px);
+    }
+
+    .services-proposal-image {
+        width: 100%;
+        max-width: 490px;
+        height: auto;
+        aspect-ratio: 490 / 676;
+    }
+
+    .services-proposal-content {
+        min-width: 0;
+        max-width: 446px;
+    }
+}
+
+/* Tablet/mobile layout for Services content block */
+@media (min-width: 601px) and (max-width: 780px) {
+    .services-wedding-content {
+        flex-direction: column;
+        padding: 0 32px;
+        gap: 44px;
+    }
+
+    .services-wedding-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .services-wedding-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 512 / 692;
+        order: 1;
+    }
+
+    .services-gallery {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 8px;
+        padding: 0;
+        margin-bottom: 54px;
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .services-gallery-item {
+        width: clamp(220px, 42vw, 320px);
+        height: auto;
+        aspect-ratio: 448 / 616;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+
+    .services-gallery-item:first-child,
+    .services-gallery-item:last-child {
+        margin: 0;
+    }
+
+    .services-proposal-block {
+        flex-direction: column;
+        padding: 0 32px;
+        gap: 44px;
+    }
+
+    .services-proposal-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 490 / 676;
+        order: 1;
+    }
+
+    .services-proposal-content {
+        width: 100%;
+        order: 2;
+    }
+}
+
 /* Mobile Styles */
 @media (max-width: 600px) {
     .services-hero {
@@ -1297,7 +1564,7 @@
     .services-wedding-content {
         flex-direction: column;
         padding: 0 32px;
-        gap: 16px;
+        gap: 44px;
     }
 
     .services-wedding-text {
@@ -1324,21 +1591,30 @@
 
     .services-gallery {
         flex-direction: row;
+        flex-wrap: nowrap;
         overflow-x: auto;
+        overflow-y: hidden;
         gap: 8px;
-        padding: 0 32px;
+        padding: 0;
         margin-bottom: 54px;
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
         -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
     }
 
     .services-gallery-item {
-        width: 197px;
-        height: 271px;
+        width: clamp(170px, 52vw, 260px);
+        height: auto;
+        aspect-ratio: 448 / 616;
         flex-shrink: 0;
+        scroll-snap-align: center;
     }
 
     .services-gallery-item:first-child {
-        margin-left: -116px;
+        margin-left: 0;
     }
 
     .services-gallery-item:last-child {
@@ -1348,7 +1624,7 @@
     .services-proposal-block {
         flex-direction: column;
         padding: 0 32px;
-        gap: 16px;
+        gap: 44px;
     }
 
     .services-proposal-image {

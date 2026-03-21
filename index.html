@@ -18,24 +18,24 @@
 <body>
     <!-- Mobile Menu Button -->
     <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <img src="src/img/for dev/icons and logo/mobile/ic_menu.svg" alt="Menu" class="mobile-menu-icon">
+        <img src="src/img/contact/ic_menu.svg" alt="Menu" class="mobile-menu-icon">
     </button>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-menu-close" id="mobileMenuClose">
-            <img src="src/img/for dev/icons and logo/mobile/ic_cross.svg" alt="Close" class="mobile-menu-close-icon">
+            <img src="src/img/contact/ic_cross.svg" alt="Close" class="mobile-menu-close-icon">
         </button>
         <div class="mobile-menu-content">
             <div class="mobile-brand">
                 <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="mobile-brand-logo">
             </div>
             <nav class="mobile-nav">
-                <a href="#" class="mobile-nav-link" data-translate="navHome">ГОЛОВНА</a>
+                <a href="index.html" class="mobile-nav-link" data-translate="navHome">ГОЛОВНА</a>
                 <a href="about.html" class="mobile-nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
-                <a href="#" class="mobile-nav-link" data-translate="navServices">ПОСЛУГИ</a>
+                <a href="services.html" class="mobile-nav-link" data-translate="navServices">ПОСЛУГИ</a>
                 <a href="#" class="mobile-nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
-                <a href="#" class="mobile-nav-link" data-translate="navContacts">КОНТАКТИ</a>
+                <a href="contact.html" class="mobile-nav-link" data-translate="navContacts">КОНТАКТИ</a>
             </nav>
             <button class="mobile-contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
             <a href="https://www.instagram.com/jko_gallery/" class="mobile-instagram" target="_blank" rel="noopener noreferrer">
@@ -57,9 +57,9 @@
 
         <nav class="header-nav">
             <a href="about.html" class="nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
-            <a href="#" class="nav-link" data-translate="navServices">ПОСЛУГИ</a>
+            <a href="services.html" class="nav-link" data-translate="navServices">ПОСЛУГИ</a>
             <a href="#" class="nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
-            <a href="#" class="nav-link" data-translate="navContacts">КОНТАКТИ</a>
+            <a href="contact.html" class="nav-link" data-translate="navContacts">КОНТАКТИ</a>
         </nav>
 
         <div class="header-right">
@@ -219,7 +219,7 @@
                 <p class="cta-description" data-translate="ctaDescription">
                     Кожен проєкт перебуває під особистим супроводом Юлії від першого контакту до фінальної реалізації. Особистий супровід, стратегічне планування та увага до деталей формують події, що мають сенс, структуру й унікальний характер.
                 </p>
-                <button class="cta-btn" data-translate="bookMeeting">ЗАБРОНЮВАТИ ЗУСТРІЧ З ЮЛІЄЮ</button>
+                <button class="cta-btn" data-translate="bookMeeting" onclick="window.location.href='contact.html'">ЗАБРОНЮВАТИ ЗУСТРІЧ З ЮЛІЄЮ</button>
             </div>
         </div>
     </section>
@@ -333,7 +333,7 @@
                     <p class="services-description" data-translate="servicesDescription">
                         Від камерних свят до масштабних, виїзних і локальних — кожен формат реалізується індивідуально, а рішення приймаються системно, з фокусом на якість, естетику та контроль кожного етапу реалізації. Кожен проєкт формується на основі вашого бачення та чітко структурованого сценарію.
                     </p>
-                    <button class="services-btn" data-translate="moreServices">БІЛЬШЕ ПРО НАШІ ПОСЛУГИ</button>
+                    <button class="services-btn" data-translate="moreServices" onclick="window.location.href='services.html'">БІЛЬШЕ ПРО НАШІ ПОСЛУГИ</button>
                 </div>
             </div>
             <div class="services-right">
@@ -368,7 +368,7 @@
             <div class="consultation-text-block">
                 <h2 class="consultation-title" data-translate-html="consultationTitle">РОЗПОЧНІМО ВАШУ РОЗКІШНУ ІСТОРІЮ</h2>
                 <p class="consultation-description" data-translate="consultationDescription">Поділіться з нами своєю мрією і ми допоможемо перетворити її на подію, створену саме для вас. Від ідеї до реалізації — кожне рішення формується навколо ваших цінностей, стилю та настрою, щоб подія стала справжнім відображенням вас.</p>
-                <button class="consultation-btn" data-translate="planConsultation">ЗАПЛАНУВАТИ КОНСУЛЬТАЦІЮ</button>
+                <button class="consultation-btn" data-translate="planConsultation" onclick="window.location.href='contact.html'">ЗАПЛАНУВАТИ КОНСУЛЬТАЦІЮ</button>
             </div>
         </div>
     </section>
@@ -552,7 +552,7 @@
                 if (isOverBeige) {
                     mobileMenuIcon.src = 'src/img/for dev/icons and logo/mobile/ic_menu1.svg';
                 } else {
-                    mobileMenuIcon.src = 'src/img/for dev/icons and logo/mobile/ic_menu.svg';
+                    mobileMenuIcon.src = 'src/img/contact/ic_menu.svg';
                 }
             }
             
@@ -681,10 +681,10 @@
                 </a>
             </div>
             <nav class="footer-nav">
-                <a href="#about" class="footer-nav-link" data-translate="footerAbout">ПРО НАС</a>
-                <a href="#services" class="footer-nav-link" data-translate="footerServices">ПОСЛУГИ</a>
+                <a href="about.html" class="footer-nav-link" data-translate="footerAbout">ПРО НАС</a>
+                <a href="services.html" class="footer-nav-link" data-translate="footerServices">ПОСЛУГИ</a>
                 <a href="#portfolio" class="footer-nav-link" data-translate="footerPortfolio">ПОРТФОЛІО</a>
-                <a href="#contacts" class="footer-nav-link" data-translate="footerContacts">КОНТАКТИ</a>
+                <a href="contact.html" class="footer-nav-link" data-translate="footerContacts">КОНТАКТИ</a>
             </nav>
             <div class="footer-contacts">
                 <h3 class="footer-section-title" data-translate="footerContactsTitle">КОНТАКТИ:</h3>

@@ -1,0 +1,792 @@
+/* Header styles - black text */
+.header .nav-link {
+    color: rgba(49, 48, 46, 1) !important;
+}
+
+.header .lang {
+    color: rgba(49, 48, 46, 1) !important;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 54px 120px 100px 120px;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+}
+
+.contact-section-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 54px;
+}
+
+.contact-section-logo-img {
+    width: 246px;
+    height: 116px;
+    display: block;
+    object-fit: contain;
+}
+
+/* Header background: white on contacts page */
+.header {
+    background-color: rgba(255, 255, 255, 1) !important;
+    height: 58px;
+}
+
+.contact-container {
+    width: 960px;
+    height: 766px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    align-items: start;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Left Column: Form */
+
+
+.contact-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: rgba(49, 48, 46, 1);
+    margin-bottom: 12px;
+    max-width: 444px;
+}
+
+.contact-subtitle {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(49, 48, 46, 1);
+    margin-bottom: 8px;
+}
+
+.contact-direct-links {
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.contact-direct-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: rgba(151, 124, 114, 1);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.contact-direct-link:hover {
+    color: rgba(151, 124, 114, 0.8);
+}
+
+.contact-direct-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.contact-form-prompt {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(49, 48, 46, 1);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form-error {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgba(190, 0, 0, 0.4);
+    background: rgba(255, 230, 230, 1);
+    color: rgba(160, 0, 0, 1);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
+.contact-inline-error {
+    display: none;
+    margin-top: 6px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal; /* SemiBold => використаємо weight 600 */
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    background: transparent;
+    color: rgba(200, 101, 92, 1);
+    padding: 0;
+}
+
+.contact-form-field--error .contact-inline-error {
+    display: block;
+}
+
+.contact-form-field--error input,
+.contact-form-field--error textarea {
+    border-bottom-color: rgba(190, 0, 0, 0.6) !important;
+}
+
+.contact-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-form-field label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(176, 161, 155, 1);
+}
+
+.contact-form-field input,
+.contact-form-field textarea {
+    border: none;
+    border-bottom: 1px solid rgba(190, 177, 172, 1);
+    background: transparent;
+    padding: 4px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal; /* SemiBold => використаємо weight 600 */
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(49, 48, 46, 1);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form-validated .contact-form-field input:invalid,
+.contact-form-validated .contact-form-field textarea:invalid {
+    border-bottom-color: rgba(190, 0, 0, 0.6);
+}
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus {
+    border-bottom-color: #8E756C;
+}
+
+.contact-form-field input[type="date"] {
+    cursor: pointer;
+    position: relative;
+}
+
+.contact-form-field input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Приховати текст форматування коли поле порожнє */
+.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-text {
+    color: transparent;
+    pointer-events: none;
+}
+
+.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-month-field {
+    color: transparent;
+    pointer-events: none;
+}
+
+.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-day-field {
+    color: transparent;
+    pointer-events: none;
+}
+
+.contact-form-field input[type="date"]:invalid::-webkit-datetime-edit-year-field {
+    color: transparent;
+    pointer-events: none;
+}
+
+/* Показати текст коли дата вибрана */
+.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-text,
+.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-month-field,
+.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-day-field,
+.contact-form-field input[type="date"]:valid::-webkit-datetime-edit-year-field {
+    color: rgba(49, 48, 46, 1);
+    pointer-events: none;
+}
+
+.contact-form-field input[type="date"]::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.contact-form-field input[type="date"]::placeholder {
+    color: transparent;
+}
+
+.contact-form-field textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+.contact-submit-btn {
+    width: 279px;
+    height: 64px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    color: rgba(190, 165, 155, 1);
+    padding-top: 24px;
+    padding-right: 50px;
+    padding-bottom: 24px;
+    padding-left: 50px;
+    gap: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    opacity: 1;
+    transform: rotate(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-style: normal; /* "Bold" => normal with 700 weight */
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.contact-submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+    transform: none;
+}
+
+.contact-submit-btn:not(:disabled) {
+    color: rgba(49, 48, 46, 1);
+}
+
+.contact-submit-btn:disabled:hover {
+    transform: none;
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Right Column: Image */
+.contact-image-column {
+    position: relative;
+}
+
+/* Success Toast */
+.contact-success-toast {
+    position: fixed;
+    top: calc(82px - var(--contact-header-hidden-offset, 0px));
+    left: 50%;
+    right: auto;
+    width: min(960px, calc(100vw - 300px));
+    height: 103px;
+
+    padding: 24px 32px;
+    box-sizing: border-box;
+    z-index: 9999;
+
+    background: rgba(255, 255, 255, 0.95);
+    
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -14px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.contact-success-toast.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.contact-success-toast-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    z-index: 2;
+}
+
+.contact-success-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 36px;
+    border-radius: 0;
+    border: none;
+    flex-shrink: 0;
+}
+
+.contact-success-tick {
+    width: 35px;
+    height: 36px;
+opacity: 1;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-success-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
+    font-style: normal; /* Medium => використаємо weight 500 */
+    font-size: 23px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(49, 48, 46, 1);
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.contact-success-title-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none !important;
+}
+
+.contact-success-subtitle {
+    margin-top: 6px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal; /* Medium => використаємо weight 500 */
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: rgba(49, 48, 46, 1);
+}
+
+.contact-success-toast-watermark {
+    display: none;
+}
+
+.contact-image-wrapper {
+    position: relative;
+    width: 472px;
+    height: 766px;
+}
+
+.contact-main-image {
+    width: 472px;
+    height: 766px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.contact-main-image-mobile {
+    display: none;
+}
+
+.contact-main-image-desktop {
+    display: block;
+}
+
+.contact-image-overlay {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 2;
+}
+
+.contact-overlay-text {
+    font-family: 'Cormorant', serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #D4AF37;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .contact-section {
+        padding: 80px 60px 60px 60px;
+    }
+    
+    .contact-container {
+        gap: 50px;
+    }
+    
+    .contact-title {
+        font-size: 38px;
+    }
+
+    .contact-success-toast {
+        left: 60px;
+        right: 60px;
+        width: auto;
+    }
+    
+
+}
+
+@media (min-width: 781px) and (max-width: 1000px) {
+    .contact-section {
+        padding: 80px 40px 60px 40px;
+    }
+    
+    .contact-container {
+        width: 100%;
+        max-width: 960px;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 44px;
+    }
+    
+    .contact-image-wrapper {
+        width: 100%;
+        max-width: 472px;
+        height: auto;
+        aspect-ratio: 472 / 766;
+    }
+    
+    .contact-main-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 472 / 766;
+    }
+
+    .contact-success-toast {
+        left: 40px;
+        right: 40px;
+        width: auto;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 780px) {
+    .contact-section {
+        padding: 0px 32px 40px 32px;
+        margin-top: 0px;
+    }
+
+    .contact-section-logo {
+        margin-top: 20px;
+        margin-bottom: 36px;
+    }
+
+    .contact-section-logo-img {
+        width: 116.29846954345703px;
+        height: 50.2068977355957px;
+        opacity: 1;
+        position: static;
+        top: auto;
+        left: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* On mobile, show image first (like in the reference screenshot) */
+    .contact-image-column {
+        order: 0;
+        align-self: center;
+    }
+
+    .contact-form-column {
+        order: 1;
+    }
+    
+    .contact-title {
+        font-size: 23px;
+        margin-bottom: 8px;
+        max-width: none;
+    }
+    
+    .contact-subtitle {
+        font-size: 15px;
+        text-align: justify;
+        letter-spacing: 2%;
+    }
+
+    .contact-direct-links {
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+    
+    .contact-form {
+        gap: 25px;
+    }
+
+    /* Prevent iOS focus-zoom and horizontal shift while typing */
+    .contact-form-field input,
+    .contact-form-field textarea {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+    
+    .contact-submit-btn {
+        width: 100%;
+        padding: 16px 30px;
+        font-size: 12px;
+    }
+    
+    .contact-image-wrapper {
+        width: 100%;
+        max-width: 311px;
+        height: auto;
+        aspect-ratio: 311 / 295;
+        margin: 0 auto;
+    }
+    
+    .contact-main-image {
+        width: 100%;
+        max-width: 311px;
+        height: auto;
+        aspect-ratio: 311 / 295;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    .contact-main-image-desktop {
+        display: none;
+    }
+
+    .contact-main-image-mobile {
+        display: block;
+    }
+    
+    .contact-overlay-text {
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Success Toast responsive */
+    .contact-success-toast {
+        top: 92px;
+        left: 32px;
+        right: 32px;
+        width: auto;
+        height: auto;
+        padding: 24px 24px;
+        transform: translateY(-14px);
+    }
+
+    .contact-success-toast.active {
+        transform: translateY(0);
+    }
+
+    .contact-success-toast-inner {
+        gap: 16px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-success-check {
+        align-self: flex-start;
+    }
+
+    .contact-success-title {
+        font-size: 23px;
+        line-height: 110%;
+    }
+
+    .contact-success-subtitle {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 0px 32px 40px 32px;
+        margin-top: 0px;
+    }
+
+    .contact-section-logo {
+        margin-top: 20px;
+        margin-bottom: 36px;
+    }
+
+    .contact-section-logo-img {
+        width: 116.29846954345703px;
+        height: 50.2068977355957px;
+        opacity: 1;
+        position: static;
+        top: auto;
+        left: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* On mobile, show image first (like in the reference screenshot) */
+    .contact-image-column {
+        order: 0;
+        align-self: center;
+    }
+
+    .contact-form-column {
+        order: 1;
+    }
+    
+    .contact-title {
+        font-size: 23px;
+        margin-bottom: 8px;
+        max-width: none;
+    }
+    
+    .contact-subtitle {
+        font-size: 15px;
+        text-align: justify;
+        letter-spacing: 2%;
+    }
+
+    .contact-direct-links {
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+    
+    .contact-form {
+        gap: 25px;
+    }
+
+    /* Prevent iOS focus-zoom and horizontal shift while typing */
+    .contact-form-field input,
+    .contact-form-field textarea {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+    
+    .contact-submit-btn {
+        width: 100%;
+        padding: 16px 30px;
+        font-size: 12px;
+    }
+    
+    .contact-image-wrapper {
+        width: 100%;
+        max-width: 311px;
+        height: auto;
+        aspect-ratio: 311 / 295;
+        margin: 0 auto;
+    }
+    
+    .contact-main-image {
+        width: 100%;
+        max-width: 311px;
+        height: auto;
+        aspect-ratio: 311 / 295;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    .contact-main-image-desktop {
+        display: none;
+    }
+
+    .contact-main-image-mobile {
+        display: block;
+    }
+    
+    .contact-overlay-text {
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Success Toast responsive */
+    .contact-success-toast {
+        top: 66px;
+        left: 32px;
+        right: 32px;
+        width: auto;
+        height: auto;
+        padding: 24px 24px;
+        transform: translateY(-14px);
+    }
+
+    .contact-success-toast.active {
+        transform: translateY(0);
+    }
+
+    .contact-success-toast-inner {
+        gap: 16px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-success-check {
+        align-self: flex-start;
+    }
+
+    .contact-success-title {
+        font-size: 23px;
+        line-height: 110%;
+    }
+
+    .contact-success-subtitle {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
