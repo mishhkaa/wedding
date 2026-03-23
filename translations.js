@@ -69,7 +69,7 @@ const translations = {
         instagramTitle: "Відвідайте наш інстаграм",
         
         // Footer
-        footerAbout: "ПРО НАС",
+        footerAbout: "ПРО ЗАСНОВНИЦЮ",
         footerServices: "ПОСЛУГИ",
         footerPortfolio: "ПОРТФОЛІО",
         footerContacts: "КОНТАКТИ",
@@ -148,7 +148,7 @@ const translations = {
         instagramTitle: "Посетите наш инстаграм",
         
         // Footer
-        footerAbout: "О НАС",
+        footerAbout: "О ОСНОВАТЕЛЬНИЦЕ",
         footerServices: "УСЛУГИ",
         footerPortfolio: "ПОРТФОЛИО",
         footerContacts: "КОНТАКТЫ",
@@ -227,7 +227,7 @@ const translations = {
         instagramTitle: "Visit our Instagram",
         
         // Footer
-        footerAbout: "ABOUT US",
+        footerAbout: "ABOUT FOUNDER",
         footerServices: "SERVICES",
         footerPortfolio: "PORTFOLIO",
         footerContacts: "CONTACTS",

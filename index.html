@@ -174,7 +174,7 @@
                             <p data-translate="bookText1">Познайомитися з</p>
                             <p data-translate="bookText2">філософією життя </p>
                             <p data-translate="bookText3">Юлії можна у книзі</p>
-                            <p class="book-title" data-translate="bookTitle">"Смакувати життя"</p>
+                            <a href="https://www.instagram.com/juliakovinko/" target="_blank" rel="noopener noreferrer" class="book-title" data-translate="bookTitle">"Смакувати життя"</a>
                         </div>
                     </div>
                 </div>
@@ -492,68 +492,29 @@
             }
         });
 
-        // Зміна іконки меню залежно від фону (тільки на мобільній версії)
+        // Бургер у hero — білий, після hero — темний (тільки на мобільній/планшетній версії)
         (function() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
             
             if (!mobileMenuBtn || !mobileMenuIcon) return;
             
-            function getBackgroundColor(element) {
-                const style = window.getComputedStyle(element);
-                return style.backgroundColor;
-            }
-            
-            function isBeigeColor(color) {
-                // Перевіряємо різні формати тілесного кольору #F8F3ED
-                return color.includes('248, 243, 237') || 
-                       color === 'rgb(248, 243, 237)' ||
-                       color.toLowerCase() === '#f8f3ed';
-            }
-            
             function updateMenuIcon() {
-                // Перевіряємо тільки на мобільній та планшетній версії (від 1130px)
-                if (window.innerWidth > 1130) return;
+                // Тільки на мобільній та планшетній версії
+                if (window.innerWidth > 1130) {
+                    mobileMenuBtn.classList.remove('on-hero');
+                    return;
+                }
                 
                 const scrollY = window.pageYOffset || window.scrollY;
-                const menuBtnTop = mobileMenuBtn.getBoundingClientRect().top + scrollY;
-                const menuBtnBottom = menuBtnTop + mobileMenuBtn.offsetHeight;
-                
-                // Знаходимо всі секції з тілесним фоном
-                const beigeSections = document.querySelectorAll('.consultation-section');
-                let isOverBeige = false;
-                
-                // Перевіряємо чи кнопка знаходиться над consultation-section
-                beigeSections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
-                    
-                    if (menuBtnBottom >= sectionTop && menuBtnTop <= sectionBottom) {
-                        isOverBeige = true;
-                    }
-                });
-                
-                // Перевіряємо чи кнопка знаходиться над body з тілесним фоном (після hero)
-                if (!isOverBeige && scrollY > 0) {
-                    const bodyBg = getBackgroundColor(document.body);
-                    if (isBeigeColor(bodyBg)) {
-                        // Перевіряємо чи не над hero секцією
-                        const hero = document.querySelector('.hero');
-                        if (hero) {
-                            const heroBottom = hero.offsetTop + hero.offsetHeight;
-                            if (menuBtnTop > heroBottom) {
-                                isOverBeige = true;
-                            }
-                        }
-                    }
-                }
-                
-                // Змінюємо іконку
-                if (isOverBeige) {
-                    mobileMenuIcon.src = 'src/img/for dev/icons and logo/mobile/ic_menu1.svg';
-                } else {
-                    mobileMenuIcon.src = 'src/img/contact/ic_menu.svg';
-                }
+                const menuBtnBottom = mobileMenuBtn.getBoundingClientRect().bottom + scrollY;
+                const hero = document.querySelector('.hero');
+                const heroBottom = hero ? (hero.offsetTop + hero.offsetHeight) : 0;
+
+                // Той самий SVG-файл: у hero робимо білим через CSS, нижче лишається темним
+                const isOverHero = hero && menuBtnBottom <= heroBottom;
+                mobileMenuBtn.classList.toggle('on-hero', Boolean(isOverHero));
+                mobileMenuIcon.src = 'src/img/contact/ic_menu.svg';
             }
             
             // Викликаємо при скролі та при завантаженні
@@ -681,7 +642,7 @@
                 </a>
             </div>
             <nav class="footer-nav">
-                <a href="about.html" class="footer-nav-link" data-translate="footerAbout">ПРО НАС</a>
+                <a href="about.html" class="footer-nav-link" data-translate="footerAbout">ПРО ЗАСНОВНИЦЮ</a>
                 <a href="services.html" class="footer-nav-link" data-translate="footerServices">ПОСЛУГИ</a>
                 <a href="#portfolio" class="footer-nav-link" data-translate="footerPortfolio">ПОРТФОЛІО</a>
                 <a href="contact.html" class="footer-nav-link" data-translate="footerContacts">КОНТАКТИ</a>

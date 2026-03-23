@@ -218,6 +218,7 @@ body.menu-open {
 .contact-btn {
     background-color:#F8F3ED;
     color: rgba(49, 48, 46, 1);
+    text-decoration: none;
     border: none;
     padding: 12px 32px;
     font-family: 'Nunito Sans', sans-serif;
@@ -234,12 +235,6 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-}
-
-.contact-btn:hover,
-.contact-btn:focus {
-    text-decoration: none;
 }
 
 
@@ -557,8 +552,8 @@ body.menu-open {
 .mobile-menu-btn {
     display: none;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     z-index: 1001;
     background: transparent;
     border: none;
@@ -570,6 +565,10 @@ body.menu-open {
     width: 24px;
     height: 24px;
     display: block;
+}
+
+.mobile-menu-btn.on-hero .mobile-menu-icon {
+    filter: brightness(0) invert(1);
 }
 
 /* Мобільна версія хедера від 1130px */
@@ -601,7 +600,8 @@ body.menu-open {
     
     /* Відступ для мобільної кнопки меню, коли меню відкрито */
     .mobile-menu.active ~ .mobile-menu-btn {
-        top: 56px;
+        top: 20px;
+        left: 20px;
     }
 }
 
@@ -654,9 +654,9 @@ body.menu-open {
 }
 
 .mobile-menu-close {
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    position: relative;
+    top: 7px;
+    left: 7px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -716,7 +716,7 @@ body.menu-open {
     padding: 5px 0;
 }
 .mobile-nav-link{
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     -webkit-font-smoothing: antialiased !important;
 
 }
@@ -737,6 +737,7 @@ body.menu-open {
 .mobile-contact-btn {
     background-color: #F8F3ED;
     color: var(--black, #31302E);
+    text-decoration: none;
     text-align: center;
     border: none;
     padding: 24px 32px;
@@ -759,12 +760,6 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-}
-
-.mobile-contact-btn:hover,
-.mobile-contact-btn:focus {
-    text-decoration: none;
 }
 
 
@@ -2401,13 +2396,9 @@ h3[data-translate="gridTitle2"] {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: 1.2px;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
+    text-decoration: underline;
     cursor: pointer;
+    
 }
 
 /* Tablet */
@@ -5480,7 +5471,6 @@ letter-spacing: 0.3px;
 
 .footer-btn:hover {
     color: #8E756C;
-    text-decoration: none;
 }
 
 
