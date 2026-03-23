@@ -484,3 +484,504 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - J.KO GALLERY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Dancing+Script:wght@400;500&family=Montserrat:wght@200;300;400&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Nunito+Sans:wght@500;700&family=Cormorant:wght@400;500&family=Corinthia:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@300;400;500;700&display=swap');
+</style>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <img src="src/img/for dev/icons and logo/mobile/ic_menu.svg" alt="Menu" class="mobile-menu-icon">
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <img src="src/img/for dev/icons and logo/mobile/ic_cross.svg" alt="Close" class="mobile-menu-close-icon">
+        </button>
+        <div class="mobile-menu-content">
+            <div class="mobile-brand">
+                <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="mobile-brand-logo">
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link" data-translate="navHome">ГОЛОВНА</a>
+                <a href="about.html" class="mobile-nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
+                <a href="index.html#services" class="mobile-nav-link" data-translate="navServices">ПОСЛУГИ</a>
+                <a href="index.html#portfolio" class="mobile-nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
+                <a href="contact.html" class="mobile-nav-link" data-translate="navContacts">КОНТАКТИ</a>
+            </nav>
+            <a href="contact.html" class="mobile-contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+            <a href="https://www.instagram.com/jko_gallery/" class="mobile-instagram" target="_blank" rel="noopener noreferrer">
+                <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="instagram-icon">
+                <span>Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="profile-section">
+                <a href="index.html" class="profile-image">
+                    <img src="src/img/for dev/icons and logo/logo-black.svg" alt="Profile">
+                </a>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+            <a href="about.html" class="nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
+            <a href="index.html#services" class="nav-link" data-translate="navServices">ПОСЛУГИ</a>
+            <a href="index.html#portfolio" class="nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
+            <a href="contact.html" class="nav-link" data-translate="navContacts">КОНТАКТИ</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="languages">
+                <span class="lang" data-lang="ua">UA</span>
+                <span class="lang" data-lang="ru">RU</span>
+                <span class="lang" data-lang="en">EN</span>
+            </div>
+            <a href="contact.html" class="contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-section-logo">
+                <img src="src/img/for dev/icons and logo/logo-black.svg" alt="J.KO GALLERY" class="contact-section-logo-img">
+            </div>
+            <div class="contact-container">
+                <!-- Left Column: Form -->
+                <div class="contact-form-column">
+                    <h1 class="contact-title">ГОТОВІ ДІЗНАТИСЯ, ЯКОЮ МОЖЕ БУТИ ВАША ПОДІЯ?</h1>
+                    <p class="contact-subtitle">Зв’яжіться з нами, щоб обговорити концепцію та можливі варіанти її втілення. Ми відповідаємо протягом 24 годин</p>
+                    
+                    <div class="contact-direct-links">
+                        <a href="https://wa.me/380674306471" class="contact-direct-link" target="_blank" rel="noopener noreferrer">
+                            <img src="src/img/for dev/icons and logo/whatsapp.svg" alt="WhatsApp" class="contact-direct-icon">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="tel:+380674306471" class="contact-direct-link">
+                            <img src="src/img/contact/call.svg" alt="Phone" class="contact-direct-icon">
+                            <span>+38 (067) 430 64 71</span>
+                        </a>
+                    </div>
+
+                    <p class="contact-form-prompt">Або заповніть форму</p>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="contact-form-field">
+                            <input type="text" id="name" name="name" placeholder="ІМ'Я" required aria-label="ІМ'Я">
+                            <div class="contact-inline-error" hidden></div>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <input type="email" id="email" name="email" placeholder="EMAIL" required aria-label="EMAIL">
+                            <div class="contact-inline-error" hidden></div>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <input type="tel" id="phone" name="phone" placeholder="НОМЕР ТЕЛЕФОНУ" required aria-label="НОМЕР ТЕЛЕФОНУ">
+                            <div class="contact-inline-error" hidden></div>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <input type="text" id="event-type" name="event-type" placeholder="ТИП ПОДІЇ" required aria-label="ТИП ПОДІЇ">
+                            <div class="contact-inline-error" hidden></div>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <input
+                                type="text"
+                                id="event-date"
+                                name="event-date"
+                                placeholder="ДАТА ПОДІЇ"
+                                autocomplete="off"
+                                required
+                                aria-label="ДАТА ПОДІЇ"
+                            >
+                            <div class="contact-inline-error" hidden></div>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <textarea id="description" name="description" rows="4" placeholder="КОРОТКИЙ ОПИС, ПО БАЖАННЮ" aria-label="КОРОТКИЙ ОПИС, ПО БАЖАННЮ"></textarea>
+                            <div class="contact-inline-error" hidden></div>
+                        </div>
+
+                        <button type="submit" class="contact-submit-btn">ВІДПРАВИТИ ЗАПИТ</button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Image -->
+                <div class="contact-image-column">
+                    <div class="contact-image-wrapper">
+                        <img
+                            src="src/img/contact/contact-us.jpg"
+                            alt="J.KO GALLERY"
+                            class="contact-main-image contact-main-image-desktop"
+                        >
+                        <img
+                            src="src/img/contact/Rectangle 31.png"
+                            alt="J.KO GALLERY"
+                            class="contact-main-image contact-main-image-mobile"
+                        >
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="src/img/for dev/icons and logo/logo-black.svg" alt="J.KO GALLERY" class="footer-logo-img">
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <a href="about.html" class="footer-nav-link" data-translate="footerAbout">ПРО НАС</a>
+                <a href="index.html#services" class="footer-nav-link" data-translate="footerServices">ПОСЛУГИ</a>
+                <a href="index.html#portfolio" class="footer-nav-link" data-translate="footerPortfolio">ПОРТФОЛІО</a>
+                <a href="contact.html" class="footer-nav-link" data-translate="footerContacts">КОНТАКТИ</a>
+            </nav>
+            <div class="footer-contacts">
+                <h3 class="footer-section-title" data-translate="footerContactsTitle">КОНТАКТИ:</h3>
+                <div class="footer-contact">
+                    <div class="footer-phone">
+                        <img src="src/img/for dev/icons and logo/whatsapp.svg" alt="WhatsApp" class="footer-icon">
+                        <a href="tel:+380674306471" class="footer-contact-link">+38 (067) 430 64 71</a>
+                    </div>
+                    <div class="footer-email">
+                        <a href="mailto:jkogallery@gmail.com" class="footer-contact-link">jkogallery@gmail.com</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="footer-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+            </div>
+            <div class="footer-right">
+                <h3 class="footer-section-title" data-translate="footerSocialTitle">СОЦІАЛЬНІ МЕРЕЖІ:</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/jko_gallery/" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="footer-social-icon">
+                    </a>
+                    <a href="https://www.threads.com/@juliakovinko?xmt=AQF0-ck61pvXUQDFmIZNkJqVhKGXguqFOk3-LTiBStXwZ5I" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/threads.svg" alt="Threads" class="footer-social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/pinterest.png" alt="Pinteres" class="footer-social-icon footer-social-icon-pinterest">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="instagram-section-content">
+            <h2 class="instagram-title" data-translate="instagramTitle">Відвідайте наш інстаграм</h2>
+            <div class="instagram-gallery">
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst1.jpg" alt="Instagram Photo 1">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst2.jpg" alt="Instagram Photo 2">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst3.jpg" alt="Instagram Photo 3">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst4.jpg" alt="Instagram Photo 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Bottom -->
+    <footer class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p class="footer-copyright" data-translate="footerCopyright">© J. KO GALLERY 2026, ALL RIGHTS RESERVED</p>
+            <div class="footer-bottom-links">
+                <a href="#" class="footer-bottom-link" data-translate="footerPrivacy">PRIVACY POLICY</a>
+                <a href="#" class="footer-bottom-link" data-translate="footerCredits">SITE CREDITS</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Toast -->
+    <div class="contact-success-toast" id="contactSuccessToast" hidden>
+        <div class="contact-success-toast-watermark">GALLERY</div>
+        <div class="contact-success-toast-inner">
+            <div class="contact-success-check">
+                <img
+                    src="src/img/contact/tick.svg"
+                    alt="Tick"
+                    class="contact-success-tick"
+                >
+            </div>
+            <div class="contact-success-text">
+                <div class="contact-success-title">
+                    Дякуємо, Ваша заявка відправлена!
+                </div>
+                <div class="contact-success-subtitle">Ми зв’яжемось з вами протягом 24 годин</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // Language Switcher
+        const langElements = document.querySelectorAll('.lang');
+        langElements.forEach(lang => {
+            lang.addEventListener('click', () => {
+                const selectedLang = lang.getAttribute('data-lang');
+                // Language switching logic here
+                langElements.forEach(l => l.classList.remove('active'));
+                lang.classList.add('active');
+            });
+        });
+
+        // Mobile menu icon toggle (like on index): switch icon color depending on background
+        (function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+
+            if (!mobileMenuBtn || !mobileMenuIcon) return;
+
+            function isBeigeColor(color) {
+                return (
+                    color.includes('248, 243, 237') ||
+                    color === 'rgb(248, 243, 237)' ||
+                    color.toLowerCase() === '#f8f3ed'
+                );
+            }
+
+            function updateMenuIcon() {
+                // Only for mobile/tablet
+                if (window.innerWidth > 1130) return;
+
+                const scrollY = window.pageYOffset || window.scrollY;
+                const menuBtnTop = mobileMenuBtn.getBoundingClientRect().top + scrollY;
+                const menuBtnBottom = menuBtnTop + mobileMenuBtn.offsetHeight;
+
+                const beigeSections = document.querySelectorAll('.contact-section');
+                let isOverBeige = false;
+
+                beigeSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    const overlaps = menuBtnTop < sectionBottom && menuBtnBottom > sectionTop;
+                    if (!overlaps) return;
+
+                    const bg = window.getComputedStyle(section).backgroundColor;
+                    if (isBeigeColor(bg) || bg.includes('249, 245, 240') || bg.includes('248, 243, 237')) {
+                        isOverBeige = true;
+                    }
+                });
+
+                // Fallback: on tablet the menu button might sit above the page background
+                // (not inside `.contact-section`), which can cause the light icon to "disappear".
+                if (!isOverBeige) {
+                    const rect = mobileMenuBtn.getBoundingClientRect();
+                    const sampleX = Math.min(window.innerWidth - 2, rect.left + rect.width + 8);
+                    const sampleY = rect.top + rect.height / 2;
+                    const el = document.elementFromPoint(sampleX, sampleY);
+                    if (el) {
+                        const bg = window.getComputedStyle(el).backgroundColor;
+                        if (isBeigeColor(bg) || bg.includes('249, 245, 240') || bg.includes('248, 243, 237')) {
+                            isOverBeige = true;
+                        }
+                    }
+                }
+
+                mobileMenuIcon.src = isOverBeige
+                    ? 'src/img/for dev/icons and logo/mobile/ic_menu1.svg'
+                    : 'src/img/for dev/icons and logo/mobile/ic_menu.svg';
+            }
+
+            window.addEventListener('resize', updateMenuIcon);
+            updateMenuIcon();
+        })();
+
+        // Hide header on scroll down, show only when reaching the very top
+        const header = document.querySelector('.header');
+        let lastScrollTop = 0;
+        let scrollThreshold = 100;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll === 0) {
+                header.classList.remove('hidden');
+            } else if (currentScroll > scrollThreshold) {
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.add('hidden');
+                }
+            } else {
+                header.classList.remove('hidden');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            const submitBtn = contactForm.querySelector('.contact-submit-btn');
+            const requiredFields = Array.from(contactForm.querySelectorAll('[required]'));
+            const inlineErrors = Array.from(contactForm.querySelectorAll('.contact-inline-error'));
+            const touched = new Set();
+
+            function setFieldError(field, show) {
+                if (!field) return;
+                const fieldWrap = field.closest('.contact-form-field');
+                const errEl = fieldWrap ? fieldWrap.querySelector('.contact-inline-error') : null;
+                if (!fieldWrap || !errEl) return;
+
+                if (show) {
+                    fieldWrap.classList.add('contact-form-field--error');
+                    errEl.textContent = 'Помилка при заповненні';
+                    errEl.hidden = false;
+                } else {
+                    fieldWrap.classList.remove('contact-form-field--error');
+                    errEl.textContent = '';
+                    errEl.hidden = true;
+                }
+            }
+
+            function updateSubmitState() {
+                const allFilledAndValid = requiredFields.every(field => {
+                    // Some fields (like date) validate only after value is set
+                    return field.value && field.checkValidity();
+                });
+
+                if (submitBtn) submitBtn.disabled = !allFilledAndValid;
+            }
+
+            // Initial state
+            if (submitBtn) submitBtn.disabled = true;
+            updateSubmitState();
+
+            // Update on user input
+            requiredFields.forEach(field => {
+                field.addEventListener('input', updateSubmitState);
+                field.addEventListener('change', updateSubmitState);
+                field.addEventListener('blur', () => {
+                    touched.add(field);
+                    setFieldError(field, !field.checkValidity());
+                });
+
+                // Show immediately after user starts interacting (typing/picking)
+                field.addEventListener('input', () => {
+                    touched.add(field);
+                    setFieldError(field, !field.checkValidity());
+                });
+            });
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                if (!contactForm.checkValidity()) {
+                    // Clear previous errors
+                    contactForm.querySelectorAll('.contact-form-field--error').forEach(el => {
+                        el.classList.remove('contact-form-field--error');
+                    });
+                    contactForm.querySelectorAll('.contact-inline-error').forEach(el => {
+                        el.textContent = '';
+                        el.hidden = true;
+                    });
+
+                    const invalidEl = contactForm.querySelector(':invalid');
+                    const field = invalidEl ? invalidEl.closest('.contact-form-field') : null;
+                    const inlineError = field ? field.querySelector('.contact-inline-error') : null;
+
+                    if (field && inlineError) {
+                        field.classList.add('contact-form-field--error');
+                        inlineError.textContent = 'Помилка при заповненні';
+                        inlineError.hidden = false;
+                    }
+
+                    return;
+                }
+
+                // Success state (demo)
+                const toast = document.getElementById('contactSuccessToast');
+                if (toast) {
+                    toast.hidden = false;
+                    toast.classList.add('active');
+
+                    // Token guard: ignore callbacks from older submit clicks
+                    const token = (toast.__toastToken = (toast.__toastToken || 0) + 1);
+
+                    // Cancel timers we created during previous submits (if we have handles)
+                    if (toast.__toastHideTimer) window.clearTimeout(toast.__toastHideTimer);
+                    if (toast.__toastRemoveActiveTimer) window.clearTimeout(toast.__toastRemoveActiveTimer);
+
+                    toast.__toastRemoveActiveTimer = window.setTimeout(() => {
+                        if (toast.__toastToken !== token) return;
+                        toast.classList.remove('active');
+                        // hide after transition ends
+                        toast.__toastHideTimer = window.setTimeout(() => {
+                            if (toast.__toastToken !== token) return;
+                            toast.hidden = true;
+                        }, 380);
+                    }, 7000);
+                }
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

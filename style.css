@@ -234,6 +234,12 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+    text-decoration: none;
 }
 
 
@@ -551,8 +557,8 @@ body.menu-open {
 .mobile-menu-btn {
     display: none;
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     z-index: 1001;
     background: transparent;
     border: none;
@@ -595,8 +601,7 @@ body.menu-open {
     
     /* Відступ для мобільної кнопки меню, коли меню відкрито */
     .mobile-menu.active ~ .mobile-menu-btn {
-        top: 20px;
-        left: 20px;
+        top: 56px;
     }
 }
 
@@ -649,9 +654,9 @@ body.menu-open {
 }
 
 .mobile-menu-close {
-    position: relative;
-    top: 10px;
-    left: 10px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -711,7 +716,7 @@ body.menu-open {
     padding: 5px 0;
 }
 .mobile-nav-link{
-    font-weight: 400 !important;
+    font-weight: 300 !important;
     -webkit-font-smoothing: antialiased !important;
 
 }
@@ -754,6 +759,12 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+.mobile-contact-btn:hover,
+.mobile-contact-btn:focus {
+    text-decoration: none;
 }
 
 
@@ -5464,10 +5475,12 @@ letter-spacing: 0.3px;
     border-radius: 0;
     align-self: flex-start;
     margin-top: 10px;
+    text-decoration: none;
 }
 
 .footer-btn:hover {
     color: #8E756C;
+    text-decoration: none;
 }
 
 

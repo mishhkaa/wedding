@@ -38,7 +38,7 @@
                 <a href="index.html#portfolio" class="mobile-nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
                 <a href="contact.html" class="mobile-nav-link" data-translate="navContacts">КОНТАКТИ</a>
             </nav>
-            <button class="mobile-contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
+            <a href="contact.html" class="mobile-contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
             <a href="https://www.instagram.com/jko_gallery/" class="mobile-instagram" target="_blank" rel="noopener noreferrer">
                 <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="instagram-icon">
                 <span>Instagram</span>
@@ -69,7 +69,7 @@
                 <span class="lang" data-lang="ru">RU</span>
                 <span class="lang" data-lang="en">EN</span>
             </div>
-            <button class="contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
+            <a href="contact.html" class="contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
         </div>
     </header>
 
@@ -187,27 +187,36 @@
                         <div class="personalized-service-image">
                             <img src="src/img/about/ic_wedding.png" alt="Весільний образ">
                         </div>
-                        <h3 class="personalized-service-label">ВЕСІЛЬНИЙ ОБРАЗ</h3>
+                        <a class="personalized-service-label" href="#option1">ВЕСІЛЬНИЙ ОБРАЗ</a>
                     </div>
                     <div class="personalized-service-item">
                         <div class="personalized-service-image">
                             <img src="src/img/about/ic_planning.png" alt="Планування подій">
                         </div>
-                        <h3 class="personalized-service-label">ПЛАНУВАННЯ ПОДІЙ</h3>
+                        <a class="personalized-service-label" href="#option2">ПЛАНУВАННЯ ПОДІЙ</a>
                     </div>
                     <div class="personalized-service-item">
                         <div class="personalized-service-image">
                             <img src="src/img/about/ic_mentoring.png" alt="Менторство">
                         </div>
-                        <h3 class="personalized-service-label">МЕНТОРСТВО</h3>
+                        <a class="personalized-service-label" href="#option3">МЕНТОРСТВО</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Sticky Options Bar (appears on scroll) -->
+    <nav class="about-sticky-options" id="aboutStickyOptions" aria-label="Personalized services navigation" hidden>
+        <div class="about-sticky-options-inner">
+            <a class="about-sticky-option" href="#option1" data-option="option1">ВЕСІЛЬНИЙ ОБРАЗ</a>
+            <a class="about-sticky-option" href="#option2" data-option="option2">ПЛАНУВАННЯ ПОДІЙ</a>
+            <a class="about-sticky-option" href="#option3" data-option="option3">МЕНТОРСТВО</a>
+        </div>
+    </nav>
+
     <!-- Wedding Work Section -->
-    <section class="wedding-work-section">
+    <section id="option1" class="wedding-work-section">
         <div class="wedding-work-container">
             <div class="wedding-work-main-image-wrapper">
                 <img src="src/img/about/40b63d156cab40a34cc343dfeb09279c1ad4e623.jpg" alt="Юлія" class="wedding-work-main-image">
@@ -278,7 +287,7 @@
     </section>
 
     <!-- Consultation Planning Section -->
-    <section class="consultation-planning-section">
+    <section id="option2" class="consultation-planning-section">
         <div class="consultation-planning-container">
             <div class="consultation-planning-image">
                 <img src="src/img/about/Yuliia3.jpg" alt="Консультація з планування подій" class="consultation-planning-main-image">
@@ -360,7 +369,7 @@
     </section>
 
     <!-- Start Your Story Section -->
-    <section class="start-story-section">
+    <section id="option3" class="start-story-section">
         <div class="start-story-content">
             <div class="start-story-text-block">
                 <div class="start-story-option-image">
@@ -475,7 +484,7 @@
                         <a href="mailto:jkogallery@gmail.com" class="footer-contact-link">jkogallery@gmail.com</a>
                     </div>
                 </div>
-                <button class="footer-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</button>
+                <a href="contact.html" class="footer-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
             </div>
             <div class="footer-right">
                 <h3 class="footer-section-title" data-translate="footerSocialTitle">СОЦІАЛЬНІ МЕРЕЖІ:</h3>
@@ -1111,6 +1120,63 @@
             window.addEventListener('scroll', onScroll, { passive: true });
             window.addEventListener('resize', updateMenuIcon);
             updateMenuIcon(); // Початкова перевірка
+        })();
+
+        // Sticky options bar (Option 1/2/3)
+        (function () {
+            const sticky = document.getElementById('aboutStickyOptions');
+            const trigger = document.querySelector('.personalized-services-section');
+            const sections = [
+                document.getElementById('option1'),
+                document.getElementById('option2'),
+                document.getElementById('option3'),
+            ].filter(Boolean);
+
+            if (!sticky || !trigger || sections.length === 0) return;
+
+            const links = Array.from(sticky.querySelectorAll('.about-sticky-option'));
+            const setActive = (id) => {
+                links.forEach((a) => a.classList.toggle('is-active', a.dataset.option === id));
+            };
+            links.forEach((a) => {
+                a.addEventListener('click', () => {
+                    const id = a.dataset.option;
+                    if (id) setActive(id);
+                });
+            });
+
+            // Show sticky nav after passing the options grid block.
+            // (Scroll-based logic is more reliable than IntersectionObserver here.)
+            const updateStickyVisibility = () => {
+                const triggerRect = trigger.getBoundingClientRect();
+                // Fixed main header occupies ~80px; sticky bar should appear right under it.
+                const mainHeaderHeight = 80;
+                sticky.hidden = !(triggerRect.bottom <= mainHeaderHeight + 5);
+            };
+
+            updateStickyVisibility();
+            window.addEventListener('scroll', updateStickyVisibility, { passive: true });
+            window.addEventListener('resize', updateStickyVisibility);
+
+            // Highlight active option based on section in view
+            const activeObserver = new IntersectionObserver(
+                (entries) => {
+                    // pick the top-most visible section
+                    const visible = entries
+                        .filter((e) => e.isIntersecting)
+                        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                    if (visible.length === 0) return;
+                    setActive(visible[0].target.id);
+                },
+                {
+                    // account for fixed header (80px) + sticky bar height (~48px)
+                    rootMargin: '-140px 0px -55% 0px',
+                    threshold: [0, 0.1, 0.25, 0.5],
+                }
+            );
+
+            sections.forEach((sec) => activeObserver.observe(sec));
+            setActive('option1');
         })();
     </script>
 </body>

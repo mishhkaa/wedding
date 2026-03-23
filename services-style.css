@@ -1132,6 +1132,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    text-decoration: none;
+}
+
+.services-how-work-btn:hover,
+.services-how-work-btn:focus {
+    text-decoration: none;
 }
 
 /* Visualization Section */
