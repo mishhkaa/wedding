@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо - J.KO GALLERY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;700&family=Cormorant:wght@300;400;500&family=Corinthia:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio-style.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <img src="src/img/ic_menu.svg" alt="Menu" class="mobile-menu-icon">
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <img src="src/img/ic_cross.svg" alt="Close" class="mobile-menu-close-icon">
+        </button>
+        <div class="mobile-menu-content">
+            <div class="mobile-brand">
+                <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="mobile-brand-logo">
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link" data-translate="navHome">ГОЛОВНА</a>
+                <a href="about.html" class="mobile-nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
+                <a href="services.html" class="mobile-nav-link" data-translate="navServices">ПОСЛУГИ</a>
+                <a href="portfolio.html" class="mobile-nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
+                <a href="contact.html" class="mobile-nav-link" data-translate="navContacts">КОНТАКТИ</a>
+            </nav>
+            <a href="contact.html" class="mobile-contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+            <a href="https://www.instagram.com/jko_gallery/" class="mobile-instagram" target="_blank" rel="noopener noreferrer">
+                <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="instagram-icon">
+                <span>Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="profile-section">
+                <a href="index.html" class="profile-image">
+                    <img src="src/img/for dev/icons and logo/logo-white.svg" alt="Profile">
+                </a>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <a href="about.html" class="nav-link" data-translate="navAbout">ПРО ЗАСНОВНИЦЮ</a>
+            <a href="services.html" class="nav-link" data-translate="navServices">ПОСЛУГИ</a>
+            <a href="portfolio.html" class="nav-link" data-translate="navPortfolio">ПОРТФОЛІО</a>
+            <a href="contact.html" class="nav-link" data-translate="navContacts">КОНТАКТИ</a>
+        </nav>
+        <div class="header-right">
+            <div class="languages">
+                <span class="lang" data-lang="ua">UA</span>
+                <span class="lang" data-lang="ru">RU</span>
+                <span class="lang" data-lang="en">EN</span>
+            </div>
+            <a href="contact.html" class="contact-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+        </div>
+    </header>
+
+    <!-- Sticky top CTA (appears after scroll to the 2nd block) -->
+    <div class="pf-sticky-cta" id="pfStickyCta" hidden aria-hidden="true">
+        <div class="pf-sticky-cta-inner">
+            <p class="pf-sticky-cta-text" data-translate="portfolioTopStickyCta">Поділіться з нами своєю мрією і ми допоможемо перетворити її на подію, створену саме для вас</p>
+            <a href="contact.html" class="pf-sticky-cta-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="portfolio-hero">
+        <video class="portfolio-hero-video" autoplay muted loop playsinline>
+            <source src="src/img/portfolio/video/port-01.mp4" type="video/mp4">
+        </video>
+        <div class="portfolio-hero-overlay"></div>
+        <div class="portfolio-hero-text">
+            <img src="src/img/for dev/icons and logo/logo-white.svg" alt="J.KO GALLERY" class="portfolio-hero-logo">
+            <h1 class="portfolio-hero-title" data-translate="portfolioHeroTitle">portfolio</h1>
+        </div>
+    </section>
+
+    <main>
+        <!-- Wedding grid -->
+        <section class="pf-section pf-wedding">
+            <div class="pf-section-header">
+                <div class="pf-kicker" data-translate="galleryKicker">gallery</div>
+                <h2 class="pf-title" data-translate="weddingTitle">wedding</h2>
+                <p class="pf-desc" data-translate="weddingDesc">Пориньте у світ романтики та подорожей разом із нашою галереєю весіль і подій у різних локаціях. Від камерних церемоній до масштабних міжнародних святкувань — J.KO Gallery створює події, що залишають сильне враження та поєднують у собі елегантність, яка не залежить від часу.</p>
+            </div>
+            <div class="pf-grid pf-grid-3x2">
+                <article class="pf-card">
+                    <div class="pf-card-media"><img src="src/img/portfolio/wed-1.jpg" alt="Wedding Serhiy & Iryna"></div>
+                    <h3 class="pf-card-title">Wedding<br>Serhiy &amp; Iryna</h3>
+                    <a href="portfolio-serhiy-iryna.html" class="pf-card-link">переглянути</a>
+                </article>
+                <article class="pf-card pf-mobile-lower">
+                    <div class="pf-card-media"><img src="src/img/portfolio/wed-2.jpg" alt="Wedding Oleksandr & Anna"></div>
+                    <h3 class="pf-card-title">Wedding<br>Oleksandr &amp; Anna</h3>
+                    <a href="portfolio-oleksandr-anna.html" class="pf-card-link">переглянути</a>
+                </article>
+                <article class="pf-card">
+                    <div class="pf-card-media"><img src="src/img/portfolio/wed-3.jpg" alt="Wedding Vladimir & Anna"></div>
+                    <h3 class="pf-card-title">Wedding<br>Vladimir &amp; Anna</h3>
+                    <a href="portfolio-volodymyr-anna.html" class="pf-card-link">переглянути</a>
+                </article>
+                <article class="pf-card pf-mobile-lower">
+                    <div class="pf-card-media"><img src="src/img/portfolio/wed-4.jpg" alt="Wedding Sulo & Tina"></div>
+                    <h3 class="pf-card-title">Wedding<br>Sulo &amp; Tina</h3>
+                    <a href="#" class="pf-card-link">переглянути</a>
+                </article>
+                <article class="pf-card">
+                    <div class="pf-card-media"><img src="src/img/portfolio/wed-5.jpg" alt="Wedding Oleksandr & Iryna"></div>
+                    <h3 class="pf-card-title">Wedding<br>Oleksandr &amp; Iryna</h3>
+                    <a href="#" class="pf-card-link">переглянути</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Proposals feature -->
+        <section class="pf-section pf-proposals">
+            <div class="pf-proposals-inner">
+                <header class="pf-feature-header">
+                    <h2 class="pf-title" data-translate="proposalsTitle">пропозиції</h2>
+                    <p class="pf-desc" data-translate="proposalsDesc">Пориньте у момент, де рішення набуває форми події, створеної як індивідуальна концепція з точно вивіреною естетикою, сценарієм і простором. Від камерних приватних форматів до складніших постановок у різних локаціях — кожен проєкт формується з урахуванням характеру пари та контексту події, де всі елементи узгоджені між собою й працюють на єдине враження, яке виглядає цілісно, доречно та зберігає свою цінність у часі.</p>
+                </header>
+                <div class="pf-feature-media">
+                    <video class="pf-feature-video" autoplay muted loop playsinline>
+                        <source src="src/img/portfolio/video/port-proposals.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <a href="contact.html" class="pf-btn pf-btn-big" data-translate="proposalsBtn">ОБГОВОРИТИ ІДЕЮ ПОДІЇ</a>
+            </div>
+        </section>
+
+        <!-- Parties grid -->
+        <section class="pf-section pf-parties">
+            <div class="pf-section-header">
+                <div class="pf-kicker" data-translate="galleryKicker">gallery</div>
+                <h2 class="pf-title" data-translate="partiesTitle">авторські parties</h2>
+                <p class="pf-desc" data-translate="partiesDesc">Події, у яких стиль визначає структуру, а кожне рішення має свою функцію і працює на загальну композицію. Вечори та вечірки різного масштабу формуються як індивідуальні концепції з точно вибудуваним сценарієм, світлом, музикою та візуальною подачею, що відповідає рівню події й характеру простору.</p>
+            </div>
+            <div class="pf-grid pf-grid-masonry-a">
+                <article class="pf-card pf-card-wide">
+                    <div class="pf-card-media"><img src="src/img/portfolio/Rectangle-62.jpg" alt="Авторська Party “А в серці вічна весна”"></div>
+                    <h3 class="pf-card-title">Авторська Party “А в серці вічна весна”</h3>
+                    <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                </article>
+                <article class="pf-card">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-2.jpg" alt="Авторська Birthday Party “Artem Dinner”"></div>
+                    <h3 class="pf-card-title">Авторська Birthday Party “Artem Dinner”</h3>
+                    <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                </article>
+                <article class="pf-card">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-3.jpg" alt="Авторська Party “The Great Gatsby”"></div>
+                    <h3 class="pf-card-title">Авторська Party “The Great Gatsby”</h3>
+                    <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Feedback (after author parties) -->
+        <section class="pf-feedback-section">
+            <div class="pf-feedback-container">
+                <div class="pf-feedback-content">
+                    <div class="pf-feedback-avatar">
+                        <img src="src/img/portfolio/feedback-mary.png" alt="Відгук клієнта">
+                    </div>
+                    <div class="pf-feedback-text">
+                        <div class="pf-feedback-name">МАРІЯ, ГОСТЯ ПОДІЙ J.KO GALLERY</div>
+                        <p class="pf-feedback-quote">Відвідування подій Юлії та J.KO Gallery щоразу стає досвідом, до якого хочеться повертатися. Кожен захід відрізняється продуманістю, культурою подачі та відчуттям стилю, що читається в деталях, атмосфері й загальній побудові події,  простір, у якому поєднуються естетика, зміст і внутрішня наповненість — коли отримуєш не лише враження, а й новий погляд, знання та натхнення. Відчувається авторський почерк, увага до якості та глибина підходу, що формують події, які залишають після себе чітке і цінне відчуття прожитого досвіду.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Children grid -->
+        <section class="pf-section pf-children">
+            <div class="pf-section-header">
+                <div class="pf-kicker" data-translate="galleryKicker">gallery</div>
+                <h2 class="pf-title" data-translate="childrenTitle">дитячі свята</h2>
+                <p class="pf-desc" data-translate="childrenDesc">Свята, створені з увагою до дитини та відчуття сім’ї, де кожна деталь має своє місце і значення. Кожен проєкт формується як індивідуальна історія, у якій враховується характер дитини, атмосфера родини і простір події, щоб усе виглядало природно і цілісно. Візуальна подача, сценарій і динаміка поєднуються так, щоб дитині було цікаво й комфортно, а дорослим — естетично і спокійно, створюючи теплий досвід, який залишається в пам’яті.</p>
+            </div>
+            <div class="pf-grid pf-grid-split">
+                <article class="pf-card pf-card-tall">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-4.jpg" alt="Хрещення Анни"></div>
+                    <h3 class="pf-card-title">Хрещення Леї</h3>
+                    <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                </article>
+                <article class="pf-card">
+                    <div class="pf-card-media">
+                        <video class="pf-card-video" autoplay muted loop playsinline>
+                            <source src="src/img/portfolio/video/port-03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3 class="pf-card-title">День Народження Марка</h3>
+                    <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                </article>
+            </div>
+        </section>
+        <section class="pf-section pf-parties-2">
+            <div class="pf-section-header">
+                <div class="pf-kicker" data-translate="galleryKicker">gallery</div>
+                <h2 class="pf-title" data-translate="parties2Title">Камерні &amp; girls parties</h2>
+                <p class="pf-desc" data-translate="parties2Desc">Події, створені для близького кола, де важлива атмосфера, настрій і відчуття моменту. Камерні вечори та girls parties формуються як індивідуальні концепції з продуманою візуальною подачею, сценарієм і деталями, що підкреслюють характер події та стиль учасниць. Простір наповнюється світлом, настроєм і деталями, які тонко підтримують атмосферу вечора, залишаючи відчуття естетики, близькості й часу, проведеного зі смаком.</p>
+            </div>
+            <div class="pf-grid pf-grid-parties-2">
+                <div class="pf-col pf-col-left">
+                    <article class="pf-card pf-card-440x580">
+                        <div class="pf-card-media"><img src="src/img/portfolio/event-7.jpg" alt="Birthday Party “Bachelorette”"></div>
+                        <h3 class="pf-card-title">Birthday Party “Bachelorette”</h3>
+                        <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                    </article>
+                    <article class="pf-card pf-card-440x460">
+                        <div class="pf-card-media"><img src="src/img/portfolio/event-5.jpg" alt="Камерна вечірка “Toskana”"></div>
+                        <h3 class="pf-card-title">Камерна вечірка “Toskana”</h3>
+                        <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                    </article>
+                </div>
+                <div class="pf-col pf-col-right">
+                    <article class="pf-card pf-card-500x668">
+                        <div class="pf-card-media"><img src="src/img/portfolio/event-8.jpg" alt="Birthday Party “Grace Kelly”"></div>
+                        <h3 class="pf-card-title">Birthday Party “Grace Kelly”</h3>
+                        <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                    </article>
+                    <article class="pf-card pf-card-500x587">
+                        <div class="pf-card-media"><img src="src/img/portfolio/event-6.jpg" alt="Birthday Party “La Dolce Vita”"></div>
+                        <h3 class="pf-card-title">Birthday Party “La Dolce Vita”</h3>
+                        <a href="#" class="pf-card-link" data-translate="viewMore">переглянути</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- CTA video -->
+        <section class="pf-section pf-cta-video">
+            <video class="pf-cta-bg" autoplay muted loop playsinline>
+                <source src="src/img/portfolio/video/port-02.mp4" type="video/mp4">
+            </video>
+            <div class="pf-cta-overlay"></div>
+            <div class="pf-cta-inner">
+                <h3 class="pf-cta-title">tell us your dream <span class="pf-cta-and">and</span> we bring it to life</h3>
+                    <a href="contact.html" class="pf-btn pf-btn-medium" data-translate="discussEventIdea">обговорити ідею вашої події</a>
+            </div>
+        </section>
+
+        <!-- Lectures & thematic -->
+        <section class="pf-section pf-lectures">
+            <div class="pf-section-header">
+                <div class="pf-kicker" data-translate="galleryKicker">gallery</div>
+                <h2 class="pf-title" data-translate="lecturesTitle">авторські Лекції &amp; тематичні свята</h2>
+                <p class="pf-desc" data-translate="lecturesDesc">Події, у яких ідея задає не лише тему, а спосіб мислення простору, ритм взаємодії та рівень сприйняття. Авторські лекції й тематичні вечори формуються як індивідуальні концепції з точно вибудуваною драматургією, де зміст, візуальна мова і середовище працюють синхронно, створюючи інтелектуально насичений і естетично вивірений формат. Кожен проєкт залишає після себе не просто враження, а чітке відчуття прожитого досвіду, до якого хочеться повертатися.</p>
+            </div>
+            <div class="pf-grid pf-grid-lectures">
+                <article class="pf-card pf-card-taller">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-9.jpg" alt="Авторська лекція “Grace Kelly”"></div>
+                    <h3 class="pf-card-title">Авторська лекція “Grace Kelly”</h3>
+                    <a href="#" class="pf-card-link">переглянути</a>
+                </article>
+                <!-- Place one more left-side card in row 2 -->
+                <article class="pf-card pf-card-left-row2">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-11.jpg" alt="Авторська лекція “Coco Chanel”"></div>
+                    <h3 class="pf-card-title">Тематичне свято “French-Style Tea”</h3>
+                    <a href="#" class="pf-card-link">переглянути</a>
+                </article>
+                <article class="pf-card pf-card-col2-row1">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-10.jpg" alt="Тематичне свято “Christmas”"></div>
+                    <h3 class="pf-card-title">Тематичне свято “Christmas”</h3>
+                    <a href="#" class="pf-card-link">переглянути</a>
+                </article>
+                <article class="pf-card pf-card-col2-row2">
+                    <div class="pf-card-media"><img src="src/img/portfolio/event-12.jpg" alt="Тематичне свято “French-Style Tea”"></div>
+                    <h3 class="pf-card-title">Авторська лекція “Coco Chanel”</h3>
+                    <a href="#" class="pf-card-link">переглянути</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Parties 2: Камерні & girls parties (stacked columns) -->
+        
+
+        <!-- J.KO Birthday Party -->
+        <section class="pf-section pf-jko-birthday">
+            <div class="pf-section-header">
+                <div class="pf-kicker" data-translate="galleryKicker">gallery</div>
+                <h2 class="pf-title" data-translate="jkoTitle">j.Ko birthday party</h2>
+                <p class="pf-desc" data-translate="jkoDesc">Подія, зібрана як цілісний вечір із власним ритмом, настроєм і візуальною мовою. J.KO Birthday Party вибудовується через світло, музику, простір і деталі, які працюють узгоджено і задають відчуття динаміки та рівня, створюючи атмосферу, в якій кожен момент відчувається точно, проживається глибше і залишає після себе стан, до якого хочеться повертатися.</p>
+                <a href="#" class="pf-card-link1" data-translate="jkoCtaButton">переглянути івент</a>
+            </div>
+            <div class="pf-grid pf-grid-jko">
+                <div class="pf-jko-left">
+                    <img src="src/img/portfolio/yuliia-1.jpg" alt="J.KO Birthday main">
+                </div>
+                <div class="pf-jko-right">
+                    <img src="src/img/portfolio/yuliia-3.jpg" alt="J.KO detail top">
+                    <img src="src/img/portfolio/yuliia-2.jpg" alt="J.KO detail bottom">
+                </div>
+            </div>
+            <div class="pf-jko-cta">
+                <a href="contact.html" class="pf-btn pf-btn-big" data-translate="jkoConsultationBtn">переглянути івент</a>
+            </div>
+        </section>
+
+        <!-- End slider: 9 photos with center zoom and arrows -->
+        <section class="pf-section pf-end-strip">
+            <div class="pf-end-slider">
+                <button class="pf-end-arrow-btn pf-end-prev" aria-label="Попередні"></button>
+                <div class="pf-end-viewport" id="pfEndViewport">
+                    <div class="pf-end-track" id="pfEndTrack">
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/1.jpg" alt="slide 1"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/2.jpg" alt="slide 2"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/3.jpg" alt="slide 3"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/4.jpg" alt="slide 4"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/5.jpg" alt="slide 5"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/6.jpg" alt="slide 6"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/7.jpg" alt="slide 7"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/8.jpg" alt="slide 8"></div>
+                        <div class="pf-end-slide"><img src="src/img/portfolio/slider/9.jpg" alt="slide 9"></div>
+                    </div>
+                </div>
+                <button class="pf-end-arrow-btn pf-end-next" aria-label="Наступні"></button>
+            </div>
+            <div class="pf-end-caption-row">
+                <div class="pf-end-caption pf-end-caption-left" id="pfEndPrev">
+                    <img src="src/img/portfolio/slider/ic_left.svg" alt="" class="pf-end-ic" aria-hidden="true"> попередні
+                </div>
+                <div class="pf-end-caption pf-end-caption-right" id="pfEndNext">
+                    наступні <img src="src/img/portfolio/slider/ic_right.svg" alt="" class="pf-end-ic" aria-hidden="true">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#">
+                    <img src="src/img/for dev/icons and logo/logo-black.svg" alt="J.KO GALLERY" class="footer-logo-img">
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <a href="about.html" class="footer-nav-link" data-translate="footerAbout">ЗАСНОВНИЦЯ</a>
+                <a href="services.html" class="footer-nav-link" data-translate="footerServices">ПОСЛУГИ</a>
+                <a href="portfolio.html" class="footer-nav-link" data-translate="footerPortfolio">ПОРТФОЛІО</a>
+                <a href="contact.html" class="footer-nav-link" data-translate="footerContacts">КОНТАКТИ</a>
+            </nav>
+            <div class="footer-contacts">
+                <h3 class="footer-section-title" data-translate="footerContactsTitle">КОНТАКТИ:</h3>
+                <div class="footer-contact">
+                    <div class="footer-phone">
+                        <img src="src/img/for dev/icons and logo/whatsapp.svg" alt="WhatsApp" class="footer-icon">
+                        <a href="tel:+380674306471" class="footer-contact-link">+38 (067) 430 64 71</a>
+                    </div>
+                    <div class="footer-email">
+                        <a href="mailto:jkogallery@gmail.com" class="footer-contact-link">jkogallery@gmail.com</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="footer-btn" data-translate="contactBtn">ЗВ'ЯЗАТИСЯ З НАМИ</a>
+            </div>
+            <div class="footer-right">
+                <h3 class="footer-section-title" data-translate="footerSocialTitle">СОЦІАЛЬНІ МЕРЕЖІ:</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/jko_gallery/" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/instagram.svg" alt="Instagram" class="footer-social-icon">
+                    </a>
+                    <a href="https://www.threads.com/@juliakovinko?xmt=AQF0-ck61pvXUQDFmIZNkJqVhKGXguqFOk3-LTiBStXwZ5I" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/threads.svg" alt="Threads" class="footer-social-icon">
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <img src="src/img/for dev/icons and logo/pinterest.png" alt="Pinteres" class="footer-social-icon footer-social-icon-pinterest">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="instagram-section-content">
+            <h2 class="instagram-title" data-translate="instagramTitle">Відвідайте наш інстаграм</h2>
+            <div class="instagram-gallery">
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst1.jpg" alt="Instagram Photo 1">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst2.jpg" alt="Instagram Photo 2">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst3.jpg" alt="Instagram Photo 3">
+                </div>
+                <div class="instagram-item">
+                    <img src="src/img/for dev/insta/inst4.jpg" alt="Instagram Photo 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Bottom -->
+    <footer class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p class="footer-copyright" data-translate="footerCopyright">© J. KO GALLERY 2026, ALL RIGHTS RESERVED</p>
+            <div class="footer-bottom-links">
+                <a href="#" class="footer-bottom-link" data-translate="footerPrivacy">PRIVACY POLICY</a>
+                <a href="#" class="footer-bottom-link" data-translate="footerCredits">SITE CREDITS</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        if (mobileMenuBtn && mobileMenu && mobileMenuClose) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                document.body.classList.add('menu-open');
+            });
+
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+        }
+    </script>
+
+    <script>
+        // Burger icon: white over hero, dark after hero (mobile/tablet)
+        (function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+
+            if (!mobileMenuBtn || !mobileMenuIcon) return;
+
+            function updateMenuIcon() {
+                if (window.innerWidth > 1130) {
+                    mobileMenuBtn.classList.remove('on-hero');
+                    return;
+                }
+
+                const scrollY = window.pageYOffset || window.scrollY;
+                const menuBtnBottom = mobileMenuBtn.getBoundingClientRect().bottom + scrollY;
+                const hero = document.querySelector('.portfolio-hero');
+                const heroBottom = hero ? (hero.offsetTop + hero.offsetHeight) : 0;
+
+                const isOverHero = hero && menuBtnBottom <= heroBottom;
+                mobileMenuBtn.classList.toggle('on-hero', Boolean(isOverHero));
+                mobileMenuIcon.src = 'src/img/ic_menu.svg';
+            }
+
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateMenuIcon();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', updateMenuIcon);
+            updateMenuIcon();
+        })();
+    </script>
+
+    <script>
+        // Hide header on scroll (same logic as on the main page)
+        (function() {
+            const header = document.querySelector('.header');
+            if (!header) return;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset || window.scrollY || 0;
+                if (currentScroll === 0) {
+                    header.classList.remove('hidden');
+                } else {
+                    header.classList.add('hidden');
+                }
+            }, { passive: true });
+        })();
+    </script>
+
+    <script>
+        // Sticky top CTA (same logic as on About): appears after trigger block, hides when above
+        (function() {
+            const stickyCta = document.getElementById('pfStickyCta');
+            const triggerBlock = document.querySelector('.pf-wedding');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuCloseBtn = document.getElementById('mobileMenuClose');
+            if (!stickyCta || !triggerBlock) return;
+
+            function updateStickyCta() {
+                const triggerRect = triggerBlock.getBoundingClientRect();
+                const mainHeaderHeight = 80;
+                // Show earlier: as soon as top of wedding approaches header area
+                const shouldShowAfterTrigger = triggerRect.top <= (mainHeaderHeight + 40);
+
+                const isVisible = shouldShowAfterTrigger;
+                stickyCta.hidden = !isVisible;
+                stickyCta.classList.toggle('is-visible', isVisible);
+                stickyCta.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+                document.body.classList.toggle('sticky-cta-visible', isVisible);
+                if (mobileMenuBtn) {
+                    const showWithPanel = window.innerWidth <= 1130 && isVisible;
+                    mobileMenuBtn.classList.toggle('with-sticky-panel', showWithPanel);
+                    if (mobileMenuCloseBtn) {
+                        mobileMenuCloseBtn.classList.toggle('with-sticky-panel', showWithPanel);
+                    }
+                }
+            }
+
+            let ticking = false;
+            function onScroll() {
+                if (ticking) return;
+                ticking = true;
+                window.requestAnimationFrame(() => {
+                    updateStickyCta();
+                    ticking = false;
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', updateStickyCta);
+            updateStickyCta();
+        })();
+    </script>
+
+    <script>
+    (function() {
+        const track = document.getElementById('pfEndTrack');
+        const viewport = document.getElementById('pfEndViewport');
+        const prevBtn = document.querySelector('.pf-end-prev');
+        const nextBtn = document.querySelector('.pf-end-next');
+        const prevCap = document.getElementById('pfEndPrev');
+        const nextCap = document.getElementById('pfEndNext');
+        if (!track || !viewport) return;
+
+        const originals = Array.from(track.children);
+        if (!originals.length) return;
+
+        const total = originals.length;
+        const startRealIndex = 1; // старт: 1-й зліва, 2-й по центру, 3-й справа
+
+        // Клони до і після — безшовна карусель
+        const before = originals.map(n => n.cloneNode(true));
+        const after = originals.map(n => n.cloneNode(true));
+        track.replaceChildren(...before, ...originals, ...after);
+
+        let slides = Array.from(track.children);
+        let vIndex = total + startRealIndex;
+        let isAnimating = false;
+
+        function markCenter() {
+            slides.forEach(s => s.classList.remove('is-center'));
+            if (slides[vIndex]) slides[vIndex].classList.add('is-center');
+        }
+
+        function trackLayoutLeftInViewportContent() {
+            let sum = 0;
+            let el = track;
+            while (el && el !== viewport) {
+                sum += el.offsetLeft;
+                el = el.offsetParent;
+            }
+            if (el === viewport) return sum;
+            const m = /translateX\((-?[\d.]+)px\)/.exec(track.style.transform || '');
+            const curT = m ? parseFloat(m[1]) : 0;
+            const vr = viewport.getBoundingClientRect();
+            return track.getBoundingClientRect().left - curT - vr.left - viewport.clientLeft;
+        }
+
+        function readTrackGapPx() {
+            const v = parseFloat(window.getComputedStyle(track).gap || '0');
+            return Number.isFinite(v) ? v : 0;
+        }
+
+        /**
+         * translateX лише за КІНЦЕВОЮ геометрією після transition слайдів.
+         * Якщо рахувати з getBoundingClientRect на старті руху, ширини ще «їдуть» — після 1-го скролу зсув.
+         */
+        function targetTranslateX() {
+            if (!slides[vIndex]) return 0;
+            const gap = readTrackGapPx();
+            const trackL = trackLayoutLeftInViewportContent();
+            const vpW = viewport.clientWidth;
+            const desktop = window.matchMedia('(min-width: 781px)').matches;
+
+            let xCenterInTrack;
+            if (desktop) {
+                const SIDE = 332;
+                const CENTER = 482;
+                xCenterInTrack = vIndex * (SIDE + gap) + CENTER / 2;
+            } else {
+                const W = slides[0] ? slides[0].offsetWidth : 0;
+                xCenterInTrack = vIndex * (W + gap) + W / 2;
+            }
+
+            return vpW / 2 - trackL - xCenterInTrack;
+        }
+
+        function setTrackTranslatePx(tx, withAnim) {
+            if (!withAnim) track.classList.add('no-transition');
+            else track.classList.remove('no-transition');
+            track.style.transform = 'translateX(' + tx + 'px)';
+            if (!withAnim) {
+                void track.offsetHeight;
+                track.classList.remove('no-transition');
+            }
+        }
+
+        function applyTransform(withAnim = true) {
+            markCenter();
+            void track.offsetHeight;
+            setTrackTranslatePx(targetTranslateX(), withAnim);
+        }
+
+        /** Після кінця анімації треку — один кадр «підрівнює» translate, щоб не було мікро-смикання, коли flex ще доганяє */
+        function snapTrackAfterTransition() {
+            markCenter();
+            track.classList.add('no-transition');
+            setTrackTranslatePx(targetTranslateX(), false);
+        }
+
+        function normalize() {
+            if (vIndex >= total * 2) {
+                vIndex -= total;
+                applyTransform(false);
+            } else if (vIndex < total) {
+                vIndex += total;
+                applyTransform(false);
+            }
+        }
+
+        function move(d) {
+            if (isAnimating) return;
+            isAnimating = true;
+            vIndex += d;
+            applyTransform(true);
+        }
+
+        track.addEventListener('transitionend', (e) => {
+            /* Ігноруємо спливання з .pf-end-slide (інші transitionend обривали б карусель) */
+            if (e.target !== track || e.propertyName !== 'transform') return;
+            normalize();
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    snapTrackAfterTransition();
+                    isAnimating = false;
+                });
+            });
+        });
+
+        function next() { move(1); }
+        function prev() { move(-1); }
+
+        prevBtn && prevBtn.addEventListener('click', prev);
+        nextBtn && nextBtn.addEventListener('click', next);
+        prevCap && prevCap.addEventListener('click', prev);
+        nextCap && nextCap.addEventListener('click', next);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') next();
+        });
+
+        // Drag-to-swipe (mouse/touch) on viewport
+        (function enableDrag() {
+            let dragActive = false;
+            let startX = 0;
+            let startTranslateX = 0;
+            let currentTranslateX = 0;
+            const dragThreshold = 48; // px to trigger slide change
+
+            function getCurrentTranslateX() {
+                const m = /translateX\((-?[\d.]+)px\)/.exec(track.style.transform || '');
+                if (m) return parseFloat(m[1]) || 0;
+                return targetTranslateX();
+            }
+
+            function onPointerDown(e) {
+                if (isAnimating) return;
+                dragActive = true;
+                track.classList.add('no-transition');
+                startX = e.pageX || e.clientX || (e.touches && e.touches[0]?.clientX) || 0;
+                startTranslateX = getCurrentTranslateX();
+                currentTranslateX = startTranslateX;
+                // Prevent image drag ghost
+                e.preventDefault();
+            }
+
+            function onPointerMove(e) {
+                if (!dragActive) return;
+                const x = e.pageX || e.clientX || (e.touches && e.touches[0]?.clientX) || 0;
+                const dx = x - startX;
+                currentTranslateX = startTranslateX + dx;
+                track.style.transform = 'translateX(' + currentTranslateX + 'px)';
+            }
+
+            function onPointerUp() {
+                if (!dragActive) return;
+                dragActive = false;
+                track.classList.remove('no-transition');
+                const delta = currentTranslateX - startTranslateX;
+                if (Math.abs(delta) > dragThreshold) {
+                    if (delta < 0) next(); else prev();
+                } else {
+                    // Snap back to current center
+                    applyTransform(true);
+                }
+            }
+
+            // Mouse
+            viewport.addEventListener('mousedown', onPointerDown);
+            window.addEventListener('mousemove', onPointerMove);
+            window.addEventListener('mouseup', onPointerUp);
+            // Touch
+            viewport.addEventListener('touchstart', onPointerDown, { passive: false });
+            window.addEventListener('touchmove', onPointerMove, { passive: false });
+            window.addEventListener('touchend', onPointerUp);
+            window.addEventListener('touchcancel', onPointerUp);
+        })();
+
+        applyTransform(false);
+        window.addEventListener('resize', () => applyTransform(false));
+        window.addEventListener('load', () => applyTransform(false));
+        slides.forEach((slide) => {
+            const img = slide.querySelector('img');
+            if (img && !img.complete) {
+                img.addEventListener('load', () => applyTransform(false), { once: true });
+            }
+        });
+    })();
+    </script>
+    <script>
+        // Make card media clickable: same target as "переглянути" link
+        (function() {
+            const cards = document.querySelectorAll('.pf-card');
+            cards.forEach((card) => {
+                const media = card.querySelector('.pf-card-media');
+                const link = card.querySelector('.pf-card-link');
+                if (!media || !link) return;
+
+                const href = (link.getAttribute('href') || '').trim();
+                if (!href || href === '#') return;
+
+                media.style.cursor = 'pointer';
+                media.addEventListener('click', () => {
+                    window.location.href = href;
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
+
