@@ -445,7 +445,7 @@
         background: transparent !important;
         padding: 0 !important;
         grid-template-columns: 522px 440px !important;
-        column-gap: 44px !important;
+        column-gap: 34px !important;
         row-gap: 16px !important;
     }
     .oa-columns-mosaic .oa-col img,
