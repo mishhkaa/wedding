@@ -2,7 +2,6 @@
 .oa-page {
     background:#F8F3ED;
     color: #31302e;
-    padding-bottom: 84px;
 }
 
 /* Allow independent tuning of close icon on mobile sticky plaque (burger untouched) */
@@ -73,6 +72,10 @@
 }
 /* Mobile: match portfolio exactly */
 @media (max-width: 780px) {
+    .oa-columns-last4 .oa-col-wide .oa-right-pair {
+        display: grid !important;
+        row-gap: 24px !important;
+    }
   .pf-sticky-cta {
       top: 0;
       left: 0;
@@ -728,6 +731,13 @@
     pointer-events: none;
 }
 
+/* Desktop: no strip above main footer (mobile keeps separator via .oa-cta::after) */
+@media (min-width: 781px) {
+    .case-separator {
+        display: none;
+    }
+}
+
 .oa-cta img {
     height: 580px;
 }
@@ -1063,8 +1073,15 @@
     .oa-columns-mosaic img[src$="09-wedd03.jpg"] {
         grid-column: 2 !important;
         grid-row: 5 / span 2 !important;
+        width: 143.5px !important;
+        max-width: 100% !important;
+        height: 238px !important;
+        min-height: 238px !important;
+        max-height: 238px !important;
         align-self: center !important;
-        aspect-ratio: 1 / 1.1 !important;
+        justify-self: center !important;
+        object-fit: cover !important;
+        box-sizing: border-box !important;
     }
     .oa-columns-mosaic img[src$="10-wedd03.jpg"] {
         grid-column: 1 / span 2 !important;
@@ -1113,8 +1130,15 @@
         .oa-columns-mosaic img[src$="09-wedd03.jpg"] {
             grid-column: 2 !important;
             grid-row: 5 / span 2 !important;
+            width: 143.5px !important;
+            max-width: 100% !important;
+            height: 238px !important;
+            min-height: 238px !important;
+            max-height: 238px !important;
             align-self: center !important;
-            aspect-ratio: 1 / 1.1 !important;
+            justify-self: center !important;
+            object-fit: cover !important;
+            box-sizing: border-box !important;
         }
         .oa-columns-mosaic img[src$="10-wedd03.jpg"] {
             grid-column: 1 / span 2 !important;
@@ -1559,3 +1583,16 @@
 @media (min-width: 1025px) {
   .visibility-desktop { display: grid !important; }
 }
+
+@media (max-width: 780px) {
+    .oa-columns-last4 .oa-col-wide .oa-right-pair {
+        display: grid !important;
+        row-gap: 24px !important;
+    }
+    .oa-columns-mosaic {
+        
+        gap: 24px !important;
+    }
+
+}
+/* 09-wedd03 mobile: 143.5×238, vertical+horizontal center in col spanning rows 5–6 — see mosaic @media (max-width: 780px) */
