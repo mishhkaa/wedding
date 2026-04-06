@@ -529,6 +529,7 @@
     aspect-ratio: 310 / 446;
     overflow: hidden;
     background: #ddd;
+    position: relative;
 }
 .pf-card-wide .pf-card-media { aspect-ratio: 632 / 544; }
 .pf-card-tall .pf-card-media { aspect-ratio: 576 / 714; }
@@ -541,12 +542,18 @@
 }
 .pf-card-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Wedding cards: slight brighten effect on hover */
-.pf-wedding .pf-card-media img {
-    transition: filter 0.28s ease;
+/* Hover overlay for case photos */
+.pf-card-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.28s ease;
+    pointer-events: none;
 }
-.pf-wedding .pf-card:hover .pf-card-media img {
-    filter: brightness(1.18);
+.pf-card:hover .pf-card-media::after {
+    opacity: 1;
 }
 
 /* Fine adjustments per card */
@@ -1091,6 +1098,12 @@
     .pf-feature-media { width: 100%; max-width: min(311px, calc(100vw - 64px)); margin: 0 auto; aspect-ratio: 311 / 419.5; }
     .pf-feature-media img,
     .pf-feature-media video { width: 100%; height: auto; display: block; object-fit: cover; }
+    .pf-proposals .pf-btn-big {
+        width: 100%;
+        max-width: min(311px, calc(100vw - 64px));
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 
     /* Feedback */
     .pf-feedback-container { padding: 0 32px; }

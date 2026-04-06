@@ -148,7 +148,7 @@
 /* Right-pair block: combine 14 + 15 with fixed internal gap 24px */
 .oa-columns-last4 .oa-col-wide .oa-right-pair {
   display: grid;
-  row-gap: 24px;
+  row-gap: 44px;
 }
 .oa-columns-last4 .oa-col-wide .oa-right-pair img {
   width: 100%;
@@ -159,7 +159,7 @@
 @media (max-width: 1024px) {
   .oa-columns-last4 .oa-col-wide .oa-right-pair {
     display: grid !important;
-    row-gap: 24px !important;
+    row-gap: 44px !important;
   }
   .oa-columns-last4 .oa-col-wide .oa-right-pair img {
     margin: 0 !important; /* ensure no extra margin on mobile */
@@ -445,7 +445,7 @@
         background: transparent !important;
         padding: 0 !important;
         grid-template-columns: 522px 440px !important;
-        column-gap: 34px !important;
+        column-gap: 44px !important;
         row-gap: 16px !important;
     }
     .oa-columns-mosaic .oa-col img,
@@ -1435,12 +1435,11 @@
     }
 
     .footer-btn {
-        width: auto;
-        display: inline-flex;
-        margin: 0 auto;
-        text-align: center;
+        align-self: stretch;
+        width: 100%;
+        margin-top: -18px;
     }
-
+    
     .footer-right {
         width: 100%;
     }

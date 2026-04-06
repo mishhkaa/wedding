@@ -574,47 +574,20 @@
             if (slides[vIndex]) slides[vIndex].classList.add('is-center');
         }
 
-        function trackLayoutLeftInViewportContent() {
-            let sum = 0;
-            let el = track;
-            while (el && el !== viewport) {
-                sum += el.offsetLeft;
-                el = el.offsetParent;
-            }
-            if (el === viewport) return sum;
-            const m = /translateX\((-?[\d.]+)px\)/.exec(track.style.transform || '');
-            const curT = m ? parseFloat(m[1]) : 0;
-            const vr = viewport.getBoundingClientRect();
-            return track.getBoundingClientRect().left - curT - vr.left - viewport.clientLeft;
-        }
-
-        function readTrackGapPx() {
-            const v = parseFloat(window.getComputedStyle(track).gap || '0');
-            return Number.isFinite(v) ? v : 0;
-        }
-
         /**
-         * translateX лише за КІНЦЕВОЮ геометрією після transition слайдів.
-         * Якщо рахувати з getBoundingClientRect на старті руху, ширини ще «їдуть» — після 1-го скролу зсув.
+         * Центрує поточний слайд за фактичною геометрією DOM (flex + різна ширина центру).
+         * Раніше жорсткі 332/482 давали похибку й стрибок після циклічного normalize().
          */
         function targetTranslateX() {
-            if (!slides[vIndex]) return 0;
-            const gap = readTrackGapPx();
-            const trackL = trackLayoutLeftInViewportContent();
-            const vpW = viewport.clientWidth;
-            const desktop = window.matchMedia('(min-width: 781px)').matches;
-
-            let xCenterInTrack;
-            if (desktop) {
-                const SIDE = 332;
-                const CENTER = 482;
-                xCenterInTrack = vIndex * (SIDE + gap) + CENTER / 2;
-            } else {
-                const W = slides[0] ? slides[0].offsetWidth : 0;
-                xCenterInTrack = vIndex * (W + gap) + W / 2;
-            }
-
-            return vpW / 2 - trackL - xCenterInTrack;
+            const slide = slides[vIndex];
+            if (!slide) return 0;
+            const m = /translateX\((-?[\d.]+)px\)/.exec(track.style.transform || '');
+            const curT = m ? parseFloat(m[1]) : 0;
+            const vpRect = viewport.getBoundingClientRect();
+            const slideRect = slide.getBoundingClientRect();
+            const viewCx = vpRect.left + vpRect.width * 0.5;
+            const slideCx = slideRect.left + slideRect.width * 0.5;
+            return curT + (viewCx - slideCx);
         }
 
         function setTrackTranslatePx(tx, withAnim) {
@@ -631,13 +604,6 @@
             markCenter();
             void track.offsetHeight;
             setTrackTranslatePx(targetTranslateX(), withAnim);
-        }
-
-        /** Після кінця анімації треку — один кадр «підрівнює» translate, щоб не було мікро-смикання, коли flex ще доганяє */
-        function snapTrackAfterTransition() {
-            markCenter();
-            track.classList.add('no-transition');
-            setTrackTranslatePx(targetTranslateX(), false);
         }
 
         function normalize() {
@@ -662,10 +628,7 @@
             if (e.target !== track || e.propertyName !== 'transform') return;
             normalize();
             requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    snapTrackAfterTransition();
-                    isAnimating = false;
-                });
+                isAnimating = false;
             });
         });
 
