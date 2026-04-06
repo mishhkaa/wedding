@@ -1,0 +1,1562 @@
+/* Volodymyr & Anna page styles — cloned from Oleksandr & Anna for separate tweaks */
+.oa-page {
+    background:#F8F3ED;
+    color: #31302e;
+    padding-bottom: 84px;
+}
+
+/* Allow independent tuning of close icon on mobile sticky plaque (burger untouched) */
+@media (max-width: 780px) {
+  .mobile-menu-close.with-sticky-panel {
+    top: -2px !important;
+    left: 3px !important;
+  }
+}
+/* Sticky top CTA (copied from portfolio) */
+.pf-sticky-cta {
+  position: fixed;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  transform: translateY(-120%);
+  width: auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1200;
+  background: rgba(255, 255, 255, 0.88);
+  border: none;
+  border-bottom: 1px solid #e6ddd2;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.32s ease, opacity 0.32s ease;
+}
+.pf-sticky-cta.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.pf-sticky-cta-inner {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  padding: 6px 30px;
+  box-sizing: border-box;
+}
+.pf-sticky-cta-text {
+  margin: 0;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #31302e;
+}
+.pf-sticky-cta-btn {
+  flex: 0 0 auto;
+  min-width: 210px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  background: #ECE3D8;
+  color: #31302e;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  white-space: nowrap;
+}
+/* Mobile: match portfolio exactly */
+@media (max-width: 780px) {
+  .pf-sticky-cta {
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: none;
+      height: 56px;
+  }
+  .pf-sticky-cta-inner {
+      min-height: 56px;
+      padding: 0 16px 0 96px;
+      gap: 16px;
+      justify-content: flex-end;
+  }
+  .pf-sticky-cta-text { display: none; }
+  .pf-sticky-cta-btn {
+      width: auto;
+      min-width: 0;
+      max-width: max-content;
+      margin-left: auto;
+  }
+}
+
+
+
+/* FINAL FIX: independent column stacking on mobile to remove large vertical gaps */
+@media (max-width: 1024px) {
+  .oa-columns-last4 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 24px !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+  }
+  /* stack columns independently with fixed internal gaps */
+  .oa-columns-last4 .oa-col,
+  .oa-columns-last4 .oa-col-wide {
+    display: grid !important;
+  }
+  .oa-columns-last4 .oa-col { row-gap: 24px !important; }
+  .oa-columns-last4 .oa-col-wide { row-gap: 24px !important; }
+  /* neutralize earlier grid positioning/margins on individual imgs */
+  .oa-columns-last4 img {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+  /* keep right pair internal spacing fixed */
+  .oa-columns-last4 .oa-col-wide .oa-right-pair { row-gap: 24px !important; }
+}
+
+/* Full-width last two photos (16,17) below columns */
+.oa-columns-last4 .oa-col-full {
+  grid-column: 1 / -1;
+  display: grid;
+  row-gap: 8px;
+}
+.oa-columns-last4 .oa-col-full img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .oa-columns-last4 .oa-col-full {
+    grid-column: 1 / -1 !important;
+    row-gap: 24px !important;
+    margin-top: -96px;
+  }
+}
+/* Right-pair block: combine 14 + 15 with fixed internal gap 24px */
+.oa-columns-last4 .oa-col-wide .oa-right-pair {
+  display: grid;
+  row-gap: 24px;
+}
+.oa-columns-last4 .oa-col-wide .oa-right-pair img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 !important; /* neutralize earlier margins */
+}
+@media (max-width: 1024px) {
+  .oa-columns-last4 .oa-col-wide .oa-right-pair {
+    display: grid !important;
+    row-gap: 24px !important;
+  }
+  .oa-columns-last4 .oa-col-wide .oa-right-pair img {
+    margin: 0 !important; /* ensure no extra margin on mobile */
+  }
+}
+/* GLOBAL: keep fixed 24px space between 14 and 15 regardless of screen width */
+.oa-columns-last4 img[src$="15-wedd03.jpg"] {
+  margin-top: 24px !important;
+}
+/* FINAL MOBILE OVERRIDE: force chess layout for 11–15, center right tiles; 16–17 full width */
+@media (max-width: 1024px) {
+  .oa-columns-last4 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    align-items: start !important;
+    grid-auto-flow: row dense !important;
+  }
+
+/* FINAL ALIGNMENT: make right column follow same spacing logic as left */
+@media (max-width: 1024px) {
+  .oa-columns-last4 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    row-gap: 8px !important;
+    column-gap: 24px !important;
+    align-items: start !important;
+    grid-auto-flow: row dense !important;
+  }
+  /* unify spacing: remove margin hacks */
+  .oa-columns-last4 img[src$="14-wedd03.jpg"],
+  .oa-columns-last4 img[src$="15-wedd03.jpg"] {
+    margin: 0 !important;
+    align-self: start !important;
+  }
+  /* left column stack */
+  .oa-columns-last4 img[src$="11-wedd03.jpg"] { grid-column: 1 !important; grid-row: 1 !important; }
+  .oa-columns-last4 img[src$="12-wedd03.jpg"] { grid-column: 1 !important; grid-row: 2 !important; }
+  .oa-columns-last4 img[src$="13-wedd03.jpg"] { grid-column: 1 !important; grid-row: 3 !important; }
+  /* right column spans with the same row rhythm as left (gap-driven) */
+  .oa-columns-last4 img[src$="14-wedd03.jpg"] { grid-column: 2 !important; grid-row: 1 / span 2 !important; }
+  .oa-columns-last4 img[src$="15-wedd03.jpg"] { grid-column: 2 !important; grid-row: 3 / span 2 !important; }
+}
+  /* reset any previous full-width rules in this block */
+  .oa-columns-last4 img {
+    grid-column: auto !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+  /* left column (stack) */
+  .oa-columns-last4 img[src$="11-wedd03.jpg"] { grid-column: 1 !important; grid-row: 1 !important; }
+  .oa-columns-last4 img[src$="12-wedd03.jpg"] { grid-column: 1 !important; grid-row: 2 !important; }
+  .oa-columns-last4 img[src$="13-wedd03.jpg"] { grid-column: 1 !important; grid-row: 3 !important; }
+  /* right column — tall and vertically centered within their 2-row areas */
+  .oa-columns-last4 img[src$="14-wedd03.jpg"] {
+    grid-column: 2 !important;
+    grid-row: 1 / span 2 !important;
+    align-self: start !important;
+    margin-top: -110px !important; /* підняти трохи вище */
+  }
+  .oa-columns-last4 img[src$="15-wedd03.jpg"] {
+    grid-column: 2 !important;
+    grid-row: 3 / span 2 !important;
+    align-self: start !important;
+    margin-top: -150px !important; /* підняти трохи вище */
+  }
+  /* 16, 17 one-per-row full width below */
+  .oa-columns-last4 img[src$="16-wedd03.jpg"] { grid-column: 1 / span 2 !important; grid-row: 5 !important; }
+  .oa-columns-last4 img[src$="17-wedd03.jpg"] { grid-column: 1 / span 2 !important; grid-row: 6 !important; }
+}
+
+.oa-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oa-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.oa-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.oa-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.oa-hero-logo {
+    width: 164px;
+}
+
+.oa-hero h1 {
+    margin: 0;
+    font-family: "Cormorant", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.oa-intro {
+    max-width: 788px;
+    margin: 84px auto;
+    text-align: center;
+}
+
+.oa-intro h2 {
+    margin: 0 0 10px;
+    font-family: "Cormorant", serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.oa-intro p {
+    margin: 0;
+    font-family: "Cormorant", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.oa-pair,
+.oa-columns,
+.oa-grid4,
+.oa-cta {
+    max-width: 1180px;
+    margin: 0 auto 74px;
+}
+
+.oa-pair {
+    display: grid;
+    grid-template-columns: 678px 276px; /* page-specific sizes */
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    background: #fff;
+    padding: 84px 0;
+    max-width: 1246px;
+}
+
+.oa-pair img,
+.oa-columns img,
+.oa-grid4 img,
+.oa-banner img,
+.oa-cta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.oa-pair img:first-child {
+    width: 678px;
+    height: 546px;
+    opacity: 1;
+    transform: none; /* angle: 0deg */
+    object-fit: cover;
+}
+
+.oa-pair img:last-child {
+    width: 276px;
+    height: 382px;
+    opacity: 1;
+    transform: none; /* angle: 0deg */
+    object-fit: cover;
+}
+
+.oa-columns {
+    display: grid;
+    grid-template-columns: 440px 522px;
+    justify-content: center;
+    gap: 44px;
+}
+
+.oa-columns-mosaic {
+    align-items: center;
+}
+
+.oa-columns-mosaic > .oa-col-wide {
+    align-self: center;
+}
+
+/* Slightly reduce sizes of specific photos in the wide column (desktop/tablet) */
+@media (min-width: 781px) {
+    .oa-columns-mosaic .oa-col-wide img[src$="07-wedd03.jpg"],
+    .oa-columns-mosaic .oa-col-wide img[src$="08-wedd03.jpg"],
+    .oa-columns-mosaic .oa-col-wide img[src$="09-wedd03.jpg"],
+    .oa-columns-mosaic .oa-col-wide img[src$="10-wedd03.jpg"] {
+        width: 72%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    /* Make the spacing between these photos a static 44px */
+    .oa-columns-mosaic .oa-col-wide {
+        gap: 44px !important;
+    }
+    .oa-columns-mosaic .oa-col {
+        gap: 44px !important;
+    }
+}
+
+/* CTA: add side paddings and prevent overflow on mobile */
+@media (max-width: 1024px) {
+  .oa-cta {
+    box-sizing: border-box !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    grid-template-columns: 1fr !important;
+    overflow: hidden !important;
+  }
+  .oa-cta > img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  .oa-cta-text {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  /* keep background shape within padded area */
+  .oa-cta::before {
+    left: 24px !important;
+    right: 24px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+  }
+}
+/* Ensure the fixed spacing BETWEEN left and right columns is exactly 44px */
+@media (min-width: 781px) {
+    .oa-columns-mosaic {
+        gap: 0px !important;           /* reduce both row/column gap */
+        column-gap: 0px !important;    /* ensure inter-column spacing specifically */
+    }
+    /* Pull the right (wide) column slightly left to close the gap even more */
+    .oa-columns-mosaic .oa-col-wide {
+        margin-left: -16px !important;
+    }
+    .oa-columns-mosaic .oa-col {
+        margin-right: -16px !important;
+    }
+}
+
+/* Make mosaic section (03–10) same full width/columns as the pair (01–02), photos only (no white bg) */
+@media (min-width: 781px) {
+    .oa-columns-mosaic {
+        width: 1006px !important;          /* 522 + 440 + 44 gap */
+        max-width: 1006px !important;
+        margin: 0 auto 74px !important;
+        background: transparent !important;
+        padding: 0 !important;
+        grid-template-columns: 522px 440px !important;
+        column-gap: 34px !important;
+        row-gap: 16px !important;
+    }
+    .oa-columns-mosaic .oa-col img,
+    .oa-columns-mosaic .oa-col-wide img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+        left: auto !important;
+    }
+    /* Reset earlier negative margins for this section */
+    .oa-columns-mosaic .oa-col-wide {
+        margin-left: 0 !important;
+        gap: 16px !important;
+    }
+    .oa-columns-mosaic .oa-col {
+        margin-right: 0 !important;
+        gap: 44px !important;
+    }
+}
+/* Last4 block: shrink left column photos to 90% and right to 75% (desktop/tablet) */
+@media (min-width: 781px) {
+    .oa-columns-last4 .oa-col img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .oa-columns-last4 .oa-col-wide img {
+        width: 100%; /* fill its column like mosaic */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        left: auto;
+    }
+}
+
+/* Make the inter-column spacing in the last4 block the same as in the previous mosaic block */
+@media (min-width: 781px) {
+    .oa-columns-last4 {
+        width: 1006px !important;              /* 522 + 440 + 44 gap */
+        max-width: 1006px !important;
+        margin: 0 auto 74px !important;
+        padding: 0 !important;
+        background: transparent !important;
+        grid-template-columns: 522px 440px !important;
+        column-gap: 44px !important;
+        row-gap: 16px !important;
+    }
+    .oa-columns-last4 .oa-col {
+        margin-right: 0 !important;
+    }
+    .oa-columns-last4 .oa-col-wide {
+        margin-left: 0 !important;
+    }
+}
+.oa-columns-last4 {
+    align-items: center;
+}
+
+.oa-columns-last4 > .oa-col-wide {
+    align-self: center;
+}
+
+.oa-col {
+    display: grid;
+    gap: 44px;
+}
+
+.oa-banner {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0 0 74px;
+    margin-left: calc(-50vw + 50%);
+}
+
+.oa-banner img,
+.oa-banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.oa-feedback {
+    width: 846px;
+    margin: 0 auto 74px;
+    background: #fff;
+    padding: 64px 84px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.oa-feedback img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.oa-feedback h3 {
+    margin: 24px 0 12px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.oa-feedback p {
+    margin: 0;
+    font-family: "Cormorant", serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+/* Keep original case-page feedback geometry for unified pf markup */
+.pf-feedback-section {
+    padding: 0;
+    background: transparent;
+}
+
+.pf-feedback-container {
+    width: 846px;
+    max-width: 846px;
+    margin: 0 auto 74px;
+    background: #fff;
+    padding: 64px 84px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.oa-photo-slider {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 0 84px;
+    margin-left: calc(-50vw + 50%);
+}
+
+.oa-photo-slider-viewport {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.oa-photo-slider-viewport::-webkit-scrollbar { display: none; }
+
+.oa-photo-slider-track {
+    display: flex;
+    gap: 8px;
+    width: max-content;
+    align-items: center;
+    will-change: scroll-position;
+}
+
+.oa-photo-slider-track.no-transition { }
+
+.oa-photo-slide {
+    width: 410px;
+    height: 600px;
+    opacity: 1;
+    flex: 0 0 410px;
+}
+
+.oa-photo-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.oa-photo-slider-captions {
+    max-width: 1022px;
+    margin: 24px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.oa-photo-slider-viewport.is-dragging { cursor: grabbing; }
+
+.oa-photo-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    border: none;
+    background: transparent;
+    color: #7f6c65;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 14px;          /* enlarge clickable area */
+    margin-left: -14px;          /* compensate to keep alignment */
+    margin-right: -14px;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: -8px;
+}
+
+.oa-photo-nav img {
+    width: 40px;
+    height: 12px;
+    display: block;
+}
+
+.oa-mid-video {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 128px;
+    height: 100vh;
+    margin: 0 auto 114px;
+    position: relative;
+    overflow: hidden;
+}
+
+.oa-mid-video-el {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.oa-cta {
+    position: relative;
+    display: grid;
+    grid-template-columns: 420px 454px;
+    justify-content: center;
+    gap: 54px;
+    align-items: center;
+    margin-top: 47px;
+    padding-bottom: 40px; /* space for absolute separator */
+}
+
+.oa-cta::before {
+    content: "";
+    position: absolute;
+    left: 63%;
+    top: -47px;
+    transform: translateX(-50%);
+    width: 798px;
+    height: 674px;
+    background: #fff;
+    z-index: 0;
+}
+
+.oa-cta > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Separator line before footer on case page */
+.oa-cta::after {
+    display: none; /* use standalone separator section like on Oleksandr & Anna */
+}
+
+/* Standalone separator section (full-bleed) */
+.case-separator {
+    width: 100vw;
+    height: 3px;
+    background: #F1EBE4;
+    border-radius: 1px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 64px; /* match Oleksandr & Anna spacing */
+    margin-bottom: 0;
+    pointer-events: none;
+}
+
+.oa-cta img {
+    height: 580px;
+}
+
+.oa-cta-text h3 {
+    margin: 0 0 16px;
+    font-family: "Cormorant", serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.oa-cta-text p {
+    margin: 0 0 24px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.53;
+    letter-spacing: 0.02em;
+    text-align: justify;
+}
+
+.oa-cta-text a {
+    display: inline-block;
+    background: #f1ebe3;
+    padding: 12px 32px;
+    color: #31302e;
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+.mobile-menu-close {
+    position: relative;
+    top: -2px;
+    left: 2px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2001;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Keep desktop/tablet behavior unchanged for the last-right photos */
+@media (min-width: 781px) {
+    .oa-columns-last4 img[src$="/15.jpg"],
+    .oa-columns-last4 img[src$="/16.jpg"] {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        justify-self: auto;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 780px) {
+    .oa-hero {
+        height: 100vh;
+    }
+
+    .oa-hero h1 {
+        font-size: 44px;
+    }
+
+    .oa-intro {
+        max-width: calc(100% - 32px);
+        margin: 56px auto;
+    }
+
+    .oa-pair,
+    .oa-columns,
+    .oa-feedback,
+    .oa-cta {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .oa-pair {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    .oa-pair img:first-child,
+    .oa-pair img:last-child {
+        width: 100%;
+        height: auto;
+    }
+
+    .oa-columns {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .oa-col {
+        gap: 16px;
+    }
+
+    .oa-feedback {
+        padding: 24px;
+    }
+
+    .pf-feedback-container {
+        width: calc(100% - 24px);
+        max-width: calc(100% - 24px);
+        padding: 44px 24px 44px 24px;
+    }
+
+    .oa-photo-slide {
+        width: min(410px, calc(100vw - 24px));
+        flex-basis: min(410px, calc(100vw - 24px));
+        height: 440px;
+    }
+
+    .oa-photo-slider-captions {
+        margin-top: 24px;
+        max-width: calc(100% - 24px);
+    }
+
+    .oa-cta {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+        overflow: hidden;
+    }
+
+    .oa-cta::before {
+        /* Remove oversized background on small screens to prevent overflow */
+        display: none !important;
+    }
+
+    .oa-cta img {
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+
+    /* Absolute safety: no horizontal scroll at body/page */
+    html, body, .oa-page {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+}
+
+@media (max-width: 780px) {
+    body {
+        overflow-x: hidden;
+        background: #f8f3ed;
+    }
+
+    .oa-page {
+        padding-bottom: 54px;
+    }
+
+    .oa-hero {
+        height: 100vh;
+    }
+    .oa-page {
+        background: linear-gradient(to bottom, #F8F3ED 0 98%, #FFFFFF 98% 100%);
+        color: #31302e;
+        padding-bottom: 5px;
+    }
+
+    .oa-hero h1 {
+        width: 311px;
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        color: #f1ebe3;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    }
+
+    .mobile-menu-btn {
+        top: 20px;
+        left: 20px;
+        padding: 0;
+        z-index: 1210;
+    }
+
+    /* Keep burger and top CTA fixed in place even when menu is opened */
+    .mobile-menu.active ~ .mobile-menu-btn {
+        top: 20px !important;
+        left: 20px !important;
+    }
+
+    .mobile-menu-icon {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        top: -5px;
+    }
+
+    .oa-intro {
+        max-width: 100%;
+        margin: 54px 0 0;
+        padding: 0 32px;
+    }
+
+    .oa-intro h2 {
+        margin-bottom: 16px;
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: 0.04em;
+    }
+
+    .oa-intro p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        line-height: 120%;
+    }
+
+    .oa-pair {
+        width: 100%;
+        max-width: 100%;
+        margin: 54px 0 0;
+        padding: 32px;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        box-sizing: border-box;
+    }
+
+    .oa-columns {
+        width: 100%;
+        max-width: 100%;
+        margin: 54px 0 0;
+        padding: 0 32px;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    /* First gallery: keep all photos, but compose 06/07/08 as mosaic */
+    .oa-columns-mosaic {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+    }
+
+    .oa-columns-mosaic > .oa-col,
+    .oa-columns-mosaic > .oa-col-wide {
+        display: contents;
+    }
+
+    .oa-columns-mosaic img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .oa-columns-mosaic img[src$="/03.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .oa-columns-mosaic img[src$="/04.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+    }
+
+    .oa-columns-mosaic img[src$="/05.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Make 06 full-width (no chessboard) */
+    .oa-columns-mosaic img[src$="/06.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        width: 100%;
+        margin: 0;
+        aspect-ratio: auto;
+    }
+
+    .oa-columns-mosaic img[src$="/07.jpg"] {
+        grid-column: 1;
+        grid-row: 5;
+        aspect-ratio: 1 / 1.27;
+    }
+
+    .oa-columns-mosaic img[src$="/08.jpg"] {
+        grid-column: 2;
+        grid-row: 4 / span 2;
+        align-self: center;
+        aspect-ratio: 1 / 1.1;
+    }
+
+    .oa-columns-mosaic img[src$="/09.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 6;
+        width: 100%;
+        margin: 0;
+    }
+
+    .oa-columns-mosaic img[src$="/10.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 7;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Override triple to use 07/08/09 for case_w3 (Volodymyr & Anna) */
+    .oa-columns-mosaic img[src$="07-wedd03.jpg"] {
+        grid-column: 1 !important;
+        grid-row: 5 !important;
+        aspect-ratio: 1 / 1.18 !important;
+    }
+    .oa-columns-mosaic img[src$="08-wedd03.jpg"] {
+        grid-column: 1 !important;
+        grid-row: 6 !important;
+        aspect-ratio: 1 / 1.27 !important;
+    }
+    .oa-columns-mosaic img[src$="09-wedd03.jpg"] {
+        grid-column: 2 !important;
+        grid-row: 5 / span 2 !important;
+        align-self: center !important;
+        aspect-ratio: 1 / 1.1 !important;
+    }
+    .oa-columns-mosaic img[src$="10-wedd03.jpg"] {
+        grid-column: 1 / span 2 !important;
+        grid-row: 7 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* WIDER MOBILE/TABLET OVERRIDE to ensure layout applies on more widths */
+    /* Applies same mapping up to 1024px if device is wider than 780px */
+    @media (max-width: 1024px) {
+        .oa-columns-mosaic {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 16px !important;
+            align-items: start !important;
+        }
+        /* 03–06 full width rows */
+        .oa-columns-mosaic img[src$="/03.jpg"],
+        .oa-columns-mosaic img[src$="/04.jpg"],
+        .oa-columns-mosaic img[src$="/05.jpg"] {
+            grid-column: 1 / span 2 !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+        .oa-columns-mosaic img[src$="/03.jpg"] { grid-row: 1 !important; }
+        .oa-columns-mosaic img[src$="/04.jpg"] { grid-row: 2 !important; }
+        .oa-columns-mosaic img[src$="/05.jpg"] { grid-row: 3 !important; }
+        .oa-columns-mosaic img[src$="/06.jpg"] {
+            grid-column: 1 / span 2 !important;
+            grid-row: 4 !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+        /* Triplet 07–09 */
+        .oa-columns-mosaic img[src$="07-wedd03.jpg"] {
+            grid-column: 1 !important;
+            grid-row: 5 !important;
+            aspect-ratio: 1 / 1.18 !important;
+        }
+        .oa-columns-mosaic img[src$="08-wedd03.jpg"] {
+            grid-column: 1 !important;
+            grid-row: 6 !important;
+            aspect-ratio: 1 / 1.27 !important;
+        }
+        .oa-columns-mosaic img[src$="09-wedd03.jpg"] {
+            grid-column: 2 !important;
+            grid-row: 5 / span 2 !important;
+            align-self: center !important;
+            aspect-ratio: 1 / 1.1 !important;
+        }
+        .oa-columns-mosaic img[src$="10-wedd03.jpg"] {
+            grid-column: 1 / span 2 !important;
+            grid-row: 7 !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+    }
+
+    /* FINAL MOBILE OVERRIDE: show every photo one-per-row (no chessboard) */
+    @media (max-width: 1024px) {
+        .oa-columns-mosaic {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+        }
+        .oa-columns-mosaic img {
+            grid-column: 1 / -1 !important;
+            width: 100% !important;
+            height: auto !important;
+            margin: 0 !important;
+            aspect-ratio: auto !important;
+        }
+    }
+
+    /* CORRECTION: 03–06 full-width one-by-one; 07–09 chess; 10 full-width */
+    /* This block overrides the previous one-per-row where needed */
+    @media (max-width: 1024px) {
+        /* back to 2-cols only for the chess section */
+        .oa-columns-mosaic {
+            grid-template-columns: 1fr 1fr !important;
+        }
+        /* 03–06 one-by-one full width */
+        .oa-columns-mosaic img[src$="/03.jpg"] { grid-column: 1 / span 2 !important; grid-row: 1 !important; }
+        .oa-columns-mosaic img[src$="/04.jpg"] { grid-column: 1 / span 2 !important; grid-row: 2 !important; }
+        .oa-columns-mosaic img[src$="/05.jpg"] { grid-column: 1 / span 2 !important; grid-row: 3 !important; }
+        .oa-columns-mosaic img[src$="/06.jpg"] { grid-column: 1 / span 2 !important; grid-row: 4 !important; }
+        /* 07–09 chess (07 top-left, 08 bottom-left, 09 tall right) */
+        .oa-columns-mosaic img[src$="07-wedd03.jpg"] { grid-column: 1 !important; grid-row: 5 !important; }
+        .oa-columns-mosaic img[src$="08-wedd03.jpg"] { grid-column: 1 !important; grid-row: 6 !important; }
+        .oa-columns-mosaic img[src$="09-wedd03.jpg"] { grid-column: 2 !important; grid-row: 5 / span 2 !important; }
+        /* 10 full width next */
+        .oa-columns-mosaic img[src$="10-wedd03.jpg"] { grid-column: 1 / span 2 !important; grid-row: 7 !important; }
+    }
+
+    /* Second gallery: last four photos (13-16) in 2x2 */
+    .oa-columns-last4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+        align-items: start;
+    }
+
+    .oa-columns-last4 > .oa-col,
+    .oa-columns-last4 > .oa-col-wide {
+        display: contents;
+    }
+
+    .oa-columns-last4 img[src$="/11.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .oa-columns-last4 img[src$="/12.jpg"] {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .oa-columns-last4 img[src$="/13.jpg"] {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .oa-columns-last4 img[src$="/14.jpg"] {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .oa-columns-last4 img[src$="/15.jpg"] {
+        grid-column: 2;
+        grid-row: 3;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        justify-self: stretch;
+        margin-top: 75px;
+    }
+
+    .oa-columns-last4 img[src$="/16.jpg"] {
+        grid-column: 2;
+        grid-row: 4;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        justify-self: stretch;
+    }
+
+    /* For Volodymyr & Anna: after the triplet, show remaining photos one-per-row full width */
+    .oa-columns-last4 {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    .oa-columns-last4 img {
+        grid-column: 1 / span 2 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        justify-self: stretch !important;
+    }
+
+
+    .oa-col {
+        gap: 24px;
+    }
+
+    .oa-banner {
+        height: 100vh;
+        margin: 54px 0 0;
+    }
+
+    .oa-feedback {
+        width: 100%;
+        margin: 54px 0 0;
+        padding: 44px 34px;
+    }
+
+    /* Edge-to-edge feedback on mobile: full viewport width, no side paddings */
+    .pf-feedback-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .pf-feedback-container {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important; /* full-bleed */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+        margin: 0 auto 54px;
+    }
+    .pf-feedback-content,
+    .pf-feedback-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important; /* keep minimal inner breathing space */
+    }
+
+    .oa-feedback p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        line-height: 120%;
+    }
+
+    .oa-mid-video {
+        height: 100vh;
+        margin: 24px 0 54px;
+        padding: 0 0px;
+    }
+
+    .oa-photo-slider {
+        width: 100%;
+        max-width: 100%;
+        margin: 54px 0 0;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .oa-photo-slider-track {
+        gap: 8px;
+        padding: 0 calc((100vw - 232px) / 2);
+        box-sizing: border-box;
+    }
+
+    .oa-photo-slide {
+        width: 232px;
+        height: 340px;
+        flex: 0 0 232px;
+    }
+
+    .oa-photo-slider-captions {
+        max-width: 100%;
+        margin-top: 16px;
+        justify-content: center;
+        gap: 43px;
+        padding: 0;
+    }
+
+    .oa-photo-nav {
+        font-size: 0;
+        letter-spacing: 0;
+        gap: 0;
+        line-height: 0;
+        position: relative;
+        padding: 12px 16px;              /* bigger tap target */
+        margin-left: -16px;              /* keep visual alignment */
+        margin-right: -16px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .oa-photo-nav img {
+        width: 48px;                     /* slightly bigger icon for touch */
+        height: 16px;
+    }
+
+    .oa-cta {
+        width: 100%;
+        max-width: 100%;
+        margin: 54px 0 0;
+        padding: 0 32px;
+        box-sizing: border-box;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        background: linear-gradient(to bottom, #F8F3ED 0 20%, #FFFFFF 20% 100%);
+    }
+
+    /* Mobile separator line after CTA button, before footer */
+    .oa-cta {
+        position: relative;
+        justify-content: center;
+    }
+    .oa-cta::after {
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;                   /* full-bleed across the viewport */
+        height: 4px;
+        background: #F1EBE3;
+        border-radius: 2px;
+        margin: 54px auto 0 auto;
+    }
+
+    .oa-cta::before {
+        display: none;
+    }
+
+    .oa-cta img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    .oa-cta-text h3 {
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        margin-bottom: 16px;
+    }
+
+    .oa-cta-text p {
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+    }
+
+    .oa-cta-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oa-cta-text p {
+        width: 100%;
+    }
+
+    .oa-cta-text a {
+        width: auto;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-self: center;
+        margin: 0 auto;
+        text-align: center;
+        padding: 12px 18px;
+    }
+
+    .footer {
+        background: #fff;
+        border-bottom: 1px solid #e3e1e0;
+        padding: 64px 0 44px;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 32px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 44px;
+    }
+
+    .footer-logo-img {
+        width: 209px;
+        height: auto;
+    }
+
+    .footer-nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 12px;
+        justify-items: center;
+    }
+
+    .footer-contacts {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-section-title,
+    .footer-contact {
+        display: none;
+    }
+
+    .footer-btn {
+        width: auto;
+        display: inline-flex;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-right .footer-section-title {
+        display: none;
+    }
+
+    .footer-social {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .footer-social-icon,
+    .footer-social-icon-pinterest {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
+    .instagram-section {
+        background: #fff;
+        padding: 24px 32px 44px;
+    }
+
+    .instagram-section-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .instagram-title {
+        margin-bottom: 18px;
+        font-size: 26px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .instagram-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .instagram-item {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .footer-bottom {
+        background: #fff;
+        min-height: 64px;
+        padding: 12px 16px;
+        border-top: 1px solid #e3e1e0;
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-bottom-link {
+        text-decoration: underline;
+    }
+}
+
+/* FINAL OVERRIDE — Mobile chess for 11–15 like 07–09 (case_w3) */
+@media (max-width: 1024px) {
+  .oa-columns-last4 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+    align-items: start !important;
+    grid-auto-flow: row dense !important;
+  }
+  /* cancel earlier full-width rules */
+  .oa-columns-last4 img { grid-column: auto !important; }
+  /* left column */
+  .oa-columns-last4 img[src$="11-wedd03.jpg"] { grid-column: 1 !important; grid-row: 1 !important; }
+  .oa-columns-last4 img[src$="12-wedd03.jpg"] { grid-column: 1 !important; grid-row: 2 !important; }
+  .oa-columns-last4 img[src$="13-wedd03.jpg"] { grid-column: 1 !important; grid-row: 3 !important; }
+  /* right column — tall tiles */
+  .oa-columns-last4 img[src$="14-wedd03.jpg"] { grid-column: 2 !important; margin-top: 32px; grid-row: 1 / span 2 !important; }
+  .oa-columns-last4 img[src$="15-wedd03.jpg"] { grid-column: 2 !important; grid-row: 3 / span 2 !important; }
+  /* tighten spacing between the two right-column photos */
+  .oa-columns-last4 img[src$="15-wedd03.jpg"] { margin-top: 24px !important; }
+  /* 16, 17 — full width one-by-one below chess */
+  .oa-columns-last4 img[src$="16-wedd03.jpg"] { grid-column: 1 / span 2 !important; grid-row: 5 !important; }
+  .oa-columns-last4 img[src$="17-wedd03.jpg"] { grid-column: 1 / span 2 !important; grid-row: 6 !important; }
+}
+@media (max-width: 1024px) {
+    .oa-columns-last4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    /* ліві */
+    .oa-columns-last4 img[src$="11-wedd03.jpg"] { grid-column: 1; grid-row: 1; }
+    .oa-columns-last4 img[src$="12-wedd03.jpg"] { grid-column: 1; grid-row: 2; }
+    .oa-columns-last4 img[src$="13-wedd03.jpg"] { grid-column: 1; grid-row: 3; }
+  
+    /* праві — опускаємо нижче через grid-row, без margin */
+    .oa-columns-last4 img[src$="14-wedd03.jpg"] { grid-column: 2; grid-row: 2 / span 2 !important; }
+    .oa-columns-last4 img[src$="15-wedd03.jpg"] { grid-column: 2; grid-row: 4 / span 2 !important; }
+  }
+
+
+ 
+/* Show/hide helpers for the explicit desktop-only section in HTML */
+@media (max-width: 1024px) {
+  .visibility-desktop { display: none !important; }
+}
+@media (min-width: 1025px) {
+  .visibility-desktop { display: grid !important; }
+}

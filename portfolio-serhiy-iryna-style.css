@@ -1,0 +1,1368 @@
+.oa-page {
+  background: #f8f3ed;
+  color: #31302e;
+  padding-bottom: 84px;
+}
+
+/* Allow independent tuning of close icon on mobile sticky plaque (burger untouched) */
+@media (max-width: 780px) {
+  .mobile-menu-close.with-sticky-panel {
+    top: -2px !important;
+    left: 3px !important;
+  }
+  /* Fix burger position when sticky plaque is visible on this page */
+  .mobile-menu-btn.with-sticky-panel {
+    top: 8px;
+    left: 15px;
+    padding: 8px;
+    z-index: 1202;
+    background: transparent !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+}
+/* Sticky top CTA (copied from portfolio) */
+.pf-sticky-cta {
+  position: fixed;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  transform: translateY(-120%);
+  width: auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1200;
+  background: rgba(255, 255, 255, 0.88);
+  border: none;
+  border-bottom: 1px solid #e6ddd2;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.32s ease, opacity 0.32s ease;
+}
+.pf-sticky-cta.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.pf-sticky-cta-inner {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  padding: 6px 30px;
+  box-sizing: border-box;
+}
+.pf-sticky-cta-text {
+  margin: 0;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #31302e;
+}
+.pf-sticky-cta-btn {
+  flex: 0 0 auto;
+  min-width: 210px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  background: #ECE3D8;
+  color: #31302e;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  white-space: nowrap;
+}
+/* Mobile: match portfolio exactly */
+@media (max-width: 780px) {
+  .pf-sticky-cta {
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: none;
+      height: 56px;
+  }
+  .pf-sticky-cta-inner {
+      min-height: 56px;
+      padding: 0 16px 0 96px;
+      gap: 16px;
+      justify-content: flex-end;
+  }
+  .pf-sticky-cta-text { display: none; }
+  .pf-sticky-cta-btn {
+      width: auto;
+      min-width: 0;
+      max-width: max-content;
+      margin-left: auto;
+  }
+}
+
+
+
+@media (min-width: 781px) {
+  .oa-cta-text {
+    width: 100%;
+    max-width: 781px;        /* cap at 781 but allow shrink */
+    min-width: 0;            /* enable shrinking within grid */
+    box-sizing: border-box;
+  }
+  .oa-cta {
+    grid-template-columns: 1fr minmax(0, 781px);  /* image + flexible text */
+    padding: 0 32px;                               /* keep gutters */
+  }
+}
+
+/* (reverted) desktop hard guard removed */
+.oa-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oa-hero-video,
+.oa-banner-video,
+.oa-mid-video-el {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.oa-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.oa-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.oa-hero h1 {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.oa-intro {
+  width: 1022px;
+  margin: 84px auto 54px;
+  text-align: center;
+}
+
+.oa-intro h2 {
+  margin: 0 0 10px;
+  font-family: "Cormorant", serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.oa-intro p {
+  margin: 0 auto;
+  width: 846px;
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.oa-pair,
+.oa-columns,
+.oa-feedback,
+.oa-cta {
+  width: 1022px;
+  margin: 0 auto 74px;
+}
+
+/* Separator line before footer on case pages (all viewports) */
+.oa-cta::after {
+  display: none; /* use standalone separator section like on Oleksandr & Anna */
+}
+
+/* Fallback: ensure the separator is visible even if CTA layout changes */
+
+
+/* Standalone separator section (full-bleed) */
+.case-separator {
+  width: 100vw;
+  height: 3px;
+  background: #F1EBE4;
+  border-radius: 1px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 64px; /* match Oleksandr & Anna spacing */
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+.oa-columns {
+  width: 1022px;
+  margin: 74px auto 0px;
+}
+
+.oa-top-strip {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 74px;
+  padding: 54px 0;
+}
+
+.oa-top-slider {
+  width: 1234px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.oa-top-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.oa-top-track {
+  display: flex;
+  gap: 44px;
+  align-items: center;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.oa-top-track.no-transition {
+  transition: none;
+}
+
+.oa-top-slide {
+  flex: 0 0 332px;
+  height: 494px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: transform 1.08s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.08s ease;
+}
+
+.oa-top-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #f8f3ed;
+}
+
+.oa-top-slide.is-center {
+  flex-basis: 482px;
+  height: 716px;
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.oa-top-caption-row {
+  width: 1022px;
+  margin: 8px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.oa-top-caption {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.88px;
+  text-transform: uppercase;
+  color: #7f6c65;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px 14px;          /* enlarge clickable area */
+  margin-left: -14px;          /* compensate to keep alignment */
+  margin-right: -14px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.oa-top-caption .oa-top-ic {
+  width: 40px;
+  height: 12px;
+  display: block;
+}
+
+.oa-pair {
+  display: grid;
+  grid-template-columns: 332px 482px 332px;
+  align-items: start;
+  justify-content: center;
+  gap: 44px;
+  padding: 54px 0;
+}
+
+.oa-pair img,
+.oa-columns img,
+.oa-cta img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.oa-pair img:nth-child(1),
+.oa-pair img:nth-child(3) {
+  height: 494px;
+}
+
+.oa-pair img:nth-child(2) {
+  height: 716px;
+}
+
+.oa-columns {
+  display: grid;
+  grid-template-columns: 440px 522px;
+  gap: 44px;
+}
+
+.oa-col {
+  display: grid;
+  gap: 44px;
+}
+
+/* Tighter spacing for the specific 3+3 block after feedback */
+.oa-columns-tight {
+  gap: 44px;
+  align-items: center;
+}
+
+.oa-columns-tight-fullbg {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  justify-content: center;
+  background: linear-gradient(to bottom, #F8F3ED 0 7%, #FFFFFF 7% 100%);
+  padding-bottom: 74px;
+}
+
+.oa-columns-tight .oa-col {
+  gap: 44px;
+}
+
+.oa-columns-tight > .oa-col:first-child {
+  align-self: center;
+}
+
+/* Right column: tighten gap above wedd02 62.jpg */
+.oa-columns-tight-fullbg .oa-col-wide img[src="src/img/case_w2/wedd02 62.jpg"] {
+  margin-top: 0px;
+}
+
+/* Center left column vertically against the right one for the specific block */
+.oa-columns-center-left {
+  align-items: center;
+}
+
+.oa-columns-center-left > .oa-col:first-child {
+  align-self: center;
+}
+
+/* Full-viewport video block (wedding02-02), same feel as .oa-hero */
+.oa-banner {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0 0 74px;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;               /* remove beige strip above video */
+  background-color: transparent;
+}
+
+.oa-mid-video {
+  width: 100vw;
+  max-width: 100vw;
+  height: 716px;
+  margin: 0 0 74px;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  background-color: transparent;
+}
+
+.oa-feedback {
+  width: 846px;
+  background: #fff;
+  padding: 54px 84px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.oa-feedback img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.oa-feedback h3 {
+  margin: 24px 0 12px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.oa-feedback p {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* Keep original case-page feedback geometry for unified pf markup */
+.pf-feedback-section {
+  padding: 0;
+  background: transparent;
+}
+
+.pf-feedback-container {
+  width: 846px;
+  max-width: 846px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 54px 84px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.oa-photo-slider {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 0 74px;
+  margin-left: calc(-50vw + 50%);
+}
+
+.oa-photo-slider-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.oa-photo-slider-track {
+  display: flex;
+  gap: 44px;
+  align-items: center;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.oa-photo-slider-track.no-transition {
+  transition: none;
+}
+
+.oa-photo-slide {
+  flex: 0 0 332px;
+  height: 494px;
+  opacity: 0.85;
+  transition: transform 1.08s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.08s ease;
+}
+
+.oa-photo-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.oa-photo-slider-captions {
+  max-width: 1022px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oa-photo-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  border: 0;
+  background: transparent;
+  color: #7f6c65;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 14px;          /* enlarge clickable area */
+  margin-left: -14px;          /* keep visual alignment */
+  margin-right: -14px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.oa-photo-nav img {
+  width: 40px;
+  height: 12px;
+}
+
+.oa-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 420px 454px;
+  gap: 54px;
+  align-items: center;
+  margin-top: 159px;
+}
+
+.oa-cta::before {
+  content: "";
+  position: absolute;
+  left: 60%;
+  top: -47px;
+  transform: translateX(-50%);
+  width: 798px;
+  height: 674px;
+  background: #fff;
+  z-index: 0;
+}
+
+.oa-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.oa-cta img {
+  height: 580px;
+}
+
+.oa-cta-text h3 {
+  margin: 0 0 16px;
+  font-family: "Cormorant", serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.oa-cta-text p {
+  margin: 0 0 24px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-align: justify;
+}
+
+.oa-cta-text a {
+  display: inline-flex;
+  padding: 12px 32px;
+  background: #f1ebe3;
+  color: #31302e;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* Narrow desktop: proportional columns (1051px–1200px only; tablet handled below) */
+@media (max-width: 1200px) and (min-width: 1051px) {
+  .oa-intro,
+  .oa-pair,
+  .oa-columns,
+  .oa-feedback,
+  .oa-cta,
+  .oa-photo-slider-captions {
+    width: calc(1022px * (100vw / 1200));
+    max-width: calc(1022px * (100vw / 1200));
+  }
+
+  .oa-top-caption-row {
+    width: calc(1022px * (100vw / 1200));
+  }
+
+  .oa-intro p {
+    width: calc(846px * (100vw / 1200));
+  }
+
+  .oa-columns {
+    grid-template-columns: calc(440px * (100vw / 1200)) calc(522px * (100vw / 1200));
+  }
+
+  .oa-cta {
+    grid-template-columns: calc(420px * (100vw / 1200)) calc(454px * (100vw / 1200));
+  }
+
+  .oa-cta img {
+    height: calc(580px * (100vw / 1200));
+  }
+
+  .pf-feedback-container {
+    width: calc(846px * (100vw / 1200));
+    max-width: calc(846px * (100vw / 1200));
+  }
+}
+
+/* Carousel: 1051px–1250px — same proportional row as tablet (332+44+482+44+332=1234), no side clip */
+@media (max-width: 1250px) and (min-width: 1051px) {
+  .oa-top-slider {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  .oa-top-track {
+    gap: calc((100vw - 64px) * 44 / 1234) !important;
+  }
+
+  .oa-top-slide {
+    flex: 0 0 calc((100vw - 64px) * 332 / 1234) !important;
+    width: calc((100vw - 64px) * 332 / 1234) !important;
+    max-width: calc((100vw - 64px) * 332 / 1234) !important;
+    height: auto !important;
+    min-width: 0 !important;
+    aspect-ratio: 332 / 494;
+    box-sizing: border-box !important;
+  }
+
+  .oa-top-slide.is-center {
+    flex: 0 0 calc((100vw - 64px) * 482 / 1234) !important;
+    width: calc((100vw - 64px) * 482 / 1234) !important;
+    max-width: calc((100vw - 64px) * 482 / 1234) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 482 / 716;
+    transform: none !important;
+  }
+
+  .oa-top-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .oa-top-caption-row {
+    width: 100% !important;
+    max-width: min(1022px, calc(100vw - 64px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Tablet: 781px–1050px — fluid widths, grids, slider, feedback, CTA */
+@media (max-width: 1050px) and (min-width: 781px) {
+  .oa-hero h1 {
+    font-size: clamp(34px, 5.5vw, 56px);
+  }
+
+  .oa-intro {
+    width: 100% !important;
+    max-width: min(1022px, calc(100vw - 64px)) !important;
+    margin: 64px auto 40px !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  .oa-intro h2 {
+    font-size: clamp(30px, 4vw, 48px);
+  }
+
+  .oa-intro p {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .oa-top-strip {
+    margin-bottom: 56px !important;
+    padding: 40px 0 !important;
+  }
+
+  .oa-top-slider {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Carousel: proportional to desktop row (332+44+482+44+332=1234) — fits in (100vw - slider gutters) */
+  .oa-top-track {
+    gap: calc((100vw - 64px) * 44 / 1234) !important;
+  }
+
+  .oa-top-slide {
+    flex: 0 0 calc((100vw - 64px) * 332 / 1234) !important;
+    width: calc((100vw - 64px) * 332 / 1234) !important;
+    max-width: calc((100vw - 64px) * 332 / 1234) !important;
+    height: auto !important;
+    min-width: 0 !important;
+    aspect-ratio: 332 / 494;
+    box-sizing: border-box !important;
+  }
+
+  .oa-top-slide.is-center {
+    flex: 0 0 calc((100vw - 64px) * 482 / 1234) !important;
+    width: calc((100vw - 64px) * 482 / 1234) !important;
+    max-width: calc((100vw - 64px) * 482 / 1234) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 482 / 716;
+    transform: none;
+  }
+
+  .oa-top-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .oa-top-caption-row {
+    width: 100% !important;
+    max-width: min(1022px, calc(100vw - 64px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Only horizontal padding — do not use padding shorthand (would zero out .oa-columns-tight-fullbg padding-bottom) */
+  .oa-columns {
+    width: 100% !important;
+    max-width: min(1022px, calc(100vw - 64px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    box-sizing: border-box !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.186fr) !important;
+    gap: min(44px) !important;
+  }
+
+  .oa-columns-tight-fullbg {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    /* Preserve base padding-bottom: 74px under full-bleed photo grid (last img e.g. wedd02 64-2.jpg) */
+    padding-bottom: 74px !important;
+    box-sizing: border-box !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  .oa-columns-tight-fullbg > .oa-col:first-child {
+    align-self: start !important;
+  }
+
+  .oa-columns-tight-fullbg img {
+    object-fit: contain !important;
+  }
+
+  .oa-columns-tight .oa-col,
+  .oa-columns-tight .oa-col-wide {
+    min-width: 0;
+  }
+
+  .oa-columns img {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .pf-feedback-container {
+    width: 100% !important;
+    max-width: min(846px, calc(100vw - 64px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: clamp(36px, 5vw, 54px) clamp(24px, 5vw, 64px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .pf-feedback-quote {
+    font-size: clamp(19px, 2.35vw, 26px);
+    line-height: 1.28;
+  }
+
+  .oa-cta {
+    width: 100% !important;
+    max-width: min(1022px, calc(100vw - 64px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: clamp(80px, 12vw, 140px) !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr) !important;
+    gap: min(40px, 4vw) !important;
+  }
+
+  .oa-cta img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  /* White panel: stretch to content height; fixed min(720px,130vw) left a tall empty strip below (901–1050px) */
+  .oa-cta::before {
+    width: min(840px, calc(100% - 24px)) !important;
+    top: -47px !important;
+    bottom: -47px !important;
+    height: auto !important;
+    left: 58% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .oa-cta-text {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 8px clamp(20px, 4vw, 36px) 20px clamp(24px, 5vw, 44px) !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .oa-cta-text h3 {
+    font-size: clamp(26px, 3.2vw, 38px);
+  }
+
+  .oa-cta-text p {
+    overflow-wrap: break-word !important;
+    word-break: normal;
+    hyphens: auto;
+  }
+}
+
+/* CTA: 901px–1050px — біле полотно з центру колонки фото (≈половина фото на бежі); ширший текст */
+@media (min-width: 901px) and (max-width: 1050px) {
+  .oa-cta {
+    --oa-cta-gap: min(32px, 3.2vw);
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    max-width: min(1022px, calc(100vw - 64px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.28fr) !important;
+    gap: var(--oa-cta-gap) !important;
+  }
+
+  /*
+   * Лівий край білого = середина першої колонки (0.88fr):
+   * padding-left + (contentWidth - gap) * 0.88 / (2 * (0.88 + 1.28))
+   * contentWidth у % від padding-box = 100% - 64px (лівий+правий padding секції)
+   */
+  .oa-cta::before {
+    left: calc(
+      32px + ((100% - 64px) - var(--oa-cta-gap)) * 0.88 / 4.32
+    ) !important;
+    right: 20px !important;
+    top: -47px !important;
+    bottom: -47px !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  .oa-cta-text {
+    max-width: none !important;
+    padding: 8px 34px 24px 22px !important;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 781px) {
+  .oa-cta {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center;
+  }
+
+  .oa-cta::before {
+    display: none !important;
+  }
+
+  .oa-cta img {
+    width: 100% !important;
+    max-width: 420px !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .oa-cta-text p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 780px) {
+  /* Lower specific image by 20px on mobile */
+  img[src="src/img/case_w2/wedd02 61-2 .jpg"] {
+    margin-top: 20px !important;
+  }
+  /* Reduce big spacing after video banner on mobile */
+  .oa-banner {
+    margin-bottom: 24px !important;
+  }
+  /* Mobile: make specific 4 photos (114-119) appear in a 2-column grid exactly */
+  .oa-columns.oa-columns-tight.oa-columns-tight-fullbg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px !important;
+    padding: 0 32px 54px 32px;
+    box-sizing: border-box;
+    grid-auto-flow: dense;
+    justify-items: center;
+    align-items: start;
+  }
+  .oa-columns-tight-fullbg {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    justify-content: center;
+    background: #F8F3ED;
+  }
+  /* Flatten inner columns so images flow into the grid */
+  .oa-columns-tight-fullbg .oa-col,
+  .oa-columns-tight-fullbg .oa-col-wide {
+    display: contents;
+  }
+  /* Default: all images full-width (one per row) */
+  .oa-columns-tight-fullbg img {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* 65, 67 (left col) + 63-1, 62 (right col): fill each grid track — was 143.5px “miniatures” */
+  .oa-columns-tight-fullbg .oa-col img:nth-child(4) {
+    grid-column: 1;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    justify-self: stretch;
+    align-self: start;
+    margin-top: clamp(20px, 5vw, 36px) !important;
+    min-width: 0;
+  }
+  .oa-columns-tight-fullbg .oa-col img:nth-child(5) {
+    grid-column: 1;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    justify-self: stretch;
+    align-self: start;
+    min-width: 0;
+  }
+  .oa-columns-tight-fullbg .oa-col-wide img:nth-child(1) {
+    grid-column: 2;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    justify-self: stretch;
+    align-self: start;
+    transform: none;
+    min-width: 0;
+  }
+  .oa-columns-tight-fullbg .oa-col-wide img:nth-child(2) {
+    grid-column: 2;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    justify-self: stretch;
+    align-self: start;
+    transform: none;
+    min-width: 0;
+  }
+  /* Ensure the last image in this block (right column 4th) is full-width as before */
+  .oa-columns-tight-fullbg .oa-col-wide img:nth-child(4) {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: auto;
+    transform: none;
+    /* tighten vertical spacing to previous image */
+    margin-top: 0px !important;
+  }
+  .oa-columns-tight-fullbg .oa-col-wide img:nth-child(3) {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  /* Nudge the first photo in the next block slightly up */
+  .oa-columns-center-left .oa-col img:first-child {
+    margin-top: -12px;
+  }
+
+  /* Ensure consistent 24px vertical spacing for all images in the next block */
+  .oa-columns-center-left {
+    margin-top: 24px !important;
+    padding-top: 0 !important;
+  }
+  .oa-columns-center-left .oa-col,
+  .oa-columns-center-left .oa-col-wide {
+    display: block !important;
+  }
+  .oa-columns-center-left .oa-col img,
+  .oa-columns-center-left .oa-col-wide img {
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  .oa-columns-center-left .oa-col img + img,
+  .oa-columns-center-left .oa-col-wide img + img {
+    margin-top: 0px !important;
+  }
+
+  /* Arrange the last 4 photos (151–156) into a 2×2 grid with 24px gaps */
+  .oa-columns-center-left {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+  /* Flatten inner wrappers so images can be placed directly in the grid */
+  .oa-columns-center-left .oa-col,
+  .oa-columns-center-left .oa-col-wide {
+    display: contents !important;
+  }
+  /* First two images of left column stay full-width above the grid */
+  .oa-columns-center-left .oa-col img:nth-child(1),
+  .oa-columns-center-left .oa-col img:nth-child(2) {
+    grid-column: 1 / -1 !important;
+  }
+  /* Place the 4 specific images into a 2×2 at the end:
+     Column Left: 66-2 (top), 63-2 (bottom)
+     Column Right: 66-3 (top), 67-1 (bottom)
+  */
+  .oa-columns-center-left .oa-col img:nth-child(3) { /* 66-2 */
+    grid-column: 1 !important;
+    grid-row: 3 !important; /* after the first two full-width rows */
+  }
+  .oa-columns-center-left .oa-col-wide img:nth-child(1) { /* 63-2 */
+    grid-column: 1 !important;
+    grid-row: 4 !important;
+  }
+  .oa-columns-center-left .oa-col-wide img:nth-child(2) { /* 66-3 */
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+  }
+  .oa-columns-center-left .oa-col-wide img:nth-child(3) { /* 67-1 */
+    grid-column: 2 !important;
+    grid-row: 4 !important;
+  }
+  /* Slightly raise the right column to align with the left */
+  .oa-columns-center-left .oa-col-wide img:nth-child(3) {
+    margin-top: -12px !important;
+  }
+  /* Lower only 66-3.jpg a bit */
+  .oa-columns-center-left .oa-col-wide img:nth-child(2) {
+    margin-top: 12px !important;
+  }
+  /* Raise left column (66-2 and 63-2) slightly */
+  .oa-columns-center-left .oa-col img:nth-child(3),
+  .oa-columns-center-left .oa-col-wide img:nth-child(1) {
+    margin-top: -20px !important;
+  }
+  .oa-page {
+    background: linear-gradient(to bottom, #f8f3ed 0 98%, #fff 98% 100%);
+    padding-bottom: 14px;
+  }
+
+  .oa-hero,
+  .oa-banner,
+  .oa-mid-video {
+    height: 100vh;
+  }
+
+  .oa-hero h1 {
+    width: 311px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+  }
+
+  .oa-intro {
+    width: 100%;
+    margin: 54px 0 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+
+  .oa-intro h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .oa-intro p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .oa-pair,
+  .oa-top-strip,
+  .oa-columns,
+  .oa-feedback,
+  .oa-cta {
+    width: 100%;
+    max-width: 100%;
+    margin: 54px 0 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+
+  .oa-top-strip {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px 0;
+    margin: 54px 0 0;
+    margin-left: 0;
+  }
+
+  .oa-top-track {
+    gap: 16px;
+    padding: 0 calc((100vw - 276px) / 2);
+    box-sizing: border-box;
+  }
+
+  .oa-top-slide {
+    width: 276px;
+    flex: 0 0 276px;
+    height: 408px;
+    opacity: 1;
+  }
+
+  .oa-top-slide.is-center {
+    width: 276px;
+    flex: 0 0 276px;
+    height: 408px;
+    transform: none;
+  }
+
+  .oa-top-caption-row {
+    width: 100%;
+    margin-top: 24px;
+    justify-content: center;
+    gap: 43px;
+  }
+
+  .oa-top-caption {
+    font-size: 0;
+    letter-spacing: 0;
+    line-height: 0;
+    gap: 0;
+    padding: 12px 16px;              /* bigger tap target */
+    margin-left: -16px;              /* keep visual alignment */
+    margin-right: -16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .oa-pair {
+    background: #fff;
+    padding: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .oa-pair img {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .oa-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .oa-col {
+    gap: 24px;
+  }
+
+  .oa-columns-tight {
+    gap: 16px;
+  }
+
+  .oa-columns-tight .oa-col {
+    gap: 16px;
+  }
+
+  .oa-feedback {
+    background: #fff;
+    padding: 44px 34px;
+  }
+
+  .pf-feedback-container {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    padding: 44px 34px ;
+    margin-top: -25px;
+  }
+
+  .oa-feedback p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .oa-photo-slider {
+    width: 100%;
+    max-width: 100%;
+    margin: 24px 0 0;
+    margin-left: 0;
+  }
+
+  .oa-photo-slider-track {
+    gap: 12px;
+    padding: 0 calc((100vw - 276px) / 2);
+    box-sizing: border-box;
+  }
+
+  .oa-photo-slide {
+    width: 276px;
+    height: 408px;
+    flex: 0 0 276px;
+    opacity: 1;
+  }
+
+  .oa-photo-slider-captions {
+    margin-top: 24px;
+    justify-content: center;
+    gap: 43px;
+  }
+
+  .oa-photo-nav {
+    font-size: 0;
+    letter-spacing: 0;
+    line-height: 0;
+    gap: 0;
+    padding: 12px 16px;              /* bigger tap target */
+    margin-left: -16px;              /* keep visual alignment */
+    margin-right: -16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent mobile browser from shrinking the layout due to overflow */
+  html, body, .oa-page {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .oa-cta {
+    margin: 84px 0 0;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    background: linear-gradient(to bottom, #f8f3ed 0 20%, #fff 20% 100%);
+    position: relative;
+    justify-content: center;
+    padding: 0 32px;            /* add side paddings on mobile */
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  /* Mobile separator line after CTA button, before footer (same as OA page) */
+  .oa-cta::after {
+    display: none !important; /* use standalone .case-separator for consistency */
+  }
+
+  .oa-cta::before {
+    display: none;
+  }
+
+  .oa-cta img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    padding: 0 0px;          /* match block side gutters for the photo as well */
+    box-sizing: border-box;
+    object-fit: contain;
+  }
+
+  .oa-cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0px;          /* ensure text also has gutters */
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .oa-cta-text h3 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .oa-cta-text p {
+    width: 100%;
+  }
+
+  .oa-cta-text a {
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: center;
+    padding: 12px 22px;
+  }
+
+  .footer-content,
+  .instagram-section-content,
+  .footer-bottom-content {
+    max-width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+  }
+
+  .footer-btn {
+    width: auto;
+    margin: 0 auto;
+    display: inline-flex;
+  }
+  /* Force exact 20px offset for the very first image in next block */
+  .oa-columns-center-left .oa-col img[src="src/img/case_w2/wedd02 61-2 .jpg"] {
+    margin-top: 24px !important;
+  }
+}
+
