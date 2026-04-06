@@ -220,6 +220,12 @@
   pointer-events: none;
 }
 
+@media (min-width: 781px) {
+  .case-separator {
+    display: none;
+  }
+}
+
 .oa-columns {
   width: 1022px;
   margin: 74px auto 0px;
